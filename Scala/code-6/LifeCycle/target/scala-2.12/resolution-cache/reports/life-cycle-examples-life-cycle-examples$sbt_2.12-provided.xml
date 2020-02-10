@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="life-cycle-examples"
+		module="life-cycle-examples$sbt_2.12"
+		revision="1.0"
+		conf="provided"
+		confs="compile, runtime, test, provided, optional"
+		date="20190514110039"/>
+	<dependencies>
+	</dependencies>
+</ivy-report>

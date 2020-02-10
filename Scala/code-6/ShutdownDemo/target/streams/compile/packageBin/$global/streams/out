@@ -1,0 +1,33 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/shut-down-examples_2.12-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	server/DeathWatchServer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/server/DeathWatchServer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/SimpleActor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/SimpleActor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	server[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/server[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/Message.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/Message.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/DeathWatchClient.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/DeathWatchClient.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/DeathWatchClient$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/DeathWatchClient$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	server/DeathWatchServer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/server/DeathWatchServer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/SimpleActor$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/SimpleActor$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/RouterSupervisor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/RouterSupervisor.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/RouterSupervisor$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/RouterSupervisor$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/DeathWatchClient$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/DeathWatchClient$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	server/DeathWatchServer$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/server/DeathWatchServer$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client[0m
+[0m[[0m[0mdebug[0m] [0m[0m	client/Message$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sethweber/Downloads/code-6/ShutdownDemo/target/scala-2.12/classes/client/Message$.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

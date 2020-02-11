@@ -1,0 +1,17 @@
+#main-header
+{
+text-align: center;
+background-color:black;
+font-size: 45px;
+color:lightyellow;
+padding:10px;
+}
+
+#forms
+{
+text-align: center;
+font-size: 25px;
+background-color: turquoise;
+margin-left: 225px;
+margin-right: 225px;
+}

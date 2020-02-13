@@ -1,5 +1,5 @@
 //csc403 assignment 6
-//jonathan hense
+//Seth Weber
 
 package csc403;
 

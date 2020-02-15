@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/../mapreduce11/.idea/modules/mapreduce11.iml" filepath="$PROJECT_DIR$/../mapreduce11/.idea/modules/mapreduce11.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../mapreduce11/.idea/modules/mapreduce11-build.iml" filepath="$PROJECT_DIR$/../mapreduce11/.idea/modules/mapreduce11-build.iml" />
-    </modules>
-  </component>
-</project>

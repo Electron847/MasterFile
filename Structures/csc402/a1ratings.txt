@@ -1,0 +1,6 @@
+Outstanding 6
+Excellent 5
+Better 4
+Worse 2
+Awful 1
+Avoid 0

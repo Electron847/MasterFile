@@ -1,0 +1,67 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  body {font-family: Calibri, Georgia; font-size: 11pt; }
+  h1 {font-family: Cambria, Arial, Helvetica; font-weight: lighter; color: #2C36ff;}
+  h2, h3 {font-family: Cambria, Arial, Helvetica; font-weight: lighter; color: #2C3642;}
+  h1 {font-size: 26pt; }
+  h2 {font-size: 14pt; }
+  h3 {font-size: 12pt; }
+  code {font-family: Courier New; font-weight: bold; color: darkblue; }
+  table {border-radius: 5px; border: 2px solid black; }
+  td, th {border: 1px solid gray; }
+  ul.innerlist {list-style: none; margin: 0; padding: 0}
+  </style>
+</head>
+
+<body>
+<div id="content">
+<h1>CSC 402/Data Structures I<br />Timing implementations of union/find</h1>
+<hr />
+<h2>Setting up</h2>
+<p>
+In the <code>src</code> directory in Eclipse, create a package called <code>timeuf</code>. Inside that package, create a class called <code>TimeUF</code>.  This creates a shell program with a mostly empty main method.  All of your code will go in the main method.
+</p>
+<p>
+In the main method, declare a timer, which is a variable of type <code>Stopwatch</code>, and a count, which is a variable of type <code>int</code>.  Ther are for UF classes in the algs14 package:
+<ul>
+<li>QuickFindUF
+<li>QuickUnionUF
+<li>WeightedUF
+<li>CompressionUF
+</ul>
+For each one, write a block of code that:
+<ol>
+<li>Directs <code>StdIn</code> to read from the file <code>"data/uf16k.txt"</code>
+<li>Reads an integer from StdIn into the count
+<li>Initializes the timer to a new Stopwatch object
+<li>Declares and initalizes a new QuickUnionUF object, passing it the count as the size
+<li>While StdIn is not empty (that is, while there is input to read):
+<ul>
+<li>Reads an integer from to StdIn into a variable p
+<li>Reads an integer from to StdIn into a variable q
+<li>Unions p and q using the union method of the QuickUnionUF object
+</ul>
+<li>Prints to StdOut how long this took by using the elapsedTimer method on the timer variable
+</ol>
+You will also have to download the data file <a href="uf16k.txt"><code>uf16k.txt</code></a> and drag it into the data directory in Eclipse.
+</p>
+<p>Use the sample program <a href="TimeLists.java"><code>TimeLists.java</code></a> for an example of how to do most of what is written above.  Its main method contains three blocks of code, each one timing a different list implementation from the classes defined in the algs13 package.  In Eclipse, create a package called <code>csc402</code> and drag <code>TimeLists.java</code> into it.  From there, you should be able to run it.  It uses a data file called <a href="32Kints.txt"><code>32KInts.txt</code></a> that you download and drag into the data directory.
+</p>
+<p>
+To give you a more concrete idea of what I expect, here is the output from my solution.  Note that your times may differ.
+<pre>
+--- Times to execute various UF implementations from a file ---
+Quick find took  6.748000 seconds.
+Quick union took  0.048000 seconds.
+Weighted UF took  0.062000 seconds.
+Compression UF took  0.031000 seconds.
+</pre>
+<h2>Submission instructions</h2>
+<p>
+These will be posted shortly.
+</p>
+<p><em>Last update: May 8th, 2018</em></p>
+</body>
+</html>

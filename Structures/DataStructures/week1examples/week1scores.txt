@@ -1,0 +1,5 @@
+Able 70 85
+Bravo 99 87
+Charley 85 86
+Delta 100 84
+Echo 98 88

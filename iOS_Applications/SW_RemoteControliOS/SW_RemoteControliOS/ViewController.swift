@@ -5,19 +5,24 @@
 //  Created by Seth Weber on 2/11/20.
 //  Copyright © 2020 DePaul University. All rights reserved.
 //
+//  Autolayout designed for iPhones 8 through 11 plus
+//
+
 
 import UIKit
 
 class ViewController: UIViewController {
             
     var keyPadUsed = false
-    var digits: Int = 0
+    var keyPadNumber: Int?
+    
+    
+    
     
     @IBAction func keyPad(_ sender: UIButton)
     {
+        keyPadNumber = Int(stepperAndKeyPadValue.text! + String(sender.tag-1))
         stepperAndKeyPadValue.text = stepperAndKeyPadValue.text! + String(sender.tag-1)
-        
-        
         
     }
     
@@ -31,22 +36,18 @@ class ViewController: UIViewController {
         tvPowerSwitch.setOn(sender.isOn, animated: true)
     }
     
-    
     @IBOutlet weak var volumeSliderValue: UILabel!
     
-    
     @IBAction func volumeSliderMoved(_ sender: UISlider) {
-        volumeSliderValue.text = "Volume: \(Int(sender.value))"
+        volumeSliderValue.text = "VL: \(Int(sender.value))"
     }
     
-  
     @IBOutlet weak var stepperAndKeyPadValue: UILabel!
     
     @IBAction func stepperChanged(_ sender: UIStepper) {
-        stepperAndKeyPadValue.text = "Channel: \(Int(sender.value))"
+        
+        stepperAndKeyPadValue.text = "CH: \(Int(sender.value))"
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

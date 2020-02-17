@@ -17,13 +17,10 @@ class ViewController: UIViewController {
     var keyPadNumber: Int?
     
     
-    
-    
     @IBAction func keyPad(_ sender: UIButton)
     {
         keyPadNumber = Int(stepperAndKeyPadValue.text! + String(sender.tag-1))
         stepperAndKeyPadValue.text = stepperAndKeyPadValue.text! + String(sender.tag-1)
-        
     }
     
     

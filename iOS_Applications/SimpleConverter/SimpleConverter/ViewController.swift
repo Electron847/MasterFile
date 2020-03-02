@@ -31,6 +31,10 @@ class ViewController: UIViewController {
                         if let rates = myJson["rates"] as? NSDictionary
                         {
                             print(rates)
+                            if let currency = rates["USD"]
+                            {
+                                print(currency)
+                            }
                         }
                     }
                     catch {}

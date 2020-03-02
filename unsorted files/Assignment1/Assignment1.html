@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+  body {font-family: Calibri, Georgia; font-size: 11pt; }
+  h1 {font-family: Cambria, Arial, Helvetica; font-weight: lighter; color: #a9511e;}
+  h2, h3 {font-family: Cambria, Arial, Helvetica; font-weight: lighter; color: #c9ab13;}
+  h1 {font-size: 26pt; }
+  h2 {font-size: 14pt; }
+  h3 {font-size: 12pt; }
+  .code {font-family: Courier New; font-weight: bold; }
+  table {border-radius: 5px; border: 2px solid black; }
+  td, th {border: 1px solid gray; }
+  ul.innerlist {list-style: none; margin: 0; padding: 0}
+  </style>
+</head>
+<body>
+<div id="content">
+<h1>CSC 403/Data Structures II<br />Programming Assignment 1</h1>
+<h2>Due Thursday, September 13th</h2>
+<hr />
+<h2>Course package setup</h2>
+<p>
+Create an Eclipse package called <code>csc403</code>.  All of the programs you will write for this course will go into that package.  Note that all of the letters in the package name are lowercase!
+</p>
+<p>
+For this assignment, you will write two programs inside that package.
+</p>
+<h2>Average restaurant rating</h2>
+<p>
+Write a program called <code>ComputeARR</code> to compute the average rating a restaurant is currently getting.  The ratings are single-word adjectives, listed in the table below, along with numeric scores for each.  Write the program so that it:
+<ol>
+<li>Declares and creates a symbol table using the <code>algs31.BinarySearchST</code> class;
+<li>Fills that symbol table with the following rating/score pairings, where the rating is the symbol table key and the score is the symbol table value:
+<table>
+  <tr><th>Key (Rating)</th><th>Value (Score)</th></tr>
+  <tr><td>Outstanding</td><td>6</td></tr>
+  <tr><td>Excellent</td><td>5</td></tr>
+  <tr><td>Better</td><td>4</td></tr>
+  <tr><td>Average</td><td>3</td></tr>
+  <tr><td>Worse</td><td>2</td></tr>
+  <tr><td>Awful</td><td>1</td></tr>
+  <tr><td>Avoid</td><td>0</td></tr>
+</table>
+<li>Reads a sequence of rating strings from a file called <code>a1ratings.txt</code> using <code>StdIn</code> where the ratings are separated from each other by one or more whitespace characters.  Read that file by directing <code>StdIn</code> to the file with the <code>fromFile</code> method and then use the method <code>StdIn.readAllStrings()</code> to return an array containing all of the Strings.
+<li>
+Iterates through the array just filled using a for-each loop and accumulates a total score based on the ratings.  For each rating, look up its value in the symbol table and add it to the accumulator variable.
+<li>
+Computes and prints the average value as a floating point number.  For example, assume the ratings read in are Excellent, Average, Excellent, Better.  These yields the scores 5, 3, 5, 4.  Averaged this is 4.25.
+</ol>
+Create your own test file called <code>a1ratings.txt</code> and place it in the <code>data</code> directory. Remember that your program will open it using the pathname <code>data/a1grades.txt</code>.  Do not submit your test file.
+</p>
+<p>
+PLEASE NOTE: Do not copy any code from the algs31.BinarySearchST class.  You will have a single line in your program that declares and creates an empty symbol table and then you will need to call the instance methods <code>put</code> and <code>get</code>.
+</p>
+<h3>Grading rubric</h3>
+<p>
+The program is worth 10 points.  For the most part, this is an all-or-nothing score.  A program that doesn't compile or that compiles and then crashes will be given 0 points.
+</p>
+<h2>Play single notes</h2>
+<p>
+Write a program called <code>PlaySingleNotes</code> to play a sequence of notes represented by note names in a textfile.
+</p>
+<p>
+Write the program so that it:
+<ol>
+<li>Declares and creates a symbol table using the <code>algs31.BinarySearchST</code> class;
+<li>Reads in a file <a href="notes_frequencies.txt"><code>notes_frequencies.txt</code></a> where each line is a pair of strings separated by whitespace.  The first string is the name of a musical note and the second a double value that is its sound frequency as found on a piano.  For example, the note A4 is paired with the frequency 440.0 and the note C4 with the frequency 261.626.  As each line is read, an entry is made in the symbol table where the note name is the key and the frequency is the value.
+<li>Reads in a note file, where each line contains a duration in seconds (floating point) and a note name. The values are separated by whitespace.  A sample file is <a href="single_notes.txt"><code>single_notes.txt</code></a>.
+</ol>
+</p>
+<p>
+Both the notes and frequencies file and the single notes file should be placed into the Eclipse <code>data</code> directory and, as in the previous program, read in using <code>StdIn</code> and the <code>fromFile</code> method.
+</p>
+<p>
+To process a text file where each line contains a fixed set of data fields:
+<ol>
+<li>Use the method <code>readLine</code> in the <code>StdIn</code> class, which returns a string;
+<li>Split the string into an array of strings using the instance method <code>split</code> in the <code>String</code> class;
+<li>Convert the numeric strings into numeric values using the method <code>parseDouble</code> in the <code>Double</code> class.
+</ol>
+</p>
+<p>
+To play each chord, place into your program and call this method:
+<pre>
+	public static void playNote(double duration, double frequency) {
+		final int sliceCount = (int) (StdAudio.SAMPLE_RATE * duration);
+		final double[] slices = new double[sliceCount+1];
+		for (int i = 0; i &lt;= sliceCount; i++) {
+			slices[i] += Math.sin(2 * Math.PI * i * frequency / StdAudio.SAMPLE_RATE);
+		}
+		StdAudio.play(slices);
+	}
+</pre>
+</p>
+<p>
+You will also have to import <code>stdlib.StdAudio</code>.
+</p>
+<h3>Grading rubric</h3>
+<p>
+<p>
+The program is worth 15 points, allocated as follows:
+<ul>
+<li>The program must compile.  No points will be given if it does not.
+<li>5 points for reading the note/frequency data and building the symbol table correctly.
+<li>5 points for reading in the single note data correctly.
+<li>5 points for playing each note correctly.
+</ul>
+</p>
+<h2>Submission instructions</h2>
+<p>
+Each program has its own submission slot in D2L.  For each program, create a zip file with the same name as the program (without the .java extension) and submit that zip file.  For example, for this assignment, you will create two zip files <code>ComputeARR.zip</code> and <code>PlaySingleNotes.zip</code> and each will contain a single .java file.  Do not include in the zip files the package directory containing the .java file.
+Submit that zip file to D2L submission slot for it.
+</p>
+<div>
+<p>
+<em>Document last updated on September 5th, 2018.</em>
+</p>
+</div>
+</body>
+
+</html>
+

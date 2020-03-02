@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Atlas Frame Website</title>
+	<link rel = "stylesheet" type= "text/css" href = "atlas_pStyle_sheet.css">
+<!--
+
+	<style type="text/css">
+		#main-header{
+			text-align: center;
+			background-color:black;
+			color:lightyellow;
+			padding:20px;
+		}
+		#main-footer{
+			text-align:center;
+			front-size:18px;
+		}
+
+		.post{
+			text-align: center;
+			
+		}
+
+	</style>
+
+-->
+
+</head>
+
+<body>
+	<header id="main-header">
+		<h1 class = "title">
+			<p>
+				Atlas Begins Here
+			</p>
+		</h1>
+	</header>
+
+	<section>
+		<article class="post">
+			<h3>Blog Post One</h3>
+			<small>Posted by Seth on August 1st</small>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article class="post">
+			<h3>Blog Post Two</h3>
+			<small>Posted by Seth on August 1st</small>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<a href="post.html">Read More</a>
+		</article>
+	</section>
+
+	<!-- Forms -->
+
+	<br>
+	<br>
+	<form action="process.php" method="GET"> 
+		<div>
+		<label>First Name</label>
+		<input type="text" name="firstName"value="Enter First Name">
+	</div>
+	<br>
+	<div>
+		<label>Last Name</label>
+		<input type="text" name="lastName"placeholder='Enter Last Name'>
+	</div>
+	<br>
+	<div>
+		<label>Email</label>
+		<input type="Email" name="email" placeholder="wudup mothafuckaz2">
+	</div>
+	<br>
+	<div>
+		<label>Message</label>
+		<textarea name="message"></textarea>
+	</div>
+	<br>
+	<div>
+		<label>Gender</label>
+		<select name="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+	</div>
+	<br>
+	<div>
+		<label>Age:</label>
+		<input type="number" name="age"value="30">
+	</div>
+	<br>
+	<div>
+		<label>Birthday:</label>
+		<input type="date" name="birthday">
+	</div>
+	<br>
+	<input type="submit" name="submit"value="Submit">
+	</form>
+	<br>
+	<hr>
+	<br>
+	<footer id="main-footer">
+		<p>Copyright &copy; 2018 My Website</p>
+	</footer>
+</body>
+</html>

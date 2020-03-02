@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SethWeber_ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-rx-8pp">
+                                <rect key="frame" x="170" y="226" width="224" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="descriptionFieldExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Ydg-jC-Q90"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJX-Cx-AWm">
+                                <rect key="frame" x="20" y="226" width="142" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="gtv-ov-1Nm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acQ-wV-T06">
+                                <rect key="frame" x="170" y="268" width="224" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="quantityFieldExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="1hD-Qo-cgY"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBz-rR-qFj">
+                                <rect key="frame" x="20" y="268" width="142" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="53V-mj-qNY">
+                                <rect key="frame" x="51.5" y="138" width="311" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-WN-g4P">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                        <state key="normal" title="New List"/>
+                                        <connections>
+                                            <action selector="newListButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EZe-jS-4el"/>
+                                            <action selector="newListStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ezP-j3-o9M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c6-Wm-vii">
+                                        <rect key="frame" x="122" y="0.0" width="65" height="30"/>
+                                        <state key="normal" title="New Item"/>
+                                        <connections>
+                                            <action selector="newItemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bba-9C-8V4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PF-DY-Z7K">
+                                        <rect key="frame" x="249" y="0.0" width="62" height="30"/>
+                                        <state key="normal" title="Add Item"/>
+                                        <connections>
+                                            <action selector="addItemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5I-m2-xrl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtN-eK-EfC">
+                                <rect key="frame" x="136" y="310" width="142" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="acQ-wV-T06" firstAttribute="top" secondItem="SOX-rx-8pp" secondAttribute="bottom" constant="8" id="0ak-ns-hP9"/>
+                            <constraint firstItem="53V-mj-qNY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4zJ-Vc-ep3"/>
+                            <constraint firstItem="53V-mj-qNY" firstAttribute="centerX" secondItem="BtN-eK-EfC" secondAttribute="centerX" id="6rG-ZK-95K"/>
+                            <constraint firstItem="acQ-wV-T06" firstAttribute="top" secondItem="SOX-rx-8pp" secondAttribute="bottom" constant="8" id="7YY-xu-fOo"/>
+                            <constraint firstItem="SOX-rx-8pp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7kP-tp-4r7"/>
+                            <constraint firstItem="bBz-rR-qFj" firstAttribute="bottom" secondItem="acQ-wV-T06" secondAttribute="bottom" id="A0Z-Bs-puW"/>
+                            <constraint firstItem="BtN-eK-EfC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="GO1-c3-V15"/>
+                            <constraint firstItem="dJX-Cx-AWm" firstAttribute="top" secondItem="SOX-rx-8pp" secondAttribute="top" id="O6r-Fs-zIN"/>
+                            <constraint firstItem="acQ-wV-T06" firstAttribute="leading" secondItem="bBz-rR-qFj" secondAttribute="trailing" constant="8" id="OKw-Y2-deY"/>
+                            <constraint firstItem="acQ-wV-T06" firstAttribute="leading" secondItem="bBz-rR-qFj" secondAttribute="trailing" constant="8" id="OMv-dL-E1C"/>
+                            <constraint firstItem="SOX-rx-8pp" firstAttribute="top" secondItem="53V-mj-qNY" secondAttribute="bottom" constant="58" id="SBr-CN-VB2"/>
+                            <constraint firstItem="SOX-rx-8pp" firstAttribute="leading" secondItem="dJX-Cx-AWm" secondAttribute="trailing" constant="8" id="STi-D3-Rh2"/>
+                            <constraint firstItem="bBz-rR-qFj" firstAttribute="leading" secondItem="dJX-Cx-AWm" secondAttribute="leading" id="bJp-MJ-w2l"/>
+                            <constraint firstItem="SOX-rx-8pp" firstAttribute="trailing" secondItem="acQ-wV-T06" secondAttribute="trailing" id="bPF-ir-ASx"/>
+                            <constraint firstItem="dJX-Cx-AWm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="h4A-Sp-EIP"/>
+                            <constraint firstItem="BtN-eK-EfC" firstAttribute="top" secondItem="acQ-wV-T06" secondAttribute="bottom" constant="8" id="l3E-xc-etd"/>
+                            <constraint firstItem="bBz-rR-qFj" firstAttribute="top" secondItem="acQ-wV-T06" secondAttribute="top" id="m00-18-M5F"/>
+                            <constraint firstItem="bBz-rR-qFj" firstAttribute="top" secondItem="dJX-Cx-AWm" secondAttribute="bottom" constant="8" id="m2v-ub-QHQ"/>
+                            <constraint firstItem="bBz-rR-qFj" firstAttribute="trailing" secondItem="dJX-Cx-AWm" secondAttribute="trailing" id="mfY-sH-X93"/>
+                            <constraint firstItem="SOX-rx-8pp" firstAttribute="leading" secondItem="dJX-Cx-AWm" secondAttribute="trailing" constant="8" id="wPN-gl-qjq"/>
+                            <constraint firstItem="bBz-rR-qFj" firstAttribute="top" secondItem="dJX-Cx-AWm" secondAttribute="bottom" constant="8" id="zDl-im-EQf"/>
+                            <constraint firstItem="53V-mj-qNY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="zxi-Kj-dLA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <action selector="backgroundExit:" destination="BYZ-38-t0r" eventType="touchDown" id="dUe-jo-VA3"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionField" destination="SOX-rx-8pp" id="BxB-R0-e9w"/>
+                        <outlet property="itemQuantityField" destination="acQ-wV-T06" id="2dw-Gp-Eo3"/>
+                        <outlet property="myShopList" destination="BtN-eK-EfC" id="v10-02-0yj"/>
+                        <outlet property="newListButton" destination="HbB-WN-g4P" id="J5X-No-fQj"/>
+                        <outletCollection property="myTextFields" destination="SOX-rx-8pp" collectionClass="NSMutableArray" id="3KS-2J-kUg"/>
+                        <outletCollection property="myTextFields" destination="acQ-wV-T06" collectionClass="NSMutableArray" id="3LE-X6-zpt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+</document>

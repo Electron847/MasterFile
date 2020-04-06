@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f47956b1-63d0-49e8-b6db-634afc5f9b29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../HW1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HW1/src/InventorySet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HW1/src/InventoryTEST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HW1/src/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HW1/src/RecordTEST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HW1/src/VideoObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HW1/src/VideoTEST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdventureGame/AdventureGameSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdventureGame/Character.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdventureGame/King.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdventureGame/Queen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdventureGame/SwordBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdventureGame/WeaponBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/Duck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/FlyBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/FlyNoWay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/FlyRocketPowered.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/FlyWithWings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/MallardDuck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/MiniDuckSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/ModelDuck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/MuteQuack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/Quack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/QuackBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimUDuckApp/Squeak.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdventureGame/Character.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding>
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#182#183#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/Duck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+              <folding>
+                <element signature="e#168#169#0" expanded="true" />
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#552#553#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdventureGame/AdventureGameSimulator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdventureGame/Queen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdventureGame/King.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+              <folding>
+                <element signature="e#84#85#0" expanded="true" />
+                <element signature="e#126#127#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
+                <element signature="e#194#195#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AdventureGame/SwordBehavior.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+              <folding>
+                <element signature="e#111#112#0" expanded="true" />
+                <element signature="e#132#133#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/MallardDuck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding>
+                <element signature="e#209#210#0" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/FlyBehavior.java" />
+        <option value="$PROJECT_DIR$/src/FlyWithWings.java" />
+        <option value="$PROJECT_DIR$/src/FlyNoWay.java" />
+        <option value="$PROJECT_DIR$/src/MallardDuck.java" />
+        <option value="$PROJECT_DIR$/src/QuackBehavior.java" />
+        <option value="$PROJECT_DIR$/src/Quack.java" />
+        <option value="$PROJECT_DIR$/src/MuteQuack.java" />
+        <option value="$PROJECT_DIR$/src/Squeak.java" />
+        <option value="$PROJECT_DIR$/src/Duck.java" />
+        <option value="$PROJECT_DIR$/src/ModelDuck.java" />
+        <option value="$PROJECT_DIR$/src/FlyRocketPowered.java" />
+        <option value="$PROJECT_DIR$/src/MiniDuckSimulator.java" />
+        <option value="$PROJECT_DIR$/src/SimUDuckApp/MiniDuckSimulator.java" />
+        <option value="$PROJECT_DIR$/src/AdventureGame/Character.java" />
+        <option value="$PROJECT_DIR$/src/AdventureGame/WeaponBehavior.java" />
+        <option value="$PROJECT_DIR$/src/AdventureGame/King.java" />
+        <option value="$PROJECT_DIR$/src/AdventureGame/SwordBehavior.java" />
+        <option value="$PROJECT_DIR$/src/AdventureGame/AdventureGameSimulator.java" />
+        <option value="$PROJECT_DIR$/src/AdventureGame/Queen.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="345" />
+    <option name="y" value="23" />
+    <option name="width" value="869" />
+    <option name="height" value="712" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WeekOneSE450" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeekOneSE450" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeekOneSE450" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeekOneSE450" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeekOneSE450" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeekOneSE450" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AdventureGame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeekOneSE450" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeekOneSE450" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SimUDuckApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586152193399" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AdventureGameSimulator">
+    <configuration name="AdventureGameSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AdventureGame.AdventureGameSimulator" />
+      <module name="WeekOneSE450" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AdventureGame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MiniDuckSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SimUDuckApp.MiniDuckSimulator" />
+      <module name="WeekOneSE450" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AdventureGameSimulator" />
+        <item itemvalue="Application.MiniDuckSimulator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../MapReduceFiles/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../PageRank/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../akka-quickstart-scala" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code-3/mapreduce" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code-3/remote3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code-4/remote" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code-4/remote2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code-4/remote3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code/first" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code/pingpong" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../mapreduce11" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../mapreduce2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../mapreduce3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../Distributed Systems 2/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../Distributed Systems 2/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../code 2/GenericService" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Distrib2_HW3/mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/MapReduceFiles/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/MapReduceFiles/pageRank" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code 2/GenericService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote3" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/FaultTolerance" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/LifeCycle" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/ShutdownDemo" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code/pingpong" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/hw" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/workingMapReduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/00/00/704DF97F-BEF7-4815-9184-25D832284BC6/GroupService 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/9a/10/901A2628-8082-4F3E-9B72-387F8FE2CD90/GroupService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/b8/08/36E2BDE1-F4AC-463C-8E4D-648F85087BB9/GroupService 2" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f47956b1-63d0-49e8-b6db-634afc5f9b29" name="Default Changelist" comment="" />
+      <created>1586146668379</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586146668379</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="345" y="23" width="869" height="712" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18237454" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.3294509" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3294509" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3294509" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/Squeak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+          <folding>
+            <element signature="e#75#76#0" expanded="true" />
+            <element signature="e#111#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/FlyWithWings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/FlyRocketPowered.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#81#82#0" expanded="true" />
+            <element signature="e#106#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/ModelDuck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/QuackBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/MuteQuack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#78#79#0" expanded="true" />
+            <element signature="e#114#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/Quack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdventureGame/WeaponBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/FlyBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/MallardDuck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/FlyNoWay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <element signature="e#95#96#0" expanded="true" />
+            <element signature="e#145#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdventureGame/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#182#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/Duck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding>
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimUDuckApp/MiniDuckSimulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdventureGame/AdventureGameSimulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdventureGame/Queen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdventureGame/King.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="e#84#85#0" expanded="true" />
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdventureGame/SwordBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding>
+            <element signature="e#111#112#0" expanded="true" />
+            <element signature="e#132#133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.12.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

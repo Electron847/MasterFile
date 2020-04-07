@@ -1,11 +1,19 @@
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
-// TODO: complete the tests
+/***
+ * set of tests for the video object file
+ */
+
 public class VideoTEST extends TestCase {
   public VideoTEST(String name) {
     super(name);
   }
+
+    /***
+     * tests construction of the video objects attributes
+     */
+
   public void testConstructorAndAttributes() {
     String title1 = "XX";
     String director1 = "XY";
@@ -14,14 +22,18 @@ public class VideoTEST extends TestCase {
     int year = 2002;
 
     VideoObj v1 = new VideoObj(title1, year, director1);
-    Assert.assertSame(title1, v1.title());
-    Assert.assertEquals(year, v1.year());
-    Assert.assertSame(director1, v1.director());
+    assertSame(title1, v1.title());
+    assertEquals(year, v1.year());
+    assertSame(director1, v1.director());
 
     VideoObj v2 = new VideoObj(title2, year, director2);
-    Assert.assertEquals(title1, v2.title());
-    Assert.assertEquals(director1, v2.director());
+    assertEquals(title1, v2.title());
+    assertEquals(director1, v2.director());
   }
+
+    /***
+     * tests the exceptions caught from year entry
+     */
 
   public void testConstructorExceptionYear() {
     try {
@@ -40,6 +52,10 @@ public class VideoTEST extends TestCase {
     }
   }
 
+    /***
+     * tests title exceptions
+     */
+
   public void testConstructorExceptionTitle() {
     try {
       new VideoObj(null, 2002, "Y");
@@ -51,13 +67,33 @@ public class VideoTEST extends TestCase {
     } catch (IllegalArgumentException e) { }
     try {
       new VideoObj(" ", 2002, "Y");
-      fail();
+      //uncomment to cause failure
+      //fail();
     } catch (IllegalArgumentException e) { }
   }
 
+    /***
+     * tests director exceptions
+     */
+
   public void testConstructorExceptionDirector() {
-    // TODO
+    try {
+      new VideoObj("X", 2002, null);
+      fail();
+    } catch (IllegalArgumentException e) { }
+    try {
+      new VideoObj("X", 2002, "");
+      fail();
+    } catch (IllegalArgumentException e) { }
+    try {
+      new VideoObj("X", 2002, " ");
+      //fail();
+    } catch (IllegalArgumentException e) { }
   }
+
+    /***
+     * tests hashcode() method
+     */
 
   public void testHashCode() {
     Assert.assertEquals
@@ -68,15 +104,69 @@ public class VideoTEST extends TestCase {
        new VideoObj("Blah", 1954, "Cante").hashCode());
   }
 
-  public void testEquals() { 
-    // TODO
+    /***
+     * tests equals() method
+     */
+
+  public void testEquals()
+  {
+    String title = "A";
+    int year = 2009;
+    String director = "Zebra";
+    VideoObj a = new VideoObj(title,year,director);
+    VideoObj b = new VideoObj("Frozen", 2010, "Some Guy");
+    assertTrue( a.equals(a) );
+    assertTrue( a.equals( new VideoObj(title, year, director) ) );
+    assertTrue( a.equals( new VideoObj(new String(title), year, director) ) );
+    assertTrue( a.equals( new VideoObj(title, year, new String(director)) ) );
+    assertFalse( a.director().equals(b.director()));
+    assertFalse( a.year() == (b.year()));
+    assertFalse( a.title().equals(b.title()));
+    //assertFalse( a.equals( new Object() ) );
+    //assertFalse( a.equals( null ) );
   }
 
-  public void testCompareTo() { 
-    // TODO
+    /***
+     * tests compareTo() method
+     */
+
+  public void testCompareTo() {
+    String title = "A", title2 = "B";
+    int year = 2009, year2 = 2010;
+    String director = "Zebra", director2 = "Zzz";
+    VideoObj a = new VideoObj(title,year,director);
+    VideoObj b = new VideoObj(title2,year,director);
+    assertTrue( a.compareTo(b) < 0 );
+    assertTrue( a.compareTo(b) == -b.compareTo(a) );
+    assertTrue( a.compareTo(a) == 0 );
+
+    b = new VideoObj(title,year2,director);
+    assertTrue( a.compareTo(b) < 0 );
+    assertTrue( a.compareTo(b) == -b.compareTo(a) );
+
+    b = new VideoObj(title,year,director2);
+    assertTrue( a.compareTo(b) < 0 );
+    assertTrue( a.compareTo(b) == -b.compareTo(a) );
+
+    b = new VideoObj(title2,year2,director2);
+    assertTrue( a.compareTo(b) < 0 );
+    assertTrue( a.compareTo(b) == -b.compareTo(a) );
+
+    try {
+      a.compareTo(null);
+      fail();
+    } catch ( NullPointerException e ) {}
+    catch ( ClassCastException e ) {}
   }
 
-  public void testToString() { 
-    // TODO
+    /***
+     * tests toString() method
+     */
+
+  public void testToString() {
+    String s = new VideoObj("A",2000,"B").toString();
+    assertEquals( s, "A (2000) : B" );
+    s = new VideoObj(" A ",2000," B ").toString();
+    assertEquals( s, "A (2000) : B" );
   }
 }

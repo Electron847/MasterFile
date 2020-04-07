@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="321b6fab-72ad-458a-b0ad-9aceeabeb959" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InventorySet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InventoryTEST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Record.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RecordTEST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VideoObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VideoTEST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/AdventureGame/AdventureGameSimulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/AdventureGame/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/AdventureGame/King.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/AdventureGame/Queen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/AdventureGame/SwordBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/AdventureGame/WeaponBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/Duck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/FlyBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/FlyNoWay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/FlyRocketPowered.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/FlyWithWings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/MallardDuck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/MiniDuckSimulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/ModelDuck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/MuteQuack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/Quack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/QuackBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/SimUDuckApp/Squeak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Counter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/CounterClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Reg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW1/InventorySet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/InventorySet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW1/InventoryTEST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/InventoryTEST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW1/RecordTEST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/RecordTEST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW1/VideoObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/VideoObj.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW1/VideoTEST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/VideoTEST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventorySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventorySet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventoryTEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryTEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecordTEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecordTEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VideoTEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoTEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/AdventureGame/AdventureGameSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/AdventureGame/AdventureGameSimulator.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,22 +31,84 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/HW1$InventoryTEST_testCheckOutCheckIn.ic" NAME="InventoryTEST.testCheckOutCheckIn Coverage Results" MODIFIED="1586192917993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HW1.iml">
+        <entry file="file://$PROJECT_DIR$/src/InventorySet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="345">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#642#659#0" expanded="true" />
+                <element signature="e#753#754#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#1299#1307#0" expanded="true" />
+                <element signature="e#3762#3763#0" expanded="true" />
+                <element signature="e#3784#3785#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InventoryTEST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Record.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RecordTEST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Record.java">
+        <entry file="file://$PROJECT_DIR$/src/VideoTEST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="-2034">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VideoObj.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1547">
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#1236#1237#0" expanded="true" />
+                <element signature="e#1258#1259#0" expanded="true" />
+                <element signature="e#1334#1335#0" expanded="true" />
+                <element signature="e#1355#1356#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,13 +130,19 @@
       <list>
         <option value="$PROJECT_DIR$/week1Practice/Duck.java" />
         <option value="$PROJECT_DIR$/week1Practice/MallardDuck.java" />
+        <option value="$PROJECT_DIR$/src/RecordTEST.java" />
+        <option value="$PROJECT_DIR$/src/InventoryTEST.java" />
+        <option value="$PROJECT_DIR$/src/Record.java" />
+        <option value="$PROJECT_DIR$/src/InventorySet.java" />
+        <option value="$PROJECT_DIR$/src/VideoTEST.java" />
+        <option value="$PROJECT_DIR$/src/VideoObj.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="468" />
-    <option name="y" value="23" />
-    <option name="width" value="1058" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="60" />
+    <option name="y" value="25" />
+    <option name="width" value="959" />
     <option name="height" value="712" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -89,7 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,11 +168,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586152193389" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586222848662" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -152,21 +214,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryTEST.testSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryTEST.testCheckOutCheckIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="InventoryTEST" />
-      <option name="METHOD_NAME" value="testSize" />
+      <option name="METHOD_NAME" value="testCheckOutCheckIn" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RecordTEST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RecordTEST" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,12 +233,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VideoTEST.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VideoTEST" />
+      <option name="METHOD_NAME" value="testEquals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoTEST.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VideoTEST" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.VideoTEST" />
-        <item itemvalue="JUnit.RecordTEST" />
-        <item itemvalue="JUnit.InventoryTEST.testSize" />
         <item itemvalue="JUnit.InventoryTEST" />
+        <item itemvalue="JUnit.InventoryTEST.testCheckOutCheckIn" />
+        <item itemvalue="JUnit.VideoTEST.testEquals" />
+        <item itemvalue="JUnit.VideoTEST.testToString" />
       </list>
     </recent_temporary>
   </component>
@@ -246,27 +320,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InventoryTEST - 2020.04.05 at 15h 56m 57s.xml">
+    <history-entry file="InventoryTEST - 2020.04.06 at 17h 13m 35s.xml">
       <configuration name="InventoryTEST" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventoryTEST_testSize - 2020.04.05 at 15h 57m 21s.xml">
-      <configuration name="InventoryTEST.testSize" configurationId="JUnit" />
+    <history-entry file="InventoryTEST_testCheckOutCheckIn - 2020.04.06 at 17h 14m 15s.xml">
+      <configuration name="InventoryTEST.testCheckOutCheckIn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RecordTEST - 2020.04.05 at 16h 05m 56s.xml">
-      <configuration name="RecordTEST" configurationId="JUnit" />
+    <history-entry file="InventoryTEST - 2020.04.06 at 17h 15m 02s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VideoTEST - 2020.04.05 at 16h 06m 16s.xml">
+    <history-entry file="InventoryTEST_testCheckOutCheckIn - 2020.04.06 at 17h 15m 26s.xml">
+      <configuration name="InventoryTEST.testCheckOutCheckIn" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.06 at 18h 17m 02s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VideoTEST - 2020.04.06 at 18h 17m 42s.xml">
       <configuration name="VideoTEST" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VideoTEST - 2020.04.05 at 23h 07m 12s.xml">
+    <history-entry file="InventoryTEST - 2020.04.06 at 18h 18m 13s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.06 at 20h 03m 26s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.06 at 20h 03m 48s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VideoTEST - 2020.04.06 at 20h 04m 10s.xml">
       <configuration name="VideoTEST" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="468" y="23" width="1058" height="712" extended-state="0" />
-    <editor active="true" />
+    <frame x="60" y="25" width="959" height="712" extended-state="1" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.116302185" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22491731" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -274,9 +362,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3294509" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3294509" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16306156" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -284,6 +372,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3294509" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.5238866" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -295,48 +384,10 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/InventoryTEST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InventorySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VideoTEST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RecordTEST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VideoObj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+    <entry file="file://$PROJECT_DIR$/week1Practice/MallardDuck.java" />
+    <entry file="file://$PROJECT_DIR$/src/package-info.java" />
+    <entry file="file://$PROJECT_DIR$/week1Practice/Duck.java" />
     <entry file="file://$PROJECT_DIR$/HW1.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -344,27 +395,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week1Practice/MallardDuck.java">
+    <entry file="jar://$PROJECT_DIR$/../../../externalLibraries/junit-4.13.jar!/org/junit/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        <state relative-caret-position="123">
+          <caret line="334" selection-start-line="334" selection-end-line="334" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/package-info.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week1Practice/Duck.java">
+    <entry file="jar://$PROJECT_DIR$/../../../externalLibraries/junit-4.13.jar!/junit/framework/TestCase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="1275">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+          <folding>
+            <element signature="e#2753#2754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InventorySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#642#659#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#1299#1307#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#3784#3785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InventoryTEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Record.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="615">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RecordTEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VideoObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1547">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VideoTEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2034">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,81 +1,109 @@
-// TODO: complete the methods
-/**
- * Immutable Data Class for video objects.
- * Comprises a triple: title, year, director.
- *
- * @objecttype Immutable Data Class
- * @objectinvariant
- *   Title is non-null, no leading or final spaces, not empty string.
- * @objectinvariant
- *   Year is greater than 1800, less than 5000.
- * @objectinvariant
- *   Director is non-null, no leading or final spaces, not empty string.
+/***
+ * videoobject file
  */
+
+
+
 final class VideoObj implements Comparable<VideoObj> {
-  /** @invariant non-null, no leading or final spaces, not empty string */
-  private final String _title;
-  /** @invariant greater than 1800, less than 5000 */
-  private final int    _year;
-  /** @invariant non-null, no leading or final spaces, not empty string */
-  private final String _director;
+  private final String title;
+  private final int    year;
+  private final String director;
 
-  /**
-   * Initialize all object attributes.
-   * Title and director are "trimmed" to remove leading and final space.
-   * @throws IllegalArgumentException if any object invariant is violated.
+
+  /***
+   *
+   * @param title
+   * @param year
+   * @param director
    */
+
   VideoObj(String title, int year, String director) {
-    // TODO
-    _title = null;
-    _year = 0;
-    _director = null;
-     
+    if (  (title == null)
+            || (director == null)
+            || (year <= 1800)
+            || (year >= 5000)) {
+      throw new IllegalArgumentException();
+    }
+    this.title = title.trim();
+    this.director = director.trim();
+    this.year = year;
+    if (  ("".equals(title))
+            || ("".equals(director))) {
+      throw new IllegalArgumentException();
+    }
   }
 
-  /**
-   * Return the value of the attribute.
+  /***
+   * sets the director attribute to video object
+   * @return
    */
+
   public String director() {
-    // TODO
-    return "director";
+    return director;
   }
 
-  /**
-   * Return the value of the attribute.
+  /***
+   * sets the title attribute to video object
+   * @return
    */
+
   public String title() {
-    // TODO
-    return "title";
+    return title;
   }
 
-  /**
-   * Return the value of the attribute.
+  /***
+   * sets the year attribute to bideo object
+   * @return
    */
+
   public int year() {
-    // TODO
-    return -1;
+    return year;
   }
 
-  /**
+  /***
    * Compare the attributes of this object with those of thatObject.
    * @param thatObject the Object to be compared.
    * @return deep equality test between this and thatObject.
    */
-  public boolean equals(Object thatObject) {
-    // TODO
-    return false;
+
+  public boolean equals(Object thatObject)
+  {
+    if (this == thatObject)
+    {
+      return true;
+    }
+    if ((this.getClass().equals(thatObject.getClass())) || thatObject == null)
+    {
+      return true;
+    }
+    if (this != thatObject)
+    {
+      return false;
+    }
+    if (!(this.getClass().equals(thatObject.getClass())))
+    {
+      return false;
+    }
+    if (!(thatObject instanceof VideoObj) ) {
+      return false;
+    }
+    //return false;
+    return thatObject.equals(this) && this.equals(thatObject);
   }
 
-  /**
+  /***
    * Return a hash code value for this object using the algorithm from Bloch:
    * fields are added in the following order: title, year, director.
    */
   public int hashCode() {
-    // TODO
-    return -1;
+    int result = 17;
+    result = 37*result + title.hashCode();
+    result = 37*result + year;
+    result = 37*result + director.hashCode();
+    return result;
   }
 
-  /**
+  /***
    * Compares the attributes of this object with those of thatObject, in
    * the following order: title, year, director.
    * @param that the VideoObj to be compared.
@@ -83,16 +111,32 @@ final class VideoObj implements Comparable<VideoObj> {
    *  object is less than, equal to, or greater than that object.
    */
   public int compareTo(VideoObj that) {
-    // TODO
-    return -1;
+    int titleDiff = title.compareTo(that.title());
+    if (titleDiff != 0) {
+      return titleDiff;
+    }
+    int yearDiff = Integer.compare (year, that.year());
+    if (yearDiff != 0) {
+      return yearDiff;
+    }
+    int directorDiff = director.compareTo(that.director());
+    if (directorDiff != 0) {
+      return directorDiff;
+    }
+    return 0;
   }
 
-  /**
+  /***
    * Return a string representation of the object in the following format:
    * <code>"title (year) : director"</code>.
    */
   public String toString() {
-    // TODO
-    return "El Mariachi (1996) : Rodriguez";
+    StringBuilder buffer = new StringBuilder();
+    buffer.append(title);
+    buffer.append(" (");
+    buffer.append(year);
+    buffer.append(") : ");
+    buffer.append(director);
+    return buffer.toString();
   }
 }

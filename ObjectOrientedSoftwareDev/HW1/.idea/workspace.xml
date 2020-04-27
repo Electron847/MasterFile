@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="321b6fab-72ad-458a-b0ad-9aceeabeb959" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Counter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/CounterClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Reg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW1/InventorySet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/InventorySet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW1/InventoryTEST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/InventoryTEST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW1/RecordTEST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/RecordTEST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW1/VideoObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/VideoObj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW1/VideoTEST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW1/VideoTEST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InventorySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventorySet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InventoryTEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryTEST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Record.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RecordTEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecordTEST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoTEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoTEST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/AdventureGame/AdventureGameSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/AdventureGame/AdventureGameSimulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/Worksheets/Reg.class" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/Worksheets/Reg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Reg.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Reg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4ReorganizingBST-2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4ReorganizingBST-3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4TestReorganizingBST-2.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,26 +28,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InventorySet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="270">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#642#659#0" expanded="true" />
-                <element signature="e#753#754#0" expanded="true" />
-                <element signature="e#781#782#0" expanded="true" />
-                <element signature="e#1299#1307#0" expanded="true" />
-                <element signature="e#3762#3763#0" expanded="true" />
-                <element signature="e#3784#3785#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InventoryTEST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            <state relative-caret-position="1305">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VideoTEST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2034">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="195">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,16 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VideoObj.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1547">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-              <folding>
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#1236#1237#0" expanded="true" />
-                <element signature="e#1258#1259#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1355#1356#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -139,9 +114,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="60" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="207" />
+    <option name="y" value="23" />
     <option name="width" value="959" />
     <option name="height" value="712" />
   </component>
@@ -152,6 +127,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,15 +140,18 @@
               <item name="HW1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="HW1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586222848662" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586808183836" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -204,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VideoTEST">
+  <component name="RunManager" selected="JUnit.InventoryTEST">
     <configuration name="InventoryTEST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW1" />
       <option name="PACKAGE_NAME" value="" />
@@ -255,8 +234,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VideoTEST" />
         <item itemvalue="JUnit.InventoryTEST" />
+        <item itemvalue="JUnit.VideoTEST" />
         <item itemvalue="JUnit.InventoryTEST.testCheckOutCheckIn" />
         <item itemvalue="JUnit.VideoTEST.testEquals" />
         <item itemvalue="JUnit.VideoTEST.testToString" />
@@ -320,12 +299,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InventoryTEST - 2020.04.06 at 17h 13m 35s.xml">
-      <configuration name="InventoryTEST" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InventoryTEST_testCheckOutCheckIn - 2020.04.06 at 17h 14m 15s.xml">
-      <configuration name="InventoryTEST.testCheckOutCheckIn" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="InventoryTEST - 2020.04.06 at 17h 15m 02s.xml">
       <configuration name="InventoryTEST" configurationId="JUnit" />
     </history-entry>
@@ -350,11 +323,18 @@
     <history-entry file="VideoTEST - 2020.04.06 at 20h 04m 10s.xml">
       <configuration name="VideoTEST" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VideoTEST - 2020.04.11 at 19h 26m 23s.xml">
+      <configuration name="VideoTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.13 at 12h 34m 23s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="25" width="959" height="712" extended-state="1" />
+    <frame x="207" y="23" width="959" height="712" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22491731" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24255788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -363,7 +343,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294509" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16306156" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31946754" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -372,7 +352,6 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3294509" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.5238866" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -381,6 +360,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.5238866" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -414,24 +394,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InventorySet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="270">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#642#659#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-            <element signature="e#1299#1307#0" expanded="true" />
-            <element signature="e#3762#3763#0" expanded="true" />
-            <element signature="e#3784#3785#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InventoryTEST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -452,25 +416,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VideoObj.java">
+    <entry file="file://$PROJECT_DIR$/src/VideoTEST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1547">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="195">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
-            <element signature="e#764#765#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1355#1356#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VideoTEST.java">
+    <entry file="file://$PROJECT_DIR$/src/VideoObj.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2034">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="210">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InventoryTEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

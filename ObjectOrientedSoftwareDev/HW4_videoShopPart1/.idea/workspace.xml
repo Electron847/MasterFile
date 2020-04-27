@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9353ed6e-8f66-4078-a88b-501e54e281ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../FP_practice/.idea/FP_practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FP_practice/src/HW3/anInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FP_practice/src/HW3/anInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HW1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW3/src/HW3/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW3/src/HW3/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW3/src/HW3/StackImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW3/src/HW3/StackImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW3/src/HW3/stackClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW3/src/HW3/stackClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/Worksheets/Reg.class" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/Worksheets/Reg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Reg.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Reg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4ReorganizingBST-2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4ReorganizingBST-3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4TestReorganizingBST-2.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/shop/data/InventoryTEST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="106" column="7" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#3779#3786#0" expanded="true" />
+                <element signature="e#4422#4429#0" expanded="true" />
+                <element signature="e#4772#4773#0" expanded="true" />
+                <element signature="e#4834#4835#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/shop/data/Data.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="78" column="68" selection-start-line="78" selection-start-column="68" selection-end-line="78" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/shop/data/VideoObj.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-395">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <folding>
+                <element signature="e#416#417#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/shop/data/InventorySet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="54" column="63" lean-forward="true" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#839#840#0" expanded="true" />
+                <element signature="e#885#886#0" expanded="true" />
+                <element signature="e#1233#1234#0" expanded="true" />
+                <element signature="e#1311#1312#0" expanded="true" />
+                <element signature="e#4819#4820#0" expanded="true" />
+                <element signature="e#4842#4843#0" expanded="true" />
+                <element signature="e#5850#5851#0" expanded="true" />
+                <element signature="e#5876#5877#0" expanded="true" />
+                <element signature="e#5905#5906#0" expanded="true" />
+                <element signature="e#5934#5935#0" expanded="true" />
+                <element signature="e#5961#5962#0" expanded="true" />
+                <element signature="e#5988#5989#0" expanded="true" />
+                <element signature="e#6019#6020#0" expanded="true" />
+                <element signature="e#6050#6051#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/shop/main/TEST1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2078">
+              <caret line="178" selection-start-line="178" selection-end-line="178" />
+              <folding>
+                <element signature="e#466#498#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#744#745#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#2810#2811#0" expanded="true" />
+                <element signature="e#2868#2869#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/shop/data/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/shop/data/CmdOut.java" />
+        <option value="$PROJECT_DIR$/src/shop/data/CmdAdd.java" />
+        <option value="$PROJECT_DIR$/src/shop/data/VideoObj.java" />
+        <option value="$PROJECT_DIR$/src/shop/main/TEST1.java" />
+        <option value="$PROJECT_DIR$/src/shop/data/VideoTEST.java" />
+        <option value="$PROJECT_DIR$/src/shop/data/InventorySet.java" />
+        <option value="$PROJECT_DIR$/src/shop/data/InventoryTEST.java" />
+        <option value="$PROJECT_DIR$/src/shop/data/Data.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="30" />
+    <option name="y" value="73" />
+    <option name="width" value="926" />
+    <option name="height" value="712" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HW4_videoShopPart1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4_videoShopPart1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4_videoShopPart1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4_videoShopPart1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4_videoShopPart1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4_videoShopPart1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW4_videoShopPart1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW4_videoShopPart1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588006589040" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.InventoryTEST">
+    <configuration name="DataTEST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4_videoShopPart1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shop.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shop.data" />
+      <option name="MAIN_CLASS_NAME" value="shop.data.DataTEST" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryTEST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4_videoShopPart1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shop.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shop.data" />
+      <option name="MAIN_CLASS_NAME" value="shop.data.InventoryTEST" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TEST1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4_videoShopPart1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shop.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shop.main" />
+      <option name="MAIN_CLASS_NAME" value="shop.main.TEST1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoTEST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4_videoShopPart1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shop.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shop.data" />
+      <option name="MAIN_CLASS_NAME" value="shop.data.VideoTEST" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoTEST.testHashCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW4_videoShopPart1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shop.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="shop.data" />
+      <option name="MAIN_CLASS_NAME" value="shop.data.VideoTEST" />
+      <option name="METHOD_NAME" value="testHashCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InventoryTEST" />
+        <item itemvalue="JUnit.DataTEST" />
+        <item itemvalue="JUnit.VideoTEST" />
+        <item itemvalue="JUnit.VideoTEST.testHashCode" />
+        <item itemvalue="JUnit.TEST1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../MapReduceFiles/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../PageRank/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../akka-quickstart-scala" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-3/mapreduce" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-3/remote3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code/first" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code/pingpong" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce11" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distributed Systems 2/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distributed Systems 2/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code 2/GenericService" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Distrib2_HW3/mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/MapReduceFiles/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/MapReduceFiles/pageRank" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code 2/GenericService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote3" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/FaultTolerance" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/LifeCycle" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/ShutdownDemo" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code/pingpong" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/hw" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/workingMapReduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/00/00/704DF97F-BEF7-4815-9184-25D832284BC6/GroupService 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/9a/10/901A2628-8082-4F3E-9B72-387F8FE2CD90/GroupService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/b8/08/36E2BDE1-F4AC-463C-8E4D-648F85087BB9/GroupService 2" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9353ed6e-8f66-4078-a88b-501e54e281ee" name="Default Changelist" comment="" />
+      <created>1587921185253</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587921185253</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="InventoryTEST - 2020.04.26 at 13h 12m 03s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 13h 12m 40s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 13h 13m 12s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 13h 20m 13s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 13h 58m 58s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 13h 59m 03s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 13h 59m 06s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 13h 59m 10s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 16h 11m 24s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventoryTEST - 2020.04.26 at 16h 12m 01s.xml">
+      <configuration name="InventoryTEST" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="261" y="23" width="926" height="712" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.04347826" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.3294509" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41763726" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933443" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3544093" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/shop/data/CmdOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/CmdClear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/CmdAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/CmdIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/main/TEST1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2078">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+          <folding>
+            <element signature="e#466#498#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#2810#2811#0" expanded="true" />
+            <element signature="e#2868#2869#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/VideoTEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#109#141#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/DataTEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-740">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/VideoObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-395">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/InventorySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="54" column="63" lean-forward="true" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#4819#4820#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#5850#5851#0" expanded="true" />
+            <element signature="e#5876#5877#0" expanded="true" />
+            <element signature="e#5905#5906#0" expanded="true" />
+            <element signature="e#5934#5935#0" expanded="true" />
+            <element signature="e#5961#5962#0" expanded="true" />
+            <element signature="e#5988#5989#0" expanded="true" />
+            <element signature="e#6019#6020#0" expanded="true" />
+            <element signature="e#6050#6051#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/InventoryTEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="106" column="7" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#3779#3786#0" expanded="true" />
+            <element signature="e#4422#4429#0" expanded="true" />
+            <element signature="e#4772#4773#0" expanded="true" />
+            <element signature="e#4834#4835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shop/data/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="78" column="68" selection-start-line="78" selection-start-column="68" selection-end-line="78" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.12.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>HW4_videoShopPart1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

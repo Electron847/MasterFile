@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5e97b817-cf32-49f2-ac6c-6eaab8fd7b8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../FP_practice/src/HW3/anInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW3/src/HW3/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW3/src/HW3/StackImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW3/src/HW3/stackClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HW1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/Worksheets/Reg.class" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/out/production/WeekOneSE450/Worksheets/Reg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Reg.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week1Practice/WeekOneSE450/src/Worksheets/Reg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4ReorganizingBST-2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4ReorganizingBST-3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/DataStructures/A4TestReorganizingBST-2.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HW2/MyLinked.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2010">
+              <caret line="134" column="25" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HW2/AssertExp1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HW2/AssertExp1Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/HW2/MyLinkedTest.java" />
+        <option value="$PROJECT_DIR$/src/HW2/AssertExp1Test.java" />
+        <option value="$PROJECT_DIR$/src/HW2/AssertExp1.java" />
+        <option value="$PROJECT_DIR$/src/HW2/MyLinked.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="41" />
+    <option name="y" value="87" />
+    <option name="width" value="927" />
+    <option name="height" value="633" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SE450_HW2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SE450_HW2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SE450_HW2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SE450_HW2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SE450_HW2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SE450_HW2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="HW2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SE450_HW2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586808183823" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.AssertExp1Test">
+    <configuration name="AssertExp1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HW2.AssertExp1" />
+      <module name="SE450_HW2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HW2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssertExp1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SE450_HW2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HW2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HW2" />
+      <option name="MAIN_CLASS_NAME" value="HW2.AssertExp1Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyLinkedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SE450_HW2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HW2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HW2" />
+      <option name="MAIN_CLASS_NAME" value="HW2.MyLinkedTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AssertExp1Test" />
+        <item itemvalue="JUnit.MyLinkedTest" />
+        <item itemvalue="Application.AssertExp1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../MapReduceFiles/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../PageRank/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../akka-quickstart-scala" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-3/mapreduce" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-3/remote3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code/first" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code/pingpong" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce11" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distributed Systems 2/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distributed Systems 2/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code 2/GenericService" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Distrib2_HW3/mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/MapReduceFiles/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/MapReduceFiles/pageRank" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code 2/GenericService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote3" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/FaultTolerance" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/LifeCycle" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/ShutdownDemo" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code/pingpong" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/hw" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/workingMapReduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/00/00/704DF97F-BEF7-4815-9184-25D832284BC6/GroupService 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/9a/10/901A2628-8082-4F3E-9B72-387F8FE2CD90/GroupService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/b8/08/36E2BDE1-F4AC-463C-8E4D-648F85087BB9/GroupService 2" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e97b817-cf32-49f2-ac6c-6eaab8fd7b8d" name="Default Changelist" comment="" />
+      <created>1586743531443</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586743531443</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MyLinkedTest - 2020.04.13 at 14h 56m 44s.xml">
+      <configuration name="MyLinkedTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssertExp1Test - 2020.04.13 at 14h 59m 42s.xml">
+      <configuration name="AssertExp1Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssertExp1Test - 2020.04.13 at 19h 43m 27s.xml">
+      <configuration name="AssertExp1Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyLinkedTest - 2020.04.13 at 19h 43m 38s.xml">
+      <configuration name="MyLinkedTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyLinkedTest - 2020.04.13 at 19h 57m 49s.xml">
+      <configuration name="MyLinkedTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyLinkedTest - 2020.04.13 at 20h 04m 33s.xml">
+      <configuration name="MyLinkedTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssertExp1Test - 2020.04.13 at 20h 04m 53s.xml">
+      <configuration name="AssertExp1Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssertExp1Test - 2020.04.13 at 20h 56m 31s.xml">
+      <configuration name="AssertExp1Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssertExp1Test - 2020.04.13 at 21h 07m 45s.xml">
+      <configuration name="AssertExp1Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssertExp1Test - 2020.04.13 at 21h 14m 06s.xml">
+      <configuration name="AssertExp1Test" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="41" y="87" width="927" height="633" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09485714" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38505748" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39961758" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3288719" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/HW2/MyLinkedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HW2/MyLinked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="134" column="25" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HW2/AssertExp1Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HW2/AssertExp1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.12.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SE450_HW2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

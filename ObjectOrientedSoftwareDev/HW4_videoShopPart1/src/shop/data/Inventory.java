@@ -3,23 +3,24 @@ package shop.data;
 import java.util.Comparator;
 import java.util.Iterator;
 
-/**
+/***
  * A collection of Records.
  * Records can only be created and destroyed using the Inventory.
  * @see Data
  */
 public interface Inventory extends Iterable<Record> {
-  /**
-   *  Return the number of Records.
+  /***
+   *  @return the number of Records.
    */
   public int size();
 
-  /**
-   *  Return the record for a given Video; if not present, return <code>null</code>.
+  /***
+   * @param v is the Video
+   *  @return the record for a given Video; if not present, return <code>null</code>.
    */
   public Record get(Video v);
 
-  /**
+  /***
    *  Return an iterator over Records in the Inventory.
    *  <p>The iterator returns objects that implement the Record interface.</p>
    *  <p>Any attempt to remove objects using the iterator should
@@ -28,8 +29,8 @@ public interface Inventory extends Iterable<Record> {
    */
   public Iterator<Record> iterator();
 
-  /**
-   *  Return an iterator over the Inventory, sorted accoring the
+  /***
+   *  @return an iterator over the Inventory, sorted accoring the
    *  Comparator.
    *  <p>The iterator returns objects that implement the
    *  <code>Record</code> interface.</p>
@@ -42,7 +43,8 @@ public interface Inventory extends Iterable<Record> {
    */
   public Iterator<Record> iterator(Comparator<Record> comparator);
 
-  /**
+  /***
+   *
    * Returns the inventory as a string; one record per line.
    */
   public String toString();

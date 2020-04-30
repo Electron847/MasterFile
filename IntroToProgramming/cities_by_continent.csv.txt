@@ -1,0 +1,5 @@
+Europe,Paris,London,Berlin
+Africa,Cairo,Tripoli,Rabat
+Asia,Tokyo,Beijing,Seoul
+South America,Caracas,Lima,Willemstad
+North America,Ottawa,Mexico City,San Jose

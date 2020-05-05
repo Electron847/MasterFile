@@ -36,7 +36,7 @@ public class TEST1 extends TestCase {
     Assert.assertEquals(1, _inventory.size());
     Assert.assertTrue(Data.newAddCmd(_inventory, v1, 5).run());
     Assert.assertEquals(1, _inventory.size());
-//     System.out.println(_inventory.get(v1));
+    System.out.println(_inventory.get(v1));
     expect(v1,"Title1 (2000) : Director1 [10,0,0]");
 
     Video v2 = Data.newVideo("Title2", 2001, "Director2");
@@ -77,7 +77,7 @@ public class TEST1 extends TestCase {
         return r2.numRentals() - r1.numRentals();
       }
     });
-    expect(it.next(),"Title1 (2000) : Director1 [10,3,4]");
+    expect(it.next(),"Title1 (2000) : Director1 [10,4,3]");
     expect(it.next(),"Title2 (2001) : Director2 [5,0,0]");
     Assert.assertFalse(it.hasNext());
   }

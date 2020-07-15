@@ -67,6 +67,16 @@ void run(char *args[])
     char string[256];
     pipe(fd);
     
+    struct namespaceName nsName;
+    string myHostName = "Host 847";
+    size_t namespaceNameSize = strnlen(myHostName);
+    if (sethostname(&myHostName,namespaceNameSize))
+    {
+        printf("Hostname Changed!");
+        printf("NodeName in Clone: %s\n", myHostName);
+    }
+    
+    
     if (strcmp(args[0], "exit") != 0)
         {   
 	    printf("%s\n", args[0]);
@@ -157,10 +167,14 @@ int main(void)
     action.sa_handler = handler;
     action.sa_flags = SA_RESTART;
     sigaction(SIGINT, &action, NULL);
-    char *args[MAX_LINE]; 
+    char *args[MAX_LINE];
+    
+    
 
     while (runFlag) {
         printf("Seth_Shell$ > "); //Welcome message
+        
+        
         fflush(stdout);		  //flush the display
         char input[MAX_LINE];     //create an array for the command line 
         fgets(input, MAX_LINE, stdin); //get the input from stdin

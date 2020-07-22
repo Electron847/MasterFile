@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c0885d0-539d-4c72-a4d6-932ad3f6e859" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/July2020/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ComputeSecurity/PasswordCracking/recovered_passwords.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/cookbooks/first_cookbook" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/cookbooks/first_cookbook" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/hw3sw" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/hw3sw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DataBase_Technologies/BasicJDBCDemo (1).java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DataBase_Technologies/BasicJDBCDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Elements/Lithium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Elements/Lithium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/HW4_videoShopPart1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/HW4_videoShopPart1/Honor_Statement.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/HW6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/HW6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/HW6/out/production/HW6/shop/ui/UIFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/HW6/out/production/HW6/shop/ui/UIFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/VideoShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ObjectOrientedSoftwareDev/VideoShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chemistry/Elements/Lithium.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chemistry/Elements/Lithium.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Python/Cryptology/assignment1/assignment1_page59_problem.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Structures/csc403/Ratings/csc402 2.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Structures/csc403/csc403_finalExam/BFS_Trace.java" beforeDir="false" />
@@ -35,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Elements/Lithium.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="317">
               <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding>
                 <element signature="e#256#257#0" expanded="true" />
@@ -90,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -115,11 +113,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/Elements/Element.java" />
         <option value="$PROJECT_DIR$/src/Elements/Helium.java" />
         <option value="$PROJECT_DIR$/src/Elements/Hydrogen.java" />
         <option value="$PROJECT_DIR$/src/Elements/Lithium.java" />
+        <option value="$PROJECT_DIR$/src/Main/Main.java" />
       </list>
     </option>
   </component>
@@ -154,6 +152,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Elements" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Chemistry" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chemistry" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -162,7 +166,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594960230674" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594962000688" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -259,7 +263,7 @@
     <frame x="367" y="23" width="747" height="712" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17697842" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17697842" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -309,13 +313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Elements/Hydrogen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -337,7 +334,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Elements/Lithium.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="317">
           <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding>
             <element signature="e#256#257#0" expanded="true" />
@@ -351,6 +348,13 @@
             <element signature="e#555#556#0" expanded="true" />
             <element signature="e#591#592#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>

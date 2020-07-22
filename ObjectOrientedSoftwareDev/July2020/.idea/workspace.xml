@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7f998af-b5ab-49c9-a7d4-64bfafefb80a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../ComputeSecurity/PasswordCracking/recovered_passwords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/cookbooks/first_cookbook" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/cookbooks/first_cookbook" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/hw3sw" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/hw3sw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase_Technologies/BasicJDBCDemo (1).java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase_Technologies/BasicJDBCDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python/Cryptology/assignment1/assignment1_page59_problem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/csc403/Ratings/csc402 2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Structures/csc403/csc403_finalExam/BFS_Trace.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/../../July2020/target/" />
+    <ignored path="$PROJECT_DIR$/../../July2020/project/project/target/" />
+    <ignored path="$PROJECT_DIR$/../../July2020/project/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/../../July2020">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../July2020/Chemistry/src/Main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Object" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../../July2020/src/main/scala/Hello.scala" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="144" />
+    <option name="y" value="28" />
+    <option name="width" value="914" />
+    <option name="height" value="712" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="July2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="July2020" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="July2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="July2020" type="462c0819:PsiDirectoryNode" />
+              <item name="Chemistry" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="July2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="July2020" type="462c0819:PsiDirectoryNode" />
+              <item name="Chemistry" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="July2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="July2020" type="462c0819:PsiDirectoryNode" />
+              <item name="Chemistry" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594960667113" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Hello" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Hello" />
+      <module name="July2020" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Hello" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="July2020" />
+              <option name="path" value="$PROJECT_DIR$/../../July2020" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="july2020 [file:/Users/sethweber/Desktop/CS/July2020/]" />
+                <option name="path" value="$PROJECT_DIR$/../../July2020" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="July2020-build" />
+                <option name="path" value="$PROJECT_DIR$/../../July2020/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../July2020" value="3188044770000" />
+        <entry key="$PROJECT_DIR$/../../July2020/build.sbt" value="637050297" />
+        <entry key="$PROJECT_DIR$/../../July2020/project/build.properties" value="2582063684" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../July2020" value="RE_IMPORT" />
+        <entry key="$PROJECT_DIR$/../../MapReduceFiles/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../PageRank/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../akka-quickstart-scala" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-3/mapreduce" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-3/remote3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code-4/remote3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code/first" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../code/pingpong" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce11" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../mapreduce3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distributed Systems 2/mReduce_Part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Distributed Systems 2/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../code 2/GenericService" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Distrib2_HW3/mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/MapReduceFiles/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/MapReduceFiles/pageRank" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code 2/GenericService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/mapreduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-3/remote3" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/FaultTolerance" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/LifeCycle" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code-6/ShutdownDemo" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/code/pingpong" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/hw" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/workingMapReduce" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/00/00/704DF97F-BEF7-4815-9184-25D832284BC6/GroupService 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/9a/10/901A2628-8082-4F3E-9B72-387F8FE2CD90/GroupService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Library/Messages/Attachments/b8/08/36E2BDE1-F4AC-463C-8E4D-648F85087BB9/GroupService 2" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7f998af-b5ab-49c9-a7d4-64bfafefb80a" name="Default Changelist" comment="" />
+      <created>1594022385454</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594022385454</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="144" y="28" width="914" height="712" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26334107" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3294509" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3294509" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" visible="true" weight="0.3294509" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3294509" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="11" weight="0.3294509" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="sbt" order="8" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../July2020/project/Hello.scala" />
+    <entry file="file://$PROJECT_DIR$/../../July2020/src/main/scala/Hello.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../July2020/Chemistry/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.12.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,27 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/project_2.12-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Threads1Solution$1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/Threads1Solution$1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sender.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/Sender.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	factR.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/factR.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Threads1Solution.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/Threads1Solution.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SHello$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/SHello$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SHello.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/SHello.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fact.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/fact.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	f.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/f.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Threads1Solution$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/Threads1Solution$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Threads1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/Threads1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PrintMessage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/PrintMessage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JHello.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jwiand/Desktop/tmp/closures/project/target/scala-2.12/classes/JHello.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

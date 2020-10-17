@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> headfirst<span style="color: #990000">.</span>decorator<span style="color: #990000">.</span>io<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>io<span style="color: #990000">.*;</span>
+<span style="color: #000000">00004:</span> 
+<span style="color: #000000">00005:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">InputTest</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00006:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>String<span style="color: #990000">[]</span> args<span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">throws</span></span> IOException <span style="color: #FF0000">{</span>
+<span style="color: #000000">00007:</span>                 <span style="color: #009900">int</span> c<span style="color: #990000">;</span>
+<span style="color: #000000">00008:</span> 
+<span style="color: #000000">00009:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">try</span></span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00010:</span>                         InputStream in <span style="color: #990000">=</span> 
+<span style="color: #000000">00011:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">LowerCaseInputStream</span></span><span style="color: #990000">(</span>
+<span style="color: #000000">00012:</span>                                         <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">BufferedInputStream</span></span><span style="color: #990000">(</span>
+<span style="color: #000000">00013:</span>                                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">FileInputStream</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"test.txt"</span><span style="color: #990000">)));</span>
+<span style="color: #000000">00014:</span> 
+<span style="color: #000000">00015:</span>                         <span style="font-weight: bold"><span style="color: #0000FF">while</span></span><span style="color: #990000">((</span>c <span style="color: #990000">=</span> in<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">read</span></span><span style="color: #990000">())</span> <span style="color: #990000">&gt;=</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00016:</span>                                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">((</span><span style="color: #009900">char</span><span style="color: #990000">)</span>c<span style="color: #990000">);</span>
+<span style="color: #000000">00017:</span>                         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00018:</span> 
+<span style="color: #000000">00019:</span>                         in<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">close</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00020:</span>                 <span style="color: #FF0000">}</span> <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>IOException e<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00021:</span>                         e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">printStackTrace</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00022:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00023:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00024:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

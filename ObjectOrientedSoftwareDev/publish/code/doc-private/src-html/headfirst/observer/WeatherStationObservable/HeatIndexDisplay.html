@@ -1,0 +1,108 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package headfirst.observer.WeatherStationObservable;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.util.Observable;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import java.util.Observer;<a name="line.4"></a>
+<FONT color="green">005</FONT>    <a name="line.5"></a>
+<FONT color="green">006</FONT>    public class HeatIndexDisplay implements Observer, DisplayElement {<a name="line.6"></a>
+<FONT color="green">007</FONT>            float heatIndex = 0.0f;<a name="line.7"></a>
+<FONT color="green">008</FONT>    <a name="line.8"></a>
+<FONT color="green">009</FONT>            public HeatIndexDisplay(Observable observable) {<a name="line.9"></a>
+<FONT color="green">010</FONT>                    observable.addObserver(this);<a name="line.10"></a>
+<FONT color="green">011</FONT>            }<a name="line.11"></a>
+<FONT color="green">012</FONT>    <a name="line.12"></a>
+<FONT color="green">013</FONT>            public void update(Observable observable, Object arg) {<a name="line.13"></a>
+<FONT color="green">014</FONT>                    if (observable instanceof WeatherData) {<a name="line.14"></a>
+<FONT color="green">015</FONT>                            WeatherData weatherData = (WeatherData)observable;<a name="line.15"></a>
+<FONT color="green">016</FONT>                            float t = weatherData.getTemperature();<a name="line.16"></a>
+<FONT color="green">017</FONT>                            float rh = weatherData.getHumidity();<a name="line.17"></a>
+<FONT color="green">018</FONT>                            heatIndex = (float)<a name="line.18"></a>
+<FONT color="green">019</FONT>                                    (<a name="line.19"></a>
+<FONT color="green">020</FONT>                                    (16.923 + (0.185212 * t)) + <a name="line.20"></a>
+<FONT color="green">021</FONT>                                    (5.37941 * rh) - <a name="line.21"></a>
+<FONT color="green">022</FONT>                                    (0.100254 * t * rh) + <a name="line.22"></a>
+<FONT color="green">023</FONT>                                    (0.00941695 * (t * t)) + <a name="line.23"></a>
+<FONT color="green">024</FONT>                                    (0.00728898 * (rh * rh)) + <a name="line.24"></a>
+<FONT color="green">025</FONT>                                    (0.000345372 * (t * t * rh)) - <a name="line.25"></a>
+<FONT color="green">026</FONT>                                    (0.000814971 * (t * rh * rh)) +<a name="line.26"></a>
+<FONT color="green">027</FONT>                                    (0.0000102102 * (t * t * rh * rh)) - <a name="line.27"></a>
+<FONT color="green">028</FONT>                                    (0.000038646 * (t * t * t)) + <a name="line.28"></a>
+<FONT color="green">029</FONT>                                    (0.0000291583 * (rh * rh * rh)) +<a name="line.29"></a>
+<FONT color="green">030</FONT>                                    (0.00000142721 * (t * t * t * rh)) + <a name="line.30"></a>
+<FONT color="green">031</FONT>                                    (0.000000197483 * (t * rh * rh * rh)) - <a name="line.31"></a>
+<FONT color="green">032</FONT>                                    (0.0000000218429 * (t * t * t * rh * rh)) +<a name="line.32"></a>
+<FONT color="green">033</FONT>                                    (0.000000000843296 * (t * t * rh * rh * rh)) -<a name="line.33"></a>
+<FONT color="green">034</FONT>                                    (0.0000000000481975 * (t * t * t * rh * rh * rh)));<a name="line.34"></a>
+<FONT color="green">035</FONT>                            display();<a name="line.35"></a>
+<FONT color="green">036</FONT>                    }<a name="line.36"></a>
+<FONT color="green">037</FONT>            }<a name="line.37"></a>
+<FONT color="green">038</FONT>    <a name="line.38"></a>
+<FONT color="green">039</FONT>            public void display() {<a name="line.39"></a>
+<FONT color="green">040</FONT>                    System.out.println("Heat index is " + heatIndex);<a name="line.40"></a>
+<FONT color="green">041</FONT>            }<a name="line.41"></a>
+<FONT color="green">042</FONT>    }<a name="line.42"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

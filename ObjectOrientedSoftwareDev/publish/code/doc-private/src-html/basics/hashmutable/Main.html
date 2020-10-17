@@ -1,0 +1,99 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package basics.hashmutable;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.util.Date;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.util.Hashtable;<a name="line.3"></a>
+<FONT color="green">004</FONT>    // example from http://www.vipan.com/htdocs/hashcode_help.html<a name="line.4"></a>
+<FONT color="green">005</FONT>    public class Main {<a name="line.5"></a>
+<FONT color="green">006</FONT>      public static void main (String[] args) {<a name="line.6"></a>
+<FONT color="green">007</FONT>        Hashtable&lt;Date,String&gt; map = new Hashtable&lt;Date,String&gt;();<a name="line.7"></a>
+<FONT color="green">008</FONT>        long time = System.currentTimeMillis();<a name="line.8"></a>
+<FONT color="green">009</FONT>        Date dt = new Date(time);<a name="line.9"></a>
+<FONT color="green">010</FONT>        Date dt2 = new Date(time);<a name="line.10"></a>
+<FONT color="green">011</FONT>        <a name="line.11"></a>
+<FONT color="green">012</FONT>        System.out.println("dt.toString() = " + dt.toString());<a name="line.12"></a>
+<FONT color="green">013</FONT>        System.out.println("dt2.toString() = " + dt2.toString());<a name="line.13"></a>
+<FONT color="green">014</FONT>        System.out.println("Is dt2.equals(dt)? = " + dt2.equals(dt));<a name="line.14"></a>
+<FONT color="green">015</FONT>        <a name="line.15"></a>
+<FONT color="green">016</FONT>        map.put(dt, "blah");<a name="line.16"></a>
+<FONT color="green">017</FONT>        System.out.println("map.get(dt) = " + map.get(dt) );<a name="line.17"></a>
+<FONT color="green">018</FONT>        System.out.println("map.get(dt2) = " + map.get(dt2) );<a name="line.18"></a>
+<FONT color="green">019</FONT>        <a name="line.19"></a>
+<FONT color="green">020</FONT>        // Change dt by adding a day to its time<a name="line.20"></a>
+<FONT color="green">021</FONT>        long newTime = time + 24*60*60*1000;<a name="line.21"></a>
+<FONT color="green">022</FONT>        dt.setTime(newTime);<a name="line.22"></a>
+<FONT color="green">023</FONT>        <a name="line.23"></a>
+<FONT color="green">024</FONT>        System.out.println("\nAfter dt.setTime(newTime):");<a name="line.24"></a>
+<FONT color="green">025</FONT>        System.out.println("dt.toString() = " + dt.toString());<a name="line.25"></a>
+<FONT color="green">026</FONT>        System.out.println("dt2.toString() = " + dt2.toString());<a name="line.26"></a>
+<FONT color="green">027</FONT>        System.out.println("Is dt2.equals(dt)? = " + dt2.equals(dt));<a name="line.27"></a>
+<FONT color="green">028</FONT>        System.out.println("map.get(dt) = " + map.get(dt) );<a name="line.28"></a>
+<FONT color="green">029</FONT>        System.out.println("map.get(dt2) = " + map.get(dt2) );<a name="line.29"></a>
+<FONT color="green">030</FONT>        <a name="line.30"></a>
+<FONT color="green">031</FONT>        System.out.println("\nmap = " + map.toString() );<a name="line.31"></a>
+<FONT color="green">032</FONT>      }<a name="line.32"></a>
+<FONT color="green">033</FONT>    }<a name="line.33"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

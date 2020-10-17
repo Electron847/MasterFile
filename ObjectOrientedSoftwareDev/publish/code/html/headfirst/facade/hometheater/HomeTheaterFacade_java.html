@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> headfirst<span style="color: #990000">.</span>facade<span style="color: #990000">.</span>hometheater<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">HomeTheaterFacade</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00004:</span>         Amplifier amp<span style="color: #990000">;</span>
+<span style="color: #000000">00005:</span>         Tuner tuner<span style="color: #990000">;</span>
+<span style="color: #000000">00006:</span>         DvdPlayer dvd<span style="color: #990000">;</span>
+<span style="color: #000000">00007:</span>         CdPlayer cd<span style="color: #990000">;</span>
+<span style="color: #000000">00008:</span>         Projector projector<span style="color: #990000">;</span>
+<span style="color: #000000">00009:</span>         TheaterLights lights<span style="color: #990000">;</span>
+<span style="color: #000000">00010:</span>         Screen screen<span style="color: #990000">;</span>
+<span style="color: #000000">00011:</span>         PopcornPopper popper<span style="color: #990000">;</span>
+<span style="color: #000000">00012:</span>  
+<span style="color: #000000">00013:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">HomeTheaterFacade</span></span><span style="color: #990000">(</span>Amplifier amp<span style="color: #990000">,</span> 
+<span style="color: #000000">00014:</span>                                  Tuner tuner<span style="color: #990000">,</span> 
+<span style="color: #000000">00015:</span>                                  DvdPlayer dvd<span style="color: #990000">,</span> 
+<span style="color: #000000">00016:</span>                                  CdPlayer cd<span style="color: #990000">,</span> 
+<span style="color: #000000">00017:</span>                                  Projector projector<span style="color: #990000">,</span> 
+<span style="color: #000000">00018:</span>                                  Screen screen<span style="color: #990000">,</span>
+<span style="color: #000000">00019:</span>                                  TheaterLights lights<span style="color: #990000">,</span>
+<span style="color: #000000">00020:</span>                                  PopcornPopper popper<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00021:</span>  
+<span style="color: #000000">00022:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>amp <span style="color: #990000">=</span> amp<span style="color: #990000">;</span>
+<span style="color: #000000">00023:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>tuner <span style="color: #990000">=</span> tuner<span style="color: #990000">;</span>
+<span style="color: #000000">00024:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>dvd <span style="color: #990000">=</span> dvd<span style="color: #990000">;</span>
+<span style="color: #000000">00025:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>cd <span style="color: #990000">=</span> cd<span style="color: #990000">;</span>
+<span style="color: #000000">00026:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>projector <span style="color: #990000">=</span> projector<span style="color: #990000">;</span>
+<span style="color: #000000">00027:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>screen <span style="color: #990000">=</span> screen<span style="color: #990000">;</span>
+<span style="color: #000000">00028:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>lights <span style="color: #990000">=</span> lights<span style="color: #990000">;</span>
+<span style="color: #000000">00029:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>popper <span style="color: #990000">=</span> popper<span style="color: #990000">;</span>
+<span style="color: #000000">00030:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00031:</span>  
+<span style="color: #000000">00032:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">watchMovie</span></span><span style="color: #990000">(</span>String movie<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00033:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Get ready to watch a movie..."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00034:</span>                 popper<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00035:</span>                 popper<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">pop</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00036:</span>                 lights<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">dim</span></span><span style="color: #990000">(</span><span style="color: #993399">10</span><span style="color: #990000">);</span>
+<span style="color: #000000">00037:</span>                 screen<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">down</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00038:</span>                 projector<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00039:</span>                 projector<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wideScreenMode</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00040:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00041:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setDvd</span></span><span style="color: #990000">(</span>dvd<span style="color: #990000">);</span>
+<span style="color: #000000">00042:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setSurroundSound</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00043:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setVolume</span></span><span style="color: #990000">(</span><span style="color: #993399">5</span><span style="color: #990000">);</span>
+<span style="color: #000000">00044:</span>                 dvd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00045:</span>                 dvd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">play</span></span><span style="color: #990000">(</span>movie<span style="color: #990000">);</span>
+<span style="color: #000000">00046:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00047:</span>  
+<span style="color: #000000">00048:</span>  
+<span style="color: #000000">00049:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">endMovie</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00050:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Shutting movie theater down..."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00051:</span>                 popper<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00052:</span>                 lights<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00053:</span>                 screen<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">up</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00054:</span>                 projector<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00055:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00056:</span>                 dvd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">stop</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00057:</span>                 dvd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">eject</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00058:</span>                 dvd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00059:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00060:</span> 
+<span style="color: #000000">00061:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">listenToCd</span></span><span style="color: #990000">(</span>String cdTitle<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00062:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Get ready for an audiopile experence..."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00063:</span>                 lights<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00064:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00065:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setVolume</span></span><span style="color: #990000">(</span><span style="color: #993399">5</span><span style="color: #990000">);</span>
+<span style="color: #000000">00066:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setCd</span></span><span style="color: #990000">(</span>cd<span style="color: #990000">);</span>
+<span style="color: #000000">00067:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setStereoSound</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00068:</span>                 cd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00069:</span>                 cd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">play</span></span><span style="color: #990000">(</span>cdTitle<span style="color: #990000">);</span>
+<span style="color: #000000">00070:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00071:</span> 
+<span style="color: #000000">00072:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">endCd</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00073:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Shutting down CD..."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00074:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00075:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setCd</span></span><span style="color: #990000">(</span>cd<span style="color: #990000">);</span>
+<span style="color: #000000">00076:</span>                 cd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">eject</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00077:</span>                 cd<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00078:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00079:</span> 
+<span style="color: #000000">00080:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">listenToRadio</span></span><span style="color: #990000">(</span><span style="color: #009900">double</span> frequency<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00081:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Tuning in the airwaves..."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00082:</span>                 tuner<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00083:</span>                 tuner<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setFrequency</span></span><span style="color: #990000">(</span>frequency<span style="color: #990000">);</span>
+<span style="color: #000000">00084:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00085:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setVolume</span></span><span style="color: #990000">(</span><span style="color: #993399">5</span><span style="color: #990000">);</span>
+<span style="color: #000000">00086:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setTuner</span></span><span style="color: #990000">(</span>tuner<span style="color: #990000">);</span>
+<span style="color: #000000">00087:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00088:</span> 
+<span style="color: #000000">00089:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">endRadio</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00090:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Shutting down the tuner..."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00091:</span>                 tuner<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00092:</span>                 amp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00093:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00094:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

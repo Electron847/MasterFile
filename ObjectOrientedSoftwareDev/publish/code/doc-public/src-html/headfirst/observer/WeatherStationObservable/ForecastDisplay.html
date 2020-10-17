@@ -1,0 +1,99 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package headfirst.observer.WeatherStationObservable;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.util.Observable;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import java.util.Observer;<a name="line.4"></a>
+<FONT color="green">005</FONT>    <a name="line.5"></a>
+<FONT color="green">006</FONT>    public class ForecastDisplay implements Observer, DisplayElement {<a name="line.6"></a>
+<FONT color="green">007</FONT>            private float currentPressure = 29.92f;  <a name="line.7"></a>
+<FONT color="green">008</FONT>            private float lastPressure;<a name="line.8"></a>
+<FONT color="green">009</FONT>    <a name="line.9"></a>
+<FONT color="green">010</FONT>            public ForecastDisplay(Observable observable) {<a name="line.10"></a>
+<FONT color="green">011</FONT>                    observable.addObserver(this);<a name="line.11"></a>
+<FONT color="green">012</FONT>            }<a name="line.12"></a>
+<FONT color="green">013</FONT>    <a name="line.13"></a>
+<FONT color="green">014</FONT>            public void update(Observable observable, Object arg) {<a name="line.14"></a>
+<FONT color="green">015</FONT>                    if (observable instanceof WeatherData) {<a name="line.15"></a>
+<FONT color="green">016</FONT>                            WeatherData weatherData = (WeatherData)observable;<a name="line.16"></a>
+<FONT color="green">017</FONT>                            lastPressure = currentPressure;<a name="line.17"></a>
+<FONT color="green">018</FONT>                            currentPressure = weatherData.getPressure();<a name="line.18"></a>
+<FONT color="green">019</FONT>                            display();<a name="line.19"></a>
+<FONT color="green">020</FONT>                    }<a name="line.20"></a>
+<FONT color="green">021</FONT>            }<a name="line.21"></a>
+<FONT color="green">022</FONT>    <a name="line.22"></a>
+<FONT color="green">023</FONT>            public void display() {<a name="line.23"></a>
+<FONT color="green">024</FONT>                    System.out.print("Forecast: ");<a name="line.24"></a>
+<FONT color="green">025</FONT>                    if (currentPressure &gt; lastPressure) {<a name="line.25"></a>
+<FONT color="green">026</FONT>                            System.out.println("Improving weather on the way!");<a name="line.26"></a>
+<FONT color="green">027</FONT>                    } else if (currentPressure == lastPressure) {<a name="line.27"></a>
+<FONT color="green">028</FONT>                            System.out.println("More of the same");<a name="line.28"></a>
+<FONT color="green">029</FONT>                    } else if (currentPressure &lt; lastPressure) {<a name="line.29"></a>
+<FONT color="green">030</FONT>                            System.out.println("Watch out for cooler, rainy weather");<a name="line.30"></a>
+<FONT color="green">031</FONT>                    }<a name="line.31"></a>
+<FONT color="green">032</FONT>            }<a name="line.32"></a>
+<FONT color="green">033</FONT>    }<a name="line.33"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

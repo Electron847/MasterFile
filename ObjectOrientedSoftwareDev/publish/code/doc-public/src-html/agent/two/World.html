@@ -1,0 +1,100 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package agent.two;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import agent.Agent;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import agent.TimeServer;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import agent.TimeServerLinked;<a name="line.4"></a>
+<FONT color="green">005</FONT>    <a name="line.5"></a>
+<FONT color="green">006</FONT>    public class Main {<a name="line.6"></a>
+<FONT color="green">007</FONT>      public static void main (String[] args) {<a name="line.7"></a>
+<FONT color="green">008</FONT>        World w = World.instance;<a name="line.8"></a>
+<FONT color="green">009</FONT>        Agent a = new Tiger();<a name="line.9"></a>
+<FONT color="green">010</FONT>        w.time().enqueue(0,a);<a name="line.10"></a>
+<FONT color="green">011</FONT>        w.time().run(100);<a name="line.11"></a>
+<FONT color="green">012</FONT>      }<a name="line.12"></a>
+<FONT color="green">013</FONT>    }<a name="line.13"></a>
+<FONT color="green">014</FONT>    <a name="line.14"></a>
+<FONT color="green">015</FONT>    interface World {<a name="line.15"></a>
+<FONT color="green">016</FONT>      public static final World instance = new WorldObj();<a name="line.16"></a>
+<FONT color="green">017</FONT>      public TimeServer time();<a name="line.17"></a>
+<FONT color="green">018</FONT>      public Object[][] space();<a name="line.18"></a>
+<FONT color="green">019</FONT>    }<a name="line.19"></a>
+<FONT color="green">020</FONT>    <a name="line.20"></a>
+<FONT color="green">021</FONT>    class WorldObj implements World {<a name="line.21"></a>
+<FONT color="green">022</FONT>      private TimeServer _time = new TimeServerLinked();<a name="line.22"></a>
+<FONT color="green">023</FONT>      private Object[][] _space = new Object[100][100];<a name="line.23"></a>
+<FONT color="green">024</FONT>      public TimeServer time()  { return _time; }<a name="line.24"></a>
+<FONT color="green">025</FONT>      public Object[][] space() { return _space; }<a name="line.25"></a>
+<FONT color="green">026</FONT>    }<a name="line.26"></a>
+<FONT color="green">027</FONT>      <a name="line.27"></a>
+<FONT color="green">028</FONT>    class Tiger implements Agent {<a name="line.28"></a>
+<FONT color="green">029</FONT>      public void run() {<a name="line.29"></a>
+<FONT color="green">030</FONT>        World w = World.instance;<a name="line.30"></a>
+<FONT color="green">031</FONT>        System.out.println("It's " + w.time().currentTime() + " and I'm alive!");<a name="line.31"></a>
+<FONT color="green">032</FONT>        w.time().enqueue(10+w.time().currentTime(), this);<a name="line.32"></a>
+<FONT color="green">033</FONT>      }<a name="line.33"></a>
+<FONT color="green">034</FONT>    }  <a name="line.34"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

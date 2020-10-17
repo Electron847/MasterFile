@@ -1,0 +1,189 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package visitor.list;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    /* public */<a name="line.3"></a>
+<FONT color="green">004</FONT>    interface List {<a name="line.4"></a>
+<FONT color="green">005</FONT>      public &lt;T&gt; T accept(ListVisitor&lt;T&gt; v);<a name="line.5"></a>
+<FONT color="green">006</FONT>    }<a name="line.6"></a>
+<FONT color="green">007</FONT>    <a name="line.7"></a>
+<FONT color="green">008</FONT>    /* public */<a name="line.8"></a>
+<FONT color="green">009</FONT>    class ListF {<a name="line.9"></a>
+<FONT color="green">010</FONT>      private ListF() {}<a name="line.10"></a>
+<FONT color="green">011</FONT>      public static final List nil = new Nil(); /* Singleton */<a name="line.11"></a>
+<FONT color="green">012</FONT>      public static final List cons(int hd, List tl) /* Factory */ {<a name="line.12"></a>
+<FONT color="green">013</FONT>        return new Cons(hd, tl);<a name="line.13"></a>
+<FONT color="green">014</FONT>      }<a name="line.14"></a>
+<FONT color="green">015</FONT>    }<a name="line.15"></a>
+<FONT color="green">016</FONT>    <a name="line.16"></a>
+<FONT color="green">017</FONT>    /* public */<a name="line.17"></a>
+<FONT color="green">018</FONT>    interface ListVisitor&lt;T&gt; {<a name="line.18"></a>
+<FONT color="green">019</FONT>      public T visitNil();<a name="line.19"></a>
+<FONT color="green">020</FONT>      public T visitCons(int hd, List tl);<a name="line.20"></a>
+<FONT color="green">021</FONT>    }<a name="line.21"></a>
+<FONT color="green">022</FONT>    <a name="line.22"></a>
+<FONT color="green">023</FONT>    /*<a name="line.23"></a>
+<FONT color="green">024</FONT>     *************************************************************************<a name="line.24"></a>
+<FONT color="green">025</FONT>     * List classes.<a name="line.25"></a>
+<FONT color="green">026</FONT>     *************************************************************************<a name="line.26"></a>
+<FONT color="green">027</FONT>     */<a name="line.27"></a>
+<FONT color="green">028</FONT>    class Nil implements List {<a name="line.28"></a>
+<FONT color="green">029</FONT>      Nil() {}<a name="line.29"></a>
+<FONT color="green">030</FONT>      public String toString() { return "nil"; }<a name="line.30"></a>
+<FONT color="green">031</FONT>      public &lt;T&gt; T accept(ListVisitor&lt;T&gt; v) {<a name="line.31"></a>
+<FONT color="green">032</FONT>        return v.visitNil();<a name="line.32"></a>
+<FONT color="green">033</FONT>      }<a name="line.33"></a>
+<FONT color="green">034</FONT>    }<a name="line.34"></a>
+<FONT color="green">035</FONT>    <a name="line.35"></a>
+<FONT color="green">036</FONT>    class Cons implements List {<a name="line.36"></a>
+<FONT color="green">037</FONT>      private final int _hd;<a name="line.37"></a>
+<FONT color="green">038</FONT>      private final List _tl;<a name="line.38"></a>
+<FONT color="green">039</FONT>      Cons(int hd, List tl) { _hd = hd; _tl = tl; }<a name="line.39"></a>
+<FONT color="green">040</FONT>      public String toString() { return _hd + "::" + _tl.toString(); }<a name="line.40"></a>
+<FONT color="green">041</FONT>      public &lt;T&gt; T accept(ListVisitor&lt;T&gt; v) {<a name="line.41"></a>
+<FONT color="green">042</FONT>        return v.visitCons(_hd, _tl);<a name="line.42"></a>
+<FONT color="green">043</FONT>      }<a name="line.43"></a>
+<FONT color="green">044</FONT>    }<a name="line.44"></a>
+<FONT color="green">045</FONT>    <a name="line.45"></a>
+<FONT color="green">046</FONT>    /*<a name="line.46"></a>
+<FONT color="green">047</FONT>     *************************************************************************<a name="line.47"></a>
+<FONT color="green">048</FONT>     * Visitor classes.<a name="line.48"></a>
+<FONT color="green">049</FONT>     * The visitor to a Cons is responsible for visiting the tl.<a name="line.49"></a>
+<FONT color="green">050</FONT>     *************************************************************************<a name="line.50"></a>
+<FONT color="green">051</FONT>     */<a name="line.51"></a>
+<FONT color="green">052</FONT>    class Sum implements ListVisitor&lt;Integer&gt; {<a name="line.52"></a>
+<FONT color="green">053</FONT>      public Integer visitNil() { return 0; }<a name="line.53"></a>
+<FONT color="green">054</FONT>      public Integer visitCons(int hd, List tl) {<a name="line.54"></a>
+<FONT color="green">055</FONT>        return hd + tl.accept(this);<a name="line.55"></a>
+<FONT color="green">056</FONT>      }<a name="line.56"></a>
+<FONT color="green">057</FONT>    }<a name="line.57"></a>
+<FONT color="green">058</FONT>    <a name="line.58"></a>
+<FONT color="green">059</FONT>    class Reverse implements ListVisitor&lt;List&gt; {<a name="line.59"></a>
+<FONT color="green">060</FONT>      private List result = ListF.nil; // use a field to accumulate the value<a name="line.60"></a>
+<FONT color="green">061</FONT>      public List visitNil() { return result; }<a name="line.61"></a>
+<FONT color="green">062</FONT>      public List visitCons(int hd, List tl) {<a name="line.62"></a>
+<FONT color="green">063</FONT>        result = ListF.cons(hd, result);<a name="line.63"></a>
+<FONT color="green">064</FONT>        return tl.accept(this);<a name="line.64"></a>
+<FONT color="green">065</FONT>      }<a name="line.65"></a>
+<FONT color="green">066</FONT>    }<a name="line.66"></a>
+<FONT color="green">067</FONT>    <a name="line.67"></a>
+<FONT color="green">068</FONT>    /*<a name="line.68"></a>
+<FONT color="green">069</FONT>     *************************************************************************<a name="line.69"></a>
+<FONT color="green">070</FONT>     * A test case.<a name="line.70"></a>
+<FONT color="green">071</FONT>     *************************************************************************<a name="line.71"></a>
+<FONT color="green">072</FONT>     */<a name="line.72"></a>
+<FONT color="green">073</FONT>    public class Main {<a name="line.73"></a>
+<FONT color="green">074</FONT>      public static void main(String[] args) {<a name="line.74"></a>
+<FONT color="green">075</FONT>        List test = ListF.cons(1, ListF.cons(2, ListF.cons(3, ListF.nil)));<a name="line.75"></a>
+<FONT color="green">076</FONT>        System.out.println(test);<a name="line.76"></a>
+<FONT color="green">077</FONT>    <a name="line.77"></a>
+<FONT color="green">078</FONT>        System.out.println(test.accept(new Sum()));<a name="line.78"></a>
+<FONT color="green">079</FONT>    <a name="line.79"></a>
+<FONT color="green">080</FONT>        System.out.println(test.accept(new Reverse()));<a name="line.80"></a>
+<FONT color="green">081</FONT>      }<a name="line.81"></a>
+<FONT color="green">082</FONT>    }<a name="line.82"></a>
+<FONT color="green">083</FONT>    <a name="line.83"></a>
+<FONT color="green">084</FONT>    <a name="line.84"></a>
+<FONT color="green">085</FONT>    /*<a name="line.85"></a>
+<FONT color="green">086</FONT>     *************************************************************************<a name="line.86"></a>
+<FONT color="green">087</FONT>     * Here is the corresponding SML code.<a name="line.87"></a>
+<FONT color="green">088</FONT>     * It is intended to match the Java as closely as possible.<a name="line.88"></a>
+<FONT color="green">089</FONT>     *************************************************************************<a name="line.89"></a>
+<FONT color="green">090</FONT>    datatype List = Nil | Cons of int * List<a name="line.90"></a>
+<FONT color="green">091</FONT>    <a name="line.91"></a>
+<FONT color="green">092</FONT>    fun toString (this : List) : string =<a name="line.92"></a>
+<FONT color="green">093</FONT>        case this of<a name="line.93"></a>
+<FONT color="green">094</FONT>            Nil =&gt; "nil"<a name="line.94"></a>
+<FONT color="green">095</FONT>          | Cons(hd, tl) =&gt; Int.toString(hd) ^ "::" ^ toString(tl)<a name="line.95"></a>
+<FONT color="green">096</FONT>    <a name="line.96"></a>
+<FONT color="green">097</FONT>    fun sum (acceptor : List) : int =<a name="line.97"></a>
+<FONT color="green">098</FONT>        case acceptor of<a name="line.98"></a>
+<FONT color="green">099</FONT>            Nil =&gt; 0<a name="line.99"></a>
+<FONT color="green">100</FONT>          | Cons(hd, tl) =&gt; hd + sum(tl)<a name="line.100"></a>
+<FONT color="green">101</FONT>    <a name="line.101"></a>
+<FONT color="green">102</FONT>    fun reverse (acceptor : List) : List =<a name="line.102"></a>
+<FONT color="green">103</FONT>        let fun reverseAux (acceptor : List, result : List) =<a name="line.103"></a>
+<FONT color="green">104</FONT>                case acceptor of<a name="line.104"></a>
+<FONT color="green">105</FONT>                    Nil =&gt; result<a name="line.105"></a>
+<FONT color="green">106</FONT>                  | Cons(hd, tl) =&gt; reverseAux(tl, Cons(hd,result))<a name="line.106"></a>
+<FONT color="green">107</FONT>        in<a name="line.107"></a>
+<FONT color="green">108</FONT>            reverseAux (acceptor, Nil)<a name="line.108"></a>
+<FONT color="green">109</FONT>        end<a name="line.109"></a>
+<FONT color="green">110</FONT>    <a name="line.110"></a>
+<FONT color="green">111</FONT>    fun main () : unit =<a name="line.111"></a>
+<FONT color="green">112</FONT>        let<a name="line.112"></a>
+<FONT color="green">113</FONT>            val testList = Cons(1, Cons(2, Cons(3, Nil)))<a name="line.113"></a>
+<FONT color="green">114</FONT>            val _ = print(toString(testList) ^ "\n")<a name="line.114"></a>
+<FONT color="green">115</FONT>            val _ = print(Int.toString(sum(testList)) ^ "\n")<a name="line.115"></a>
+<FONT color="green">116</FONT>            val _ = print(toString(copy(testList)) ^ "\n")<a name="line.116"></a>
+<FONT color="green">117</FONT>            val _ = print(toString(reverse(testList)) ^ "\n")<a name="line.117"></a>
+<FONT color="green">118</FONT>        in<a name="line.118"></a>
+<FONT color="green">119</FONT>            ()<a name="line.119"></a>
+<FONT color="green">120</FONT>        end<a name="line.120"></a>
+<FONT color="green">121</FONT>    <a name="line.121"></a>
+<FONT color="green">122</FONT>     *************************************************************************<a name="line.122"></a>
+<FONT color="green">123</FONT>     */<a name="line.123"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

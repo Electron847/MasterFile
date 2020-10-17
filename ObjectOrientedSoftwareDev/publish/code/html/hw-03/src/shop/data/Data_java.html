@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> shop<span style="color: #990000">.</span>data<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> shop<span style="color: #990000">.</span>command<span style="color: #990000">.</span>RerunnableCommand<span style="color: #990000">;</span>
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> shop<span style="color: #990000">.</span>command<span style="color: #990000">.</span>UndoableCommand<span style="color: #990000">;</span>
+<span style="color: #000000">00005:</span> 
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00007:</span> <span style="font-style: italic"><span style="color: #9A1900"> * A static class for accessing data objects.</span></span>
+<span style="color: #000000">00008:</span> <span style="font-style: italic"><span style="color: #9A1900"> */</span></span>
+<span style="color: #000000">00009:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">Data</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00010:</span>   <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #000000">Data</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{}</span>
+<span style="color: #000000">00011:</span>   <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00012:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Returns a new Inventory.</span></span>
+<span style="color: #000000">00013:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00014:</span>   <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> Inventory <span style="font-weight: bold"><span style="color: #000000">newInventory</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00015:</span>     <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">InventorySet</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00016:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00017:</span> 
+<span style="color: #000000">00018:</span>   <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00019:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Factory method for Video objects.</span></span>
+<span style="color: #000000">00020:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Title and director are "trimmed" to remove leading and final space.</span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="color: #009900">@throws</span><span style="font-style: italic"><span style="color: #9A1900"> IllegalArgumentException if Video invariant violated.</span></span>
+<span style="color: #000000">00022:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00023:</span>   <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Video <span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span>String title<span style="color: #990000">,</span> <span style="color: #009900">int</span> year<span style="color: #990000">,</span> String director<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00024:</span>     <span style="font-style: italic"><span style="color: #9A1900">// TODO</span></span>
+<span style="color: #000000">00025:</span>     <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00026:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00027:</span> 
+<span style="color: #000000">00028:</span>   <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00029:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Returns a command to add or remove copies of a video from the inventory.</span></span>
+<span style="color: #000000">00030:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;p&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">The returned command has the following behavior:</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/p&gt;</span></span>
+<span style="color: #000000">00031:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;ul&gt;</span></span>
+<span style="color: #000000">00032:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;li&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">If a video record is not already present (and change is</span></span>
+<span style="color: #000000">00033:</span> <span style="font-style: italic"><span style="color: #9A1900">   * positive), a record is created.</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/li&gt;</span></span>
+<span style="color: #000000">00034:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;li&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">If a record is already present, </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">numOwned</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> is</span></span>
+<span style="color: #000000">00035:</span> <span style="font-style: italic"><span style="color: #9A1900">   * modified using </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">change</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">.</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/li&gt;</span></span>
+<span style="color: #000000">00036:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;li&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">If </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">change</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> brings the number of copies to be less</span></span>
+<span style="color: #000000">00037:</span> <span style="font-style: italic"><span style="color: #9A1900">   * than one, the record is removed from the inventory.</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/li&gt;</span></span>
+<span style="color: #000000">00038:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/ul&gt;</span></span>
+<span style="color: #000000">00039:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> video the video to be added.</span></span>
+<span style="color: #000000">00040:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> change the number of copies to add (or remove if negative).</span></span>
+<span style="color: #000000">00041:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="color: #009900">@throws</span><span style="font-style: italic"><span style="color: #9A1900"> IllegalArgumentException if </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">inventory</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> not created by a call to </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">newInventory</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">.</span></span>
+<span style="color: #000000">00042:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00043:</span>   <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> UndoableCommand <span style="font-weight: bold"><span style="color: #000000">newAddCmd</span></span><span style="color: #990000">(</span>Inventory inventory<span style="color: #990000">,</span> Video video<span style="color: #990000">,</span> <span style="color: #009900">int</span> change<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00044:</span>     <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(!(</span>inventory <span style="font-weight: bold"><span style="color: #0000FF">instanceof</span></span> InventorySet<span style="color: #990000">))</span>
+<span style="color: #000000">00045:</span>       <span style="font-weight: bold"><span style="color: #0000FF">throw</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">IllegalArgumentException</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00046:</span>     <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">CmdAdd</span></span><span style="color: #990000">((</span>InventorySet<span style="color: #990000">)</span> inventory<span style="color: #990000">,</span> video<span style="color: #990000">,</span> change<span style="color: #990000">);</span>
+<span style="color: #000000">00047:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00048:</span> 
+<span style="color: #000000">00049:</span>   <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00050:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Returns a command to check out a video.</span></span>
+<span style="color: #000000">00051:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> video the video to be checked out.</span></span>
+<span style="color: #000000">00052:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00053:</span>   <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> UndoableCommand <span style="font-weight: bold"><span style="color: #000000">newOutCmd</span></span><span style="color: #990000">(</span>Inventory inventory<span style="color: #990000">,</span> Video video<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00054:</span>     <span style="font-style: italic"><span style="color: #9A1900">// TODO</span></span>
+<span style="color: #000000">00055:</span>     <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00056:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00057:</span>   
+<span style="color: #000000">00058:</span>   <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00059:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Returns a command to check in a video.</span></span>
+<span style="color: #000000">00060:</span> <span style="font-style: italic"><span style="color: #9A1900">   * </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> video the video to be checked in.</span></span>
+<span style="color: #000000">00061:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00062:</span>   <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> UndoableCommand <span style="font-weight: bold"><span style="color: #000000">newInCmd</span></span><span style="color: #990000">(</span>Inventory inventory<span style="color: #990000">,</span> Video video<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00063:</span>     <span style="font-style: italic"><span style="color: #9A1900">// TODO</span></span>
+<span style="color: #000000">00064:</span>     <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00065:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00066:</span>   
+<span style="color: #000000">00067:</span>   <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00068:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Returns a command to remove all records from the inventory.</span></span>
+<span style="color: #000000">00069:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00070:</span>   <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> UndoableCommand <span style="font-weight: bold"><span style="color: #000000">newClearCmd</span></span><span style="color: #990000">(</span>Inventory inventory<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00071:</span>     <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(!(</span>inventory <span style="font-weight: bold"><span style="color: #0000FF">instanceof</span></span> InventorySet<span style="color: #990000">))</span>
+<span style="color: #000000">00072:</span>       <span style="font-weight: bold"><span style="color: #0000FF">throw</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">IllegalArgumentException</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00073:</span>     <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">CmdClear</span></span><span style="color: #990000">((</span>InventorySet<span style="color: #990000">)</span> inventory<span style="color: #990000">);</span>
+<span style="color: #000000">00074:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00075:</span> 
+<span style="color: #000000">00076:</span>   <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00077:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Returns a command to undo that will undo the last successful UndoableCommand. </span></span>
+<span style="color: #000000">00078:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00079:</span>   <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> RerunnableCommand <span style="font-weight: bold"><span style="color: #000000">newUndoCmd</span></span><span style="color: #990000">(</span>Inventory inventory<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00080:</span>     <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(!(</span>inventory <span style="font-weight: bold"><span style="color: #0000FF">instanceof</span></span> InventorySet<span style="color: #990000">))</span>
+<span style="color: #000000">00081:</span>       <span style="font-weight: bold"><span style="color: #0000FF">throw</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">IllegalArgumentException</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00082:</span>     <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #990000">((</span>InventorySet<span style="color: #990000">)</span>inventory<span style="color: #990000">).</span><span style="font-weight: bold"><span style="color: #000000">getHistory</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">getUndo</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00083:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00084:</span> 
+<span style="color: #000000">00085:</span>   <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00086:</span> <span style="font-style: italic"><span style="color: #9A1900">   * Returns a command to redo that last successfully undone command. </span></span>
+<span style="color: #000000">00087:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00088:</span>   <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> RerunnableCommand <span style="font-weight: bold"><span style="color: #000000">newRedoCmd</span></span><span style="color: #990000">(</span>Inventory inventory<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00089:</span>     <span style="font-style: italic"><span style="color: #9A1900">// TODO</span></span>
+<span style="color: #000000">00090:</span>     <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00091:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00092:</span> <span style="color: #FF0000">}</span>  
+</tt></pre>
+  </body>
+</html>

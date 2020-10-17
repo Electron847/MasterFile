@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch08_graphed<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.*;</span>
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>geom<span style="color: #990000">.*;</span>
+<span style="color: #000000">00004:</span> 
+<span style="color: #000000">00005:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">   A circular node that is filled with a color.</span></span>
+<span style="color: #000000">00007:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span>
+<span style="color: #000000">00008:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">CircleNode</span> <span style="font-weight: bold"><span style="color: #0000FF">implements</span></span> Node
+<span style="color: #000000">00009:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00010:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">      Construct a circle node with a given size and color.</span></span>
+<span style="color: #000000">00012:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aColor the fill color</span></span>
+<span style="color: #000000">00013:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00014:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">CircleNode</span></span><span style="color: #990000">(</span>Color aColor<span style="color: #990000">)</span>
+<span style="color: #000000">00015:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00016:</span>       size <span style="color: #990000">=</span> DEFAULT_SIZE<span style="color: #990000">;</span>
+<span style="color: #000000">00017:</span>       x <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span>
+<span style="color: #000000">00018:</span>       y <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span>
+<span style="color: #000000">00019:</span>       color <span style="color: #990000">=</span> aColor<span style="color: #990000">;</span>
+<span style="color: #000000">00020:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00021:</span> 
+<span style="color: #000000">00022:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Object <span style="font-weight: bold"><span style="color: #000000">clone</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00023:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00024:</span>       <span style="font-weight: bold"><span style="color: #0000FF">try</span></span>
+<span style="color: #000000">00025:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00026:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">super</span></span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">clone</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00027:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00028:</span>       <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>CloneNotSupportedException exception<span style="color: #990000">)</span>
+<span style="color: #000000">00029:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00030:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00031:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00032:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00033:</span> 
+<span style="color: #000000">00034:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">draw</span></span><span style="color: #990000">(</span>Graphics2D g2<span style="color: #990000">)</span>
+<span style="color: #000000">00035:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00036:</span>       Ellipse2D circle <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Ellipse2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>
+<span style="color: #000000">00037:</span>             x<span style="color: #990000">,</span> y<span style="color: #990000">,</span> size<span style="color: #990000">,</span> size<span style="color: #990000">);</span>
+<span style="color: #000000">00038:</span>       Color oldColor <span style="color: #990000">=</span> g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getColor</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00039:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setColor</span></span><span style="color: #990000">(</span>color<span style="color: #990000">);</span>
+<span style="color: #000000">00040:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">fill</span></span><span style="color: #990000">(</span>circle<span style="color: #990000">);</span>
+<span style="color: #000000">00041:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setColor</span></span><span style="color: #990000">(</span>oldColor<span style="color: #990000">);</span>
+<span style="color: #000000">00042:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">draw</span></span><span style="color: #990000">(</span>circle<span style="color: #990000">);</span>
+<span style="color: #000000">00043:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00044:</span> 
+<span style="color: #000000">00045:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">translate</span></span><span style="color: #990000">(</span><span style="color: #009900">double</span> dx<span style="color: #990000">,</span> <span style="color: #009900">double</span> dy<span style="color: #990000">)</span>
+<span style="color: #000000">00046:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00047:</span>       x <span style="color: #990000">+=</span> dx<span style="color: #990000">;</span>
+<span style="color: #000000">00048:</span>       y <span style="color: #990000">+=</span> dy<span style="color: #990000">;</span>
+<span style="color: #000000">00049:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00050:</span> 
+<span style="color: #000000">00051:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">boolean</span> <span style="font-weight: bold"><span style="color: #000000">contains</span></span><span style="color: #990000">(</span>Point2D p<span style="color: #990000">)</span>
+<span style="color: #000000">00052:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00053:</span>       Ellipse2D circle <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Ellipse2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>
+<span style="color: #000000">00054:</span>             x<span style="color: #990000">,</span> y<span style="color: #990000">,</span> size<span style="color: #990000">,</span> size<span style="color: #990000">);</span>
+<span style="color: #000000">00055:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> circle<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">contains</span></span><span style="color: #990000">(</span>p<span style="color: #990000">);</span>
+<span style="color: #000000">00056:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00057:</span> 
+<span style="color: #000000">00058:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Rectangle2D <span style="font-weight: bold"><span style="color: #000000">getBounds</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00059:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00060:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Rectangle2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>
+<span style="color: #000000">00061:</span>             x<span style="color: #990000">,</span> y<span style="color: #990000">,</span> size<span style="color: #990000">,</span> size<span style="color: #990000">);</span>
+<span style="color: #000000">00062:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00063:</span> 
+<span style="color: #000000">00064:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Point2D <span style="font-weight: bold"><span style="color: #000000">getConnectionPoint</span></span><span style="color: #990000">(</span>Point2D other<span style="color: #990000">)</span>
+<span style="color: #000000">00065:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00066:</span>       <span style="color: #009900">double</span> centerX <span style="color: #990000">=</span> x <span style="color: #990000">+</span> size <span style="color: #990000">/</span> <span style="color: #993399">2</span><span style="color: #990000">;</span>
+<span style="color: #000000">00067:</span>       <span style="color: #009900">double</span> centerY <span style="color: #990000">=</span> y <span style="color: #990000">+</span> size <span style="color: #990000">/</span> <span style="color: #993399">2</span><span style="color: #990000">;</span>
+<span style="color: #000000">00068:</span>       <span style="color: #009900">double</span> dx <span style="color: #990000">=</span> other<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getX</span></span><span style="color: #990000">()</span> <span style="color: #990000">-</span> centerX<span style="color: #990000">;</span>
+<span style="color: #000000">00069:</span>       <span style="color: #009900">double</span> dy <span style="color: #990000">=</span> other<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getY</span></span><span style="color: #990000">()</span> <span style="color: #990000">-</span> centerY<span style="color: #990000">;</span>
+<span style="color: #000000">00070:</span>       <span style="color: #009900">double</span> distance <span style="color: #990000">=</span> Math<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">sqrt</span></span><span style="color: #990000">(</span>dx <span style="color: #990000">*</span> dx <span style="color: #990000">+</span> dy <span style="color: #990000">*</span> dy<span style="color: #990000">);</span>
+<span style="color: #000000">00071:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>distance <span style="color: #990000">==</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> other<span style="color: #990000">;</span>
+<span style="color: #000000">00072:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Point2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>
+<span style="color: #000000">00073:</span>             centerX <span style="color: #990000">+</span> dx <span style="color: #990000">*</span> <span style="color: #990000">(</span>size <span style="color: #990000">/</span> <span style="color: #993399">2</span><span style="color: #990000">)</span> <span style="color: #990000">/</span> distance<span style="color: #990000">,</span>
+<span style="color: #000000">00074:</span>             centerY <span style="color: #990000">+</span> dy <span style="color: #990000">*</span> <span style="color: #990000">(</span>size <span style="color: #990000">/</span> <span style="color: #993399">2</span><span style="color: #990000">)</span> <span style="color: #990000">/</span> distance<span style="color: #990000">);</span>
+<span style="color: #000000">00075:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00076:</span> 
+<span style="color: #000000">00077:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">double</span> x<span style="color: #990000">;</span>
+<span style="color: #000000">00078:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">double</span> y<span style="color: #990000">;</span>
+<span style="color: #000000">00079:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">double</span> size<span style="color: #990000">;</span>
+<span style="color: #000000">00080:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Color color<span style="color: #990000">;</span>  
+<span style="color: #000000">00081:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> DEFAULT_SIZE <span style="color: #990000">=</span> <span style="color: #993399">20</span><span style="color: #990000">;</span>
+<span style="color: #000000">00082:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

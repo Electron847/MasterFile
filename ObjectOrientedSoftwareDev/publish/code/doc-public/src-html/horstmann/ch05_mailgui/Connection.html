@@ -1,0 +1,303 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package horstmann.ch05_mailgui;<a name="line.1"></a>
+<FONT color="green">002</FONT>    /**<a name="line.2"></a>
+<FONT color="green">003</FONT>       Connect a phone to the mail system.<a name="line.3"></a>
+<FONT color="green">004</FONT>    */<a name="line.4"></a>
+<FONT color="green">005</FONT>    public class Connection<a name="line.5"></a>
+<FONT color="green">006</FONT>    {<a name="line.6"></a>
+<FONT color="green">007</FONT>       /**<a name="line.7"></a>
+<FONT color="green">008</FONT>          Construct a Connection object.<a name="line.8"></a>
+<FONT color="green">009</FONT>          @param s a MailSystem object<a name="line.9"></a>
+<FONT color="green">010</FONT>          @param p a Telephone object<a name="line.10"></a>
+<FONT color="green">011</FONT>       */<a name="line.11"></a>
+<FONT color="green">012</FONT>       public Connection(MailSystem s, Telephone p)<a name="line.12"></a>
+<FONT color="green">013</FONT>       {<a name="line.13"></a>
+<FONT color="green">014</FONT>          system = s;<a name="line.14"></a>
+<FONT color="green">015</FONT>          thePhone = p;<a name="line.15"></a>
+<FONT color="green">016</FONT>          resetConnection();<a name="line.16"></a>
+<FONT color="green">017</FONT>       }<a name="line.17"></a>
+<FONT color="green">018</FONT>    <a name="line.18"></a>
+<FONT color="green">019</FONT>       /**<a name="line.19"></a>
+<FONT color="green">020</FONT>          Respond to the user's pressing a key on the phone touchpad<a name="line.20"></a>
+<FONT color="green">021</FONT>          @param key the phone key pressed by the user<a name="line.21"></a>
+<FONT color="green">022</FONT>       */<a name="line.22"></a>
+<FONT color="green">023</FONT>       public void dial(String key)<a name="line.23"></a>
+<FONT color="green">024</FONT>       {<a name="line.24"></a>
+<FONT color="green">025</FONT>          if (state == CONNECTED)<a name="line.25"></a>
+<FONT color="green">026</FONT>             connect(key);<a name="line.26"></a>
+<FONT color="green">027</FONT>          else if (state == RECORDING)<a name="line.27"></a>
+<FONT color="green">028</FONT>             login(key);<a name="line.28"></a>
+<FONT color="green">029</FONT>          else if (state == CHANGE_PASSCODE)<a name="line.29"></a>
+<FONT color="green">030</FONT>             changePasscode(key);<a name="line.30"></a>
+<FONT color="green">031</FONT>          else if (state == CHANGE_GREETING)<a name="line.31"></a>
+<FONT color="green">032</FONT>             changeGreeting(key);<a name="line.32"></a>
+<FONT color="green">033</FONT>          else if (state == MAILBOX_MENU)<a name="line.33"></a>
+<FONT color="green">034</FONT>             mailboxMenu(key);<a name="line.34"></a>
+<FONT color="green">035</FONT>          else if (state == MESSAGE_MENU)<a name="line.35"></a>
+<FONT color="green">036</FONT>             messageMenu(key);<a name="line.36"></a>
+<FONT color="green">037</FONT>       }<a name="line.37"></a>
+<FONT color="green">038</FONT>    <a name="line.38"></a>
+<FONT color="green">039</FONT>       /**<a name="line.39"></a>
+<FONT color="green">040</FONT>          Record voice.<a name="line.40"></a>
+<FONT color="green">041</FONT>          @param voice voice spoken by the user<a name="line.41"></a>
+<FONT color="green">042</FONT>       */<a name="line.42"></a>
+<FONT color="green">043</FONT>       public void record(String voice)<a name="line.43"></a>
+<FONT color="green">044</FONT>       {<a name="line.44"></a>
+<FONT color="green">045</FONT>          currentRecording += voice;<a name="line.45"></a>
+<FONT color="green">046</FONT>       }<a name="line.46"></a>
+<FONT color="green">047</FONT>    <a name="line.47"></a>
+<FONT color="green">048</FONT>       /**<a name="line.48"></a>
+<FONT color="green">049</FONT>          The user hangs up the phone.<a name="line.49"></a>
+<FONT color="green">050</FONT>       */<a name="line.50"></a>
+<FONT color="green">051</FONT>       public void hangup()<a name="line.51"></a>
+<FONT color="green">052</FONT>       {<a name="line.52"></a>
+<FONT color="green">053</FONT>          if (state == RECORDING)<a name="line.53"></a>
+<FONT color="green">054</FONT>             currentMailbox.addMessage(new Message(currentRecording));<a name="line.54"></a>
+<FONT color="green">055</FONT>          resetConnection();<a name="line.55"></a>
+<FONT color="green">056</FONT>       }<a name="line.56"></a>
+<FONT color="green">057</FONT>    <a name="line.57"></a>
+<FONT color="green">058</FONT>       /**<a name="line.58"></a>
+<FONT color="green">059</FONT>          Reset the connection to the initial state and prompt<a name="line.59"></a>
+<FONT color="green">060</FONT>          for mailbox number<a name="line.60"></a>
+<FONT color="green">061</FONT>       */<a name="line.61"></a>
+<FONT color="green">062</FONT>       private void resetConnection()<a name="line.62"></a>
+<FONT color="green">063</FONT>       {<a name="line.63"></a>
+<FONT color="green">064</FONT>          currentRecording = "";<a name="line.64"></a>
+<FONT color="green">065</FONT>          accumulatedKeys = "";<a name="line.65"></a>
+<FONT color="green">066</FONT>          state = CONNECTED;<a name="line.66"></a>
+<FONT color="green">067</FONT>          thePhone.speak(initialPrompt);<a name="line.67"></a>
+<FONT color="green">068</FONT>       }<a name="line.68"></a>
+<FONT color="green">069</FONT>    <a name="line.69"></a>
+<FONT color="green">070</FONT>       /**<a name="line.70"></a>
+<FONT color="green">071</FONT>          Try to connect the user with the specified mail box.<a name="line.71"></a>
+<FONT color="green">072</FONT>          @param key the phone key pressed by the user<a name="line.72"></a>
+<FONT color="green">073</FONT>       */<a name="line.73"></a>
+<FONT color="green">074</FONT>       private void connect(String key)<a name="line.74"></a>
+<FONT color="green">075</FONT>       {<a name="line.75"></a>
+<FONT color="green">076</FONT>          if (key.equals("#"))<a name="line.76"></a>
+<FONT color="green">077</FONT>          {<a name="line.77"></a>
+<FONT color="green">078</FONT>             currentMailbox = system.findMailbox(accumulatedKeys);<a name="line.78"></a>
+<FONT color="green">079</FONT>             if (currentMailbox != null)<a name="line.79"></a>
+<FONT color="green">080</FONT>             {<a name="line.80"></a>
+<FONT color="green">081</FONT>                state = RECORDING;<a name="line.81"></a>
+<FONT color="green">082</FONT>                thePhone.speak(currentMailbox.getGreeting());<a name="line.82"></a>
+<FONT color="green">083</FONT>             }<a name="line.83"></a>
+<FONT color="green">084</FONT>             else<a name="line.84"></a>
+<FONT color="green">085</FONT>                thePhone.speak("Incorrect mailbox number. Try again!");<a name="line.85"></a>
+<FONT color="green">086</FONT>             accumulatedKeys = "";<a name="line.86"></a>
+<FONT color="green">087</FONT>          }<a name="line.87"></a>
+<FONT color="green">088</FONT>          else<a name="line.88"></a>
+<FONT color="green">089</FONT>             accumulatedKeys += key;<a name="line.89"></a>
+<FONT color="green">090</FONT>       }<a name="line.90"></a>
+<FONT color="green">091</FONT>    <a name="line.91"></a>
+<FONT color="green">092</FONT>       /**<a name="line.92"></a>
+<FONT color="green">093</FONT>          Try to log in the user.<a name="line.93"></a>
+<FONT color="green">094</FONT>          @param key the phone key pressed by the user<a name="line.94"></a>
+<FONT color="green">095</FONT>       */<a name="line.95"></a>
+<FONT color="green">096</FONT>       private void login(String key)<a name="line.96"></a>
+<FONT color="green">097</FONT>       {<a name="line.97"></a>
+<FONT color="green">098</FONT>          if (key.equals("#"))<a name="line.98"></a>
+<FONT color="green">099</FONT>          {<a name="line.99"></a>
+<FONT color="green">100</FONT>             if (currentMailbox.checkPasscode(accumulatedKeys))<a name="line.100"></a>
+<FONT color="green">101</FONT>             {<a name="line.101"></a>
+<FONT color="green">102</FONT>                state = MAILBOX_MENU;<a name="line.102"></a>
+<FONT color="green">103</FONT>                thePhone.speak(mailboxMenu);<a name="line.103"></a>
+<FONT color="green">104</FONT>             }<a name="line.104"></a>
+<FONT color="green">105</FONT>             else<a name="line.105"></a>
+<FONT color="green">106</FONT>                thePhone.speak("Incorrect passcode. Try again!");<a name="line.106"></a>
+<FONT color="green">107</FONT>             accumulatedKeys = "";<a name="line.107"></a>
+<FONT color="green">108</FONT>          }<a name="line.108"></a>
+<FONT color="green">109</FONT>          else<a name="line.109"></a>
+<FONT color="green">110</FONT>             accumulatedKeys += key;<a name="line.110"></a>
+<FONT color="green">111</FONT>       }<a name="line.111"></a>
+<FONT color="green">112</FONT>    <a name="line.112"></a>
+<FONT color="green">113</FONT>       /**<a name="line.113"></a>
+<FONT color="green">114</FONT>          Change passcode.<a name="line.114"></a>
+<FONT color="green">115</FONT>          @param key the phone key pressed by the user<a name="line.115"></a>
+<FONT color="green">116</FONT>       */<a name="line.116"></a>
+<FONT color="green">117</FONT>       private void changePasscode(String key)<a name="line.117"></a>
+<FONT color="green">118</FONT>       {<a name="line.118"></a>
+<FONT color="green">119</FONT>          if (key.equals("#"))<a name="line.119"></a>
+<FONT color="green">120</FONT>          {<a name="line.120"></a>
+<FONT color="green">121</FONT>             currentMailbox.setPasscode(accumulatedKeys);<a name="line.121"></a>
+<FONT color="green">122</FONT>             state = MAILBOX_MENU;<a name="line.122"></a>
+<FONT color="green">123</FONT>             thePhone.speak(mailboxMenu);<a name="line.123"></a>
+<FONT color="green">124</FONT>             accumulatedKeys = "";<a name="line.124"></a>
+<FONT color="green">125</FONT>          }<a name="line.125"></a>
+<FONT color="green">126</FONT>          else<a name="line.126"></a>
+<FONT color="green">127</FONT>             accumulatedKeys += key;<a name="line.127"></a>
+<FONT color="green">128</FONT>       }<a name="line.128"></a>
+<FONT color="green">129</FONT>    <a name="line.129"></a>
+<FONT color="green">130</FONT>       /**<a name="line.130"></a>
+<FONT color="green">131</FONT>          Change greeting.<a name="line.131"></a>
+<FONT color="green">132</FONT>          @param key the phone key pressed by the user<a name="line.132"></a>
+<FONT color="green">133</FONT>       */<a name="line.133"></a>
+<FONT color="green">134</FONT>       private void changeGreeting(String key)<a name="line.134"></a>
+<FONT color="green">135</FONT>       {<a name="line.135"></a>
+<FONT color="green">136</FONT>          if (key.equals("#"))<a name="line.136"></a>
+<FONT color="green">137</FONT>          {<a name="line.137"></a>
+<FONT color="green">138</FONT>             currentMailbox.setGreeting(currentRecording);<a name="line.138"></a>
+<FONT color="green">139</FONT>             currentRecording = "";<a name="line.139"></a>
+<FONT color="green">140</FONT>             state = MAILBOX_MENU;<a name="line.140"></a>
+<FONT color="green">141</FONT>             thePhone.speak(mailboxMenu);<a name="line.141"></a>
+<FONT color="green">142</FONT>          }<a name="line.142"></a>
+<FONT color="green">143</FONT>       }<a name="line.143"></a>
+<FONT color="green">144</FONT>    <a name="line.144"></a>
+<FONT color="green">145</FONT>       /**<a name="line.145"></a>
+<FONT color="green">146</FONT>          Respond to the user's selection from mailbox menu.<a name="line.146"></a>
+<FONT color="green">147</FONT>          @param key the phone key pressed by the user<a name="line.147"></a>
+<FONT color="green">148</FONT>       */<a name="line.148"></a>
+<FONT color="green">149</FONT>       private void mailboxMenu(String key)<a name="line.149"></a>
+<FONT color="green">150</FONT>       {<a name="line.150"></a>
+<FONT color="green">151</FONT>          if (key.equals("1"))<a name="line.151"></a>
+<FONT color="green">152</FONT>          {<a name="line.152"></a>
+<FONT color="green">153</FONT>             state = MESSAGE_MENU;<a name="line.153"></a>
+<FONT color="green">154</FONT>             thePhone.speak(messageMenu);<a name="line.154"></a>
+<FONT color="green">155</FONT>          }<a name="line.155"></a>
+<FONT color="green">156</FONT>          else if (key.equals("2"))<a name="line.156"></a>
+<FONT color="green">157</FONT>          {<a name="line.157"></a>
+<FONT color="green">158</FONT>             state = CHANGE_PASSCODE;<a name="line.158"></a>
+<FONT color="green">159</FONT>             thePhone.speak("Enter new passcode followed by the # key");<a name="line.159"></a>
+<FONT color="green">160</FONT>          }<a name="line.160"></a>
+<FONT color="green">161</FONT>          else if (key.equals("3"))<a name="line.161"></a>
+<FONT color="green">162</FONT>          {<a name="line.162"></a>
+<FONT color="green">163</FONT>             state = CHANGE_GREETING;<a name="line.163"></a>
+<FONT color="green">164</FONT>             thePhone.speak("Record your greeting, then press the # key");<a name="line.164"></a>
+<FONT color="green">165</FONT>          }<a name="line.165"></a>
+<FONT color="green">166</FONT>       }<a name="line.166"></a>
+<FONT color="green">167</FONT>    <a name="line.167"></a>
+<FONT color="green">168</FONT>       /**<a name="line.168"></a>
+<FONT color="green">169</FONT>          Respond to the user's selection from message menu.<a name="line.169"></a>
+<FONT color="green">170</FONT>          @param key the phone key pressed by the user<a name="line.170"></a>
+<FONT color="green">171</FONT>       */<a name="line.171"></a>
+<FONT color="green">172</FONT>       private void messageMenu(String key)<a name="line.172"></a>
+<FONT color="green">173</FONT>       {<a name="line.173"></a>
+<FONT color="green">174</FONT>          if (key.equals("1"))<a name="line.174"></a>
+<FONT color="green">175</FONT>          {<a name="line.175"></a>
+<FONT color="green">176</FONT>             String output = "";<a name="line.176"></a>
+<FONT color="green">177</FONT>             Message m = currentMailbox.getCurrentMessage();<a name="line.177"></a>
+<FONT color="green">178</FONT>             if (m == null) output += "No messages." + "\n";<a name="line.178"></a>
+<FONT color="green">179</FONT>             else output += m.getText() + "\n";<a name="line.179"></a>
+<FONT color="green">180</FONT>             output += messageMenu;<a name="line.180"></a>
+<FONT color="green">181</FONT>             thePhone.speak(output);<a name="line.181"></a>
+<FONT color="green">182</FONT>          }<a name="line.182"></a>
+<FONT color="green">183</FONT>          else if (key.equals("2"))<a name="line.183"></a>
+<FONT color="green">184</FONT>          {<a name="line.184"></a>
+<FONT color="green">185</FONT>             currentMailbox.saveCurrentMessage();<a name="line.185"></a>
+<FONT color="green">186</FONT>             thePhone.speak(messageMenu);<a name="line.186"></a>
+<FONT color="green">187</FONT>          }<a name="line.187"></a>
+<FONT color="green">188</FONT>          else if (key.equals("3"))<a name="line.188"></a>
+<FONT color="green">189</FONT>          {<a name="line.189"></a>
+<FONT color="green">190</FONT>             currentMailbox.removeCurrentMessage();<a name="line.190"></a>
+<FONT color="green">191</FONT>             thePhone.speak(messageMenu);<a name="line.191"></a>
+<FONT color="green">192</FONT>          }<a name="line.192"></a>
+<FONT color="green">193</FONT>          else if (key.equals("4"))<a name="line.193"></a>
+<FONT color="green">194</FONT>          {<a name="line.194"></a>
+<FONT color="green">195</FONT>             state = MAILBOX_MENU;<a name="line.195"></a>
+<FONT color="green">196</FONT>             thePhone.speak(mailboxMenu);<a name="line.196"></a>
+<FONT color="green">197</FONT>          }<a name="line.197"></a>
+<FONT color="green">198</FONT>       }<a name="line.198"></a>
+<FONT color="green">199</FONT>    <a name="line.199"></a>
+<FONT color="green">200</FONT>       private MailSystem system;<a name="line.200"></a>
+<FONT color="green">201</FONT>       private Mailbox currentMailbox;<a name="line.201"></a>
+<FONT color="green">202</FONT>       private String currentRecording;<a name="line.202"></a>
+<FONT color="green">203</FONT>       private String accumulatedKeys;<a name="line.203"></a>
+<FONT color="green">204</FONT>       private Telephone thePhone;<a name="line.204"></a>
+<FONT color="green">205</FONT>       private int state;<a name="line.205"></a>
+<FONT color="green">206</FONT>    <a name="line.206"></a>
+<FONT color="green">207</FONT>       private static final int DISCONNECTED = 0;<a name="line.207"></a>
+<FONT color="green">208</FONT>       private static final int CONNECTED = 1;<a name="line.208"></a>
+<FONT color="green">209</FONT>       private static final int RECORDING = 2;<a name="line.209"></a>
+<FONT color="green">210</FONT>       private static final int MAILBOX_MENU = 3;<a name="line.210"></a>
+<FONT color="green">211</FONT>       private static final int MESSAGE_MENU = 4;<a name="line.211"></a>
+<FONT color="green">212</FONT>       private static final int CHANGE_PASSCODE = 5;<a name="line.212"></a>
+<FONT color="green">213</FONT>       private static final int CHANGE_GREETING = 6;<a name="line.213"></a>
+<FONT color="green">214</FONT>    <a name="line.214"></a>
+<FONT color="green">215</FONT>       private static final String initialPrompt = <a name="line.215"></a>
+<FONT color="green">216</FONT>          "Please enter mailbox number followed by #";      <a name="line.216"></a>
+<FONT color="green">217</FONT>       private static final String mailboxMenu = <a name="line.217"></a>
+<FONT color="green">218</FONT>          "Enter 1 to listen to your messages\n"<a name="line.218"></a>
+<FONT color="green">219</FONT>          + "Enter 2 to change your passcode\n"<a name="line.219"></a>
+<FONT color="green">220</FONT>          + "Enter 3 to change your greeting";<a name="line.220"></a>
+<FONT color="green">221</FONT>       private static final String messageMenu = <a name="line.221"></a>
+<FONT color="green">222</FONT>          "Enter 1 to listen to the current message\n"<a name="line.222"></a>
+<FONT color="green">223</FONT>          + "Enter 2 to save the current message\n"<a name="line.223"></a>
+<FONT color="green">224</FONT>          + "Enter 3 to delete the current message\n"<a name="line.224"></a>
+<FONT color="green">225</FONT>          + "Enter 4 to return to the main menu";<a name="line.225"></a>
+<FONT color="green">226</FONT>    }<a name="line.226"></a>
+<FONT color="green">227</FONT>    <a name="line.227"></a>
+<FONT color="green">228</FONT>    <a name="line.228"></a>
+<FONT color="green">229</FONT>    <a name="line.229"></a>
+<FONT color="green">230</FONT>    <a name="line.230"></a>
+<FONT color="green">231</FONT>    <a name="line.231"></a>
+<FONT color="green">232</FONT>    <a name="line.232"></a>
+<FONT color="green">233</FONT>    <a name="line.233"></a>
+<FONT color="green">234</FONT>    <a name="line.234"></a>
+<FONT color="green">235</FONT>    <a name="line.235"></a>
+<FONT color="green">236</FONT>    <a name="line.236"></a>
+<FONT color="green">237</FONT>    <a name="line.237"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

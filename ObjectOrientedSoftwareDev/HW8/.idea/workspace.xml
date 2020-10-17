@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01416951-1322-484b-a8b6-c771482be05e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Beryllium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Boron.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ComputeSecurity/PasswordCracking/recovered_passwords.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/cookbooks/first_cookbook" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/cookbooks/first_cookbook" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/hw3sw" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContinousDelivery&amp;DevOps/SE441_hw7/hw3sw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataBase_Technologies/BasicJDBCDemo (1).java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataBase_Technologies/BasicJDBCDemo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW4_videoShopPart1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW4_videoShopPart1/Honor_Statement.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HW6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW6/out/production/HW6/shop/ui/UIFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HW6/out/production/HW6/shop/ui/UIFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/out/production/Chemistry/Elements/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/out/production/Chemistry/Elements/Element.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/out/production/Chemistry/Elements/Helium.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/out/production/Chemistry/Elements/Helium.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/out/production/Chemistry/Elements/Hydrogen.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/out/production/Chemistry/Elements/Hydrogen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/out/production/Chemistry/Elements/Lithium.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/out/production/Chemistry/Elements/Lithium.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Helium.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Helium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Hydrogen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Hydrogen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Lithium.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../July2020/Chemistry/src/Elements/Lithium.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../VideoShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VideoShop/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Python/Cryptology/assignment1/assignment1_page59_problem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Structures/csc403/Ratings/csc402 2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Structures/csc403/csc403_finalExam/BFS_Trace.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,7 +80,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="256" />
-    <option name="y" value="28" />
+    <option name="y" value="24" />
     <option name="width" value="914" />
     <option name="height" value="712" />
   </component>
@@ -96,6 +98,11 @@
             <path>
               <item name="HW8" type="b2602c69:ProjectViewProjectNode" />
               <item name="HW8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HW8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW8" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,14 +305,14 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="256" y="28" width="914" height="712" extended-state="0" />
+    <frame x="256" y="24" width="914" height="712" extended-state="0" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.30278423" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.31090486" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />

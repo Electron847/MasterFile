@@ -1,0 +1,90 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package headfirst.decorator.starbuzz;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    public class StarbuzzCoffee {<a name="line.3"></a>
+<FONT color="green">004</FONT>     <a name="line.4"></a>
+<FONT color="green">005</FONT>            public static void main(String args[]) {<a name="line.5"></a>
+<FONT color="green">006</FONT>                    Beverage beverage = new Espresso();<a name="line.6"></a>
+<FONT color="green">007</FONT>                    System.out.println(beverage.getDescription() <a name="line.7"></a>
+<FONT color="green">008</FONT>                                    + " $" + beverage.cost());<a name="line.8"></a>
+<FONT color="green">009</FONT>     <a name="line.9"></a>
+<FONT color="green">010</FONT>                    Beverage beverage2 = new DarkRoast();<a name="line.10"></a>
+<FONT color="green">011</FONT>                    beverage2 = new Mocha(beverage2);<a name="line.11"></a>
+<FONT color="green">012</FONT>                    beverage2 = new Mocha(beverage2);<a name="line.12"></a>
+<FONT color="green">013</FONT>                    beverage2 = new Whip(beverage2);<a name="line.13"></a>
+<FONT color="green">014</FONT>                    System.out.println(beverage2.getDescription() <a name="line.14"></a>
+<FONT color="green">015</FONT>                                    + " $" + beverage2.cost());<a name="line.15"></a>
+<FONT color="green">016</FONT>     <a name="line.16"></a>
+<FONT color="green">017</FONT>                    Beverage beverage3 = new HouseBlend();<a name="line.17"></a>
+<FONT color="green">018</FONT>                    beverage3 = new Soy(beverage3);<a name="line.18"></a>
+<FONT color="green">019</FONT>                    beverage3 = new Mocha(beverage3);<a name="line.19"></a>
+<FONT color="green">020</FONT>                    beverage3 = new Whip(beverage3);<a name="line.20"></a>
+<FONT color="green">021</FONT>                    System.out.println(beverage3.getDescription() <a name="line.21"></a>
+<FONT color="green">022</FONT>                                    + " $" + beverage3.cost());<a name="line.22"></a>
+<FONT color="green">023</FONT>            }<a name="line.23"></a>
+<FONT color="green">024</FONT>    }<a name="line.24"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

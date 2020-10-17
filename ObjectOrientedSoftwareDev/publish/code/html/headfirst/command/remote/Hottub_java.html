@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> headfirst<span style="color: #990000">.</span>command<span style="color: #990000">.</span>remote<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">Hottub</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00004:</span>         <span style="color: #009900">boolean</span> on<span style="color: #990000">;</span>
+<span style="color: #000000">00005:</span>         <span style="color: #009900">int</span> temperature<span style="color: #990000">;</span>
+<span style="color: #000000">00006:</span> 
+<span style="color: #000000">00007:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">Hottub</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00008:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00009:</span> 
+<span style="color: #000000">00010:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">on</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00011:</span>                 on <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">true</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00012:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00013:</span> 
+<span style="color: #000000">00014:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">off</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00015:</span>                 on <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">false</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00016:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00017:</span> 
+<span style="color: #000000">00018:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">bubblesOn</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00019:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>on<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00020:</span>                         System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hottub is bubbling!"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00021:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00022:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00023:</span> 
+<span style="color: #000000">00024:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">bubblesOff</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00025:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>on<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00026:</span>                         System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hottub is not bubbling"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00027:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00028:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00029:</span> 
+<span style="color: #000000">00030:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">jetsOn</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00031:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>on<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00032:</span>                         System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hottub jets are on"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00033:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00034:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00035:</span> 
+<span style="color: #000000">00036:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">jetsOff</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00037:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>on<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00038:</span>                         System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hottub jets are off"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00039:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00040:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00041:</span> 
+<span style="color: #000000">00042:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setTemperature</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> temperature<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00043:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>temperature <span style="color: #990000">=</span> temperature<span style="color: #990000">;</span>
+<span style="color: #000000">00044:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00045:</span> 
+<span style="color: #000000">00046:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">heat</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00047:</span>                 temperature <span style="color: #990000">=</span> <span style="color: #993399">105</span><span style="color: #990000">;</span>
+<span style="color: #000000">00048:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hottub is heating to a steaming 105 degrees"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00049:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00050:</span> 
+<span style="color: #000000">00051:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">cool</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00052:</span>                 temperature <span style="color: #990000">=</span> <span style="color: #993399">98</span><span style="color: #990000">;</span>
+<span style="color: #000000">00053:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hottub is cooling to 98 degrees"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00054:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00055:</span> 
+<span style="color: #000000">00056:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

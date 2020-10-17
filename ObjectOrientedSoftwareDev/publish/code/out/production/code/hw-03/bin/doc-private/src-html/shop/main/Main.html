@@ -1,0 +1,85 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package shop.main;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    import shop.ui.UIFactory;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import shop.ui.UI;<a name="line.4"></a>
+<FONT color="green">005</FONT>    import shop.data.Data;<a name="line.5"></a>
+<FONT color="green">006</FONT>    <a name="line.6"></a>
+<FONT color="green">007</FONT>    public class Main {<a name="line.7"></a>
+<FONT color="green">008</FONT>      private Main() {}<a name="line.8"></a>
+<FONT color="green">009</FONT>      public static void main(String[] args) {<a name="line.9"></a>
+<FONT color="green">010</FONT>        UI ui;<a name="line.10"></a>
+<FONT color="green">011</FONT>        if (Math.random() &lt;= 0.5) {<a name="line.11"></a>
+<FONT color="green">012</FONT>          ui = new shop.ui.TextUI();<a name="line.12"></a>
+<FONT color="green">013</FONT>        } else {<a name="line.13"></a>
+<FONT color="green">014</FONT>          ui = new shop.ui.PopupUI();<a name="line.14"></a>
+<FONT color="green">015</FONT>        }<a name="line.15"></a>
+<FONT color="green">016</FONT>        Control control = new Control(Data.newInventory(), ui);<a name="line.16"></a>
+<FONT color="green">017</FONT>        control.run();<a name="line.17"></a>
+<FONT color="green">018</FONT>      }<a name="line.18"></a>
+<FONT color="green">019</FONT>    }<a name="line.19"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

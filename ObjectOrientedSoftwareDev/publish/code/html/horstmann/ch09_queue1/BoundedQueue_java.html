@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch09_queue1<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>util<span style="color: #990000">.</span>ArrayList<span style="color: #990000">;</span>
+<span style="color: #000000">00003:</span> <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00004:</span> <span style="font-style: italic"><span style="color: #9A1900">    A first-in, first-out bounded collection of objects. </span></span>
+<span style="color: #000000">00005:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span> 
+<span style="color: #000000">00006:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">BoundedQueue</span><span style="color: #990000">&lt;</span>E<span style="color: #990000">&gt;</span>
+<span style="color: #000000">00007:</span> <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00008:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00009:</span> <span style="font-style: italic"><span style="color: #9A1900">       Constructs an empty queue. </span></span>
+<span style="color: #000000">00010:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> capacity the maximum capacity of the queue </span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00012:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">BoundedQueue</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> capacity<span style="color: #990000">)</span> 
+<span style="color: #000000">00013:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00014:</span>       elements <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> ArrayList<span style="color: #990000">&lt;</span>E<span style="color: #990000">&gt;(</span>capacity<span style="color: #990000">);</span> 
+<span style="color: #000000">00015:</span>       head <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> 
+<span style="color: #000000">00016:</span>       tail <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> 
+<span style="color: #000000">00017:</span>       size <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span>
+<span style="color: #000000">00018:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00019:</span> 
+<span style="color: #000000">00020:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900">       Removes the object at the head. </span></span>
+<span style="color: #000000">00022:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the object that has been removed from the queue</span></span>
+<span style="color: #000000">00023:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@precondition</span><span style="font-style: italic"><span style="color: #9A1900"> !isEmpty()</span></span>
+<span style="color: #000000">00024:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00025:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> E <span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">()</span> 
+<span style="color: #000000">00026:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00027:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"removeFirst"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00028:</span>       E r <span style="color: #990000">=</span> elements<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span>head<span style="color: #990000">);</span> 
+<span style="color: #000000">00029:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00030:</span>       head<span style="color: #990000">++;</span>
+<span style="color: #000000">00031:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00032:</span>       size<span style="color: #990000">--;</span>
+<span style="color: #000000">00033:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>head <span style="color: #990000">==</span> elements<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">size</span></span><span style="color: #990000">())</span> 
+<span style="color: #000000">00034:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00035:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00036:</span>          head <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> 
+<span style="color: #000000">00037:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00038:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> 
+<span style="color: #000000">00039:</span>          System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"head="</span> <span style="color: #990000">+</span> head <span style="color: #990000">+</span> <span style="color: #FF0000">",tail="</span> <span style="color: #990000">+</span> tail 
+<span style="color: #000000">00040:</span>             <span style="color: #990000">+</span> <span style="color: #FF0000">",size="</span> <span style="color: #990000">+</span> size<span style="color: #990000">);</span>
+<span style="color: #000000">00041:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> r<span style="color: #990000">;</span> 
+<span style="color: #000000">00042:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00043:</span> 
+<span style="color: #000000">00044:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00045:</span> <span style="font-style: italic"><span style="color: #9A1900">       Appends an object at the tail. </span></span>
+<span style="color: #000000">00046:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> newValue the object to be appended </span></span>
+<span style="color: #000000">00047:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@precondition</span><span style="font-style: italic"><span style="color: #9A1900"> !isFull();</span></span>
+<span style="color: #000000">00048:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00049:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>E newValue<span style="color: #990000">)</span> 
+<span style="color: #000000">00050:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00051:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"add"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00052:</span>       elements<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set</span></span><span style="color: #990000">(</span>tail<span style="color: #990000">,</span>newValue<span style="color: #990000">);</span> 
+<span style="color: #000000">00053:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00054:</span>       tail<span style="color: #990000">++;</span>
+<span style="color: #000000">00055:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00056:</span>       size<span style="color: #990000">++;</span>
+<span style="color: #000000">00057:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>tail <span style="color: #990000">==</span> elements<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">size</span></span><span style="color: #990000">())</span> 
+<span style="color: #000000">00058:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00059:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00060:</span>          tail <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> 
+<span style="color: #000000">00061:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00062:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>debug<span style="color: #990000">)</span> 
+<span style="color: #000000">00063:</span>          System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"head="</span> <span style="color: #990000">+</span> head <span style="color: #990000">+</span> <span style="color: #FF0000">",tail="</span> <span style="color: #990000">+</span> tail 
+<span style="color: #000000">00064:</span>             <span style="color: #990000">+</span> <span style="color: #FF0000">",size="</span> <span style="color: #990000">+</span> size<span style="color: #990000">);</span>
+<span style="color: #000000">00065:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00066:</span> 
+<span style="color: #000000">00067:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">boolean</span> <span style="font-weight: bold"><span style="color: #000000">isFull</span></span><span style="color: #990000">()</span> 
+<span style="color: #000000">00068:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00069:</span>      <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> size <span style="color: #990000">==</span> elements<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">size</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00070:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00071:</span> 
+<span style="color: #000000">00072:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">boolean</span> <span style="font-weight: bold"><span style="color: #000000">isEmpty</span></span><span style="color: #990000">()</span> 
+<span style="color: #000000">00073:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00074:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> size <span style="color: #990000">==</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> 
+<span style="color: #000000">00075:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00076:</span> 
+<span style="color: #000000">00077:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setDebug</span></span><span style="color: #990000">(</span><span style="color: #009900">boolean</span> newValue<span style="color: #990000">)</span>
+<span style="color: #000000">00078:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00079:</span>       debug <span style="color: #990000">=</span> newValue<span style="color: #990000">;</span>
+<span style="color: #000000">00080:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00081:</span> 
+<span style="color: #000000">00082:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> ArrayList<span style="color: #990000">&lt;</span>E<span style="color: #990000">&gt;</span> elements<span style="color: #990000">;</span> 
+<span style="color: #000000">00083:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> head<span style="color: #990000">;</span> 
+<span style="color: #000000">00084:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> tail<span style="color: #990000">;</span> 
+<span style="color: #000000">00085:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> size<span style="color: #990000">;</span>
+<span style="color: #000000">00086:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">boolean</span> debug<span style="color: #990000">;</span>
+<span style="color: #000000">00087:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

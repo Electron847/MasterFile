@@ -1,0 +1,138 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package horstmann.ch04_animation;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.awt.*;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.awt.geom.*;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import java.util.*;<a name="line.4"></a>
+<FONT color="green">005</FONT>    <a name="line.5"></a>
+<FONT color="green">006</FONT>    /**<a name="line.6"></a>
+<FONT color="green">007</FONT>       A car that can be moved around.<a name="line.7"></a>
+<FONT color="green">008</FONT>    */<a name="line.8"></a>
+<FONT color="green">009</FONT>    public class CarShape implements MoveableShape<a name="line.9"></a>
+<FONT color="green">010</FONT>    {<a name="line.10"></a>
+<FONT color="green">011</FONT>       /**<a name="line.11"></a>
+<FONT color="green">012</FONT>          Constructs a car item.<a name="line.12"></a>
+<FONT color="green">013</FONT>          @param x the left of the bounding rectangle<a name="line.13"></a>
+<FONT color="green">014</FONT>          @param y the top of the bounding rectangle<a name="line.14"></a>
+<FONT color="green">015</FONT>          @param width the width of the bounding rectangle<a name="line.15"></a>
+<FONT color="green">016</FONT>       */<a name="line.16"></a>
+<FONT color="green">017</FONT>       public CarShape(int x, int y, int width)<a name="line.17"></a>
+<FONT color="green">018</FONT>       {<a name="line.18"></a>
+<FONT color="green">019</FONT>          this.x = x;<a name="line.19"></a>
+<FONT color="green">020</FONT>          this.y = y;<a name="line.20"></a>
+<FONT color="green">021</FONT>          this.width = width;<a name="line.21"></a>
+<FONT color="green">022</FONT>       }<a name="line.22"></a>
+<FONT color="green">023</FONT>    <a name="line.23"></a>
+<FONT color="green">024</FONT>       public void translate(int dx, int dy)<a name="line.24"></a>
+<FONT color="green">025</FONT>       {<a name="line.25"></a>
+<FONT color="green">026</FONT>          x += dx;<a name="line.26"></a>
+<FONT color="green">027</FONT>          y += dy;<a name="line.27"></a>
+<FONT color="green">028</FONT>       }<a name="line.28"></a>
+<FONT color="green">029</FONT>    <a name="line.29"></a>
+<FONT color="green">030</FONT>       public void draw(Graphics2D g2)<a name="line.30"></a>
+<FONT color="green">031</FONT>       {<a name="line.31"></a>
+<FONT color="green">032</FONT>          Rectangle2D.Double body<a name="line.32"></a>
+<FONT color="green">033</FONT>                = new Rectangle2D.Double(x, y + width / 6, <a name="line.33"></a>
+<FONT color="green">034</FONT>                      width - 1, width / 6);<a name="line.34"></a>
+<FONT color="green">035</FONT>          Ellipse2D.Double frontTire<a name="line.35"></a>
+<FONT color="green">036</FONT>                = new Ellipse2D.Double(x + width / 6, y + width / 3, <a name="line.36"></a>
+<FONT color="green">037</FONT>                      width / 6, width / 6);<a name="line.37"></a>
+<FONT color="green">038</FONT>          Ellipse2D.Double rearTire<a name="line.38"></a>
+<FONT color="green">039</FONT>                = new Ellipse2D.Double(x + width * 2 / 3, y + width / 3,<a name="line.39"></a>
+<FONT color="green">040</FONT>                      width / 6, width / 6);<a name="line.40"></a>
+<FONT color="green">041</FONT>    <a name="line.41"></a>
+<FONT color="green">042</FONT>          // The bottom of the front windshield<a name="line.42"></a>
+<FONT color="green">043</FONT>          Point2D.Double r1<a name="line.43"></a>
+<FONT color="green">044</FONT>                = new Point2D.Double(x + width / 6, y + width / 6);<a name="line.44"></a>
+<FONT color="green">045</FONT>          // The front of the roof<a name="line.45"></a>
+<FONT color="green">046</FONT>          Point2D.Double r2<a name="line.46"></a>
+<FONT color="green">047</FONT>                = new Point2D.Double(x + width / 3, y);<a name="line.47"></a>
+<FONT color="green">048</FONT>          // The rear of the roof<a name="line.48"></a>
+<FONT color="green">049</FONT>          Point2D.Double r3<a name="line.49"></a>
+<FONT color="green">050</FONT>                = new Point2D.Double(x + width * 2 / 3, y);<a name="line.50"></a>
+<FONT color="green">051</FONT>          // The bottom of the rear windshield<a name="line.51"></a>
+<FONT color="green">052</FONT>          Point2D.Double r4<a name="line.52"></a>
+<FONT color="green">053</FONT>                = new Point2D.Double(x + width * 5 / 6, y + width / 6);<a name="line.53"></a>
+<FONT color="green">054</FONT>          Line2D.Double frontWindshield<a name="line.54"></a>
+<FONT color="green">055</FONT>                = new Line2D.Double(r1, r2);<a name="line.55"></a>
+<FONT color="green">056</FONT>          Line2D.Double roofTop<a name="line.56"></a>
+<FONT color="green">057</FONT>                = new Line2D.Double(r2, r3);<a name="line.57"></a>
+<FONT color="green">058</FONT>          Line2D.Double rearWindshield<a name="line.58"></a>
+<FONT color="green">059</FONT>                = new Line2D.Double(r3, r4);<a name="line.59"></a>
+<FONT color="green">060</FONT>          <a name="line.60"></a>
+<FONT color="green">061</FONT>          g2.draw(body);<a name="line.61"></a>
+<FONT color="green">062</FONT>          g2.draw(frontTire);<a name="line.62"></a>
+<FONT color="green">063</FONT>          g2.draw(rearTire);<a name="line.63"></a>
+<FONT color="green">064</FONT>          g2.draw(frontWindshield);<a name="line.64"></a>
+<FONT color="green">065</FONT>          g2.draw(roofTop);<a name="line.65"></a>
+<FONT color="green">066</FONT>          g2.draw(rearWindshield);<a name="line.66"></a>
+<FONT color="green">067</FONT>       }<a name="line.67"></a>
+<FONT color="green">068</FONT>       <a name="line.68"></a>
+<FONT color="green">069</FONT>       private int x;<a name="line.69"></a>
+<FONT color="green">070</FONT>       private int y;<a name="line.70"></a>
+<FONT color="green">071</FONT>       private int width;<a name="line.71"></a>
+<FONT color="green">072</FONT>    }<a name="line.72"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

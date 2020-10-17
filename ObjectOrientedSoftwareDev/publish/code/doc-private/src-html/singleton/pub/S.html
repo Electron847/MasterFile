@@ -1,0 +1,80 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package singleton.pub;<a name="line.1"></a>
+<FONT color="green">002</FONT>    public interface S {<a name="line.2"></a>
+<FONT color="green">003</FONT>      public static final S instance = <a name="line.3"></a>
+<FONT color="green">004</FONT>        ("linux".equals(System.getProperty("os.name"))) ? new SLinux() : new SOther();<a name="line.4"></a>
+<FONT color="green">005</FONT>      public int inc();<a name="line.5"></a>
+<FONT color="green">006</FONT>    }<a name="line.6"></a>
+<FONT color="green">007</FONT>    final class SLinux implements S { <a name="line.7"></a>
+<FONT color="green">008</FONT>      private int i;<a name="line.8"></a>
+<FONT color="green">009</FONT>      public int inc() {return ++i;}<a name="line.9"></a>
+<FONT color="green">010</FONT>    }<a name="line.10"></a>
+<FONT color="green">011</FONT>    final class SOther implements S {<a name="line.11"></a>
+<FONT color="green">012</FONT>      private int i;<a name="line.12"></a>
+<FONT color="green">013</FONT>      public int inc() {return --i;}<a name="line.13"></a>
+<FONT color="green">014</FONT>    }<a name="line.14"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

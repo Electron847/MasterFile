@@ -1,7 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662805e6-adb5-40af-bbf6-f4685f5b216b" name="Default Changelist" comment="" />
+    <list default="true" id="662805e6-adb5-40af-bbf6-f4685f5b216b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../July2020/Akka_Scala_basics/.idea/scala_compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../July2020/Akka_Scala_basics/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Beryllium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Boron.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Carbon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Nitrogen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Oxygen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Distributed Systems 2/token/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Distributed Systems 2/token/.idea/modules/token_8531-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Distributed Systems 2/token/.idea/sbt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Distributed Systems 2/token/.idea/scala_compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Distributed Systems 2/token/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ComputeSecurity/PasswordCracking/recovered_passwords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ContinousDelivery&amp;DevOps/SE441_hw7/cookbooks/first_cookbook" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ContinousDelivery&amp;DevOps/SE441_hw7/cookbooks/first_cookbook" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ContinousDelivery&amp;DevOps/SE441_hw7/hw3sw" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ContinousDelivery&amp;DevOps/SE441_hw7/hw3sw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Elements/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Elements/Element.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Elements/Helium.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Elements/Helium.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Elements/Hydrogen.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Elements/Hydrogen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Elements/Lithium.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Elements/Lithium.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/out/production/Chemistry/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Helium.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Helium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Hydrogen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Hydrogen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Lithium.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Elements/Lithium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../July2020/Chemistry/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ObjectOrientedSoftwareDev/HW7_Final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ObjectOrientedSoftwareDev/HW7_Final/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ObjectOrientedSoftwareDev/HW7_Final/HW7_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ObjectOrientedSoftwareDev/HW7_Final/HW7_Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ObjectOrientedSoftwareDev/HW8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ObjectOrientedSoftwareDev/HW8/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ObjectOrientedSoftwareDev/VideoShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ObjectOrientedSoftwareDev/VideoShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Python/Cryptology/assignment1/assignment1_page59_problem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/modules/Life Cycle Examples-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/modules/Life Cycle Examples-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/modules/Life Cycle Examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/modules/Life Cycle Examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/sbt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/config-classes/$326beec27e2231b04ef8$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/config-classes/$326beec27e2231b04ef8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/config-classes/$326beec27e2231b04ef8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/default/lifecycle-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/default/lifecycle-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/default/lifecycle-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/default/lifecycle-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lifecycle-build-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/.history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/Monitoring2$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/Monitoring2$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/Monitoring2$delayedInit$body.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/Monitoring2$delayedInit$body.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/Parent$$anonfun$receive$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/Parent$$anonfun$receive$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/Parent.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/Parent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/WatchActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/WatchActor$$anonfun$receive$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/WatchActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/classes/monitoring2/WatchActor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sbt_2.12/1.0/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sbt_2.12/1.0/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sbt_2.12/1.0/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sbt_2.12/1.0/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sources/1.0/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sources/1.0/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sources/1.0/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sources/1.0/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sources_2.12/1.0/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sources_2.12/1.0/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sources_2.12/1.0/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples$sources_2.12/1.0/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples_2.12/1.0/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples_2.12/1.0/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples_2.12/1.0/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/life-cycle-examples/life-cycle-examples_2.12/1.0/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sbt_2.12-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples$sources_2.12-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/scala-2.12/resolution-cache/reports/life-cycle-examples-life-cycle-examples_2.12-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/$global/dumpStructure/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/updateSbtClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../FaultTolerance_LifeCycle/LifeCycle/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Ping Pong-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Ping Pong-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Ping Pong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Ping Pong.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7354fff61fcbce664b34$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7354fff61fcbce664b34.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7354fff61fcbce664b34.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7ffab7f0c5c8bfa33a53$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7ffab7f0c5c8bfa33a53.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7ffab7f0c5c8bfa33a53.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/pingpong-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/pingpong-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/pingpong-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/pingpong-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-pingpong-build-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/third/PingPong$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/third/PingPong$$anonfun$receive$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/third/Server$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/third/Server$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/third/Server$delayedInit$body.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/third/Server$delayedInit$body.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/ping-pong/ping-pong$sources/1.0/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/ping-pong/ping-pong$sources/1.0/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/ping-pong/ping-pong$sources/1.0/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/ping-pong/ping-pong$sources/1.0/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/ping-pong/ping-pong_2.12/1.0/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/ping-pong/ping-pong_2.12/1.0/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/ping-pong/ping-pong_2.12/1.0/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/ping-pong/ping-pong_2.12/1.0/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong$sources-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ping-pong-ping-pong_2.12-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -21,16 +207,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/second/second.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="199">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/third/third.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-256">
+            <state relative-caret-position="551">
               <caret line="51" column="117" selection-start-line="51" selection-start-column="117" selection-end-line="51" selection-end-column="117" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -40,7 +226,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -51,6 +237,9 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -59,17 +248,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="348" />
+    <option name="x" value="106" />
     <option name="y" value="23" />
-    <option name="width" value="785" />
-    <option name="height" value="723" />
+    <option name="width" value="808" />
+    <option name="height" value="623" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,6 +302,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,7 +361,7 @@
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="root [file:/Users/sethweber/Desktop/CS/code/pingpong/]" />
+                <option name="name" value="root [file:/Users/sethweber/Desktop/CS/Scala/code/pingpong/]" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
@@ -185,16 +375,17 @@
     </option>
     <option name="modificationStamps">
       <map>
+        <entry key="$PROJECT_DIR$" value="3110169505000" />
         <entry key="$PROJECT_DIR$/build.sbt" value="2346867770" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="3771982881" />
       </map>
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../first" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../../Distrib2_HW3/mReduce_Part2" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../../Distributed Systems 2/mReduce_Part2" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../../Distributed Systems 2/mReduce_Part2 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../first" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../../code 2/GenericService" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../../mapreduce" value="PREVIEW" />
         <entry key="$USER_HOME$/Downloads/code 2/GenericService" value="PREVIEW" />
@@ -227,10 +418,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="348" y="23" width="785" height="723" extended-state="0" />
-    <editor active="true" />
+    <frame x="106" y="23" width="808" height="623" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.218035" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21825397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -239,7 +429,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3296355" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.328125" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -266,28 +456,31 @@
     <entry file="file://$PROJECT_DIR$/project/build.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/second/second.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/third/third.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256">
+        <state relative-caret-position="551">
           <caret line="51" column="117" selection-start-line="51" selection-start-column="117" selection-end-line="51" selection-end-column="117" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#170#225#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/second/second.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_akka_akka_actor_2_12_2_5_22_jar.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>

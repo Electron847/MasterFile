@@ -1,0 +1,112 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package horstmann.ch08_umleditor;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.awt.BasicStroke;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.awt.Graphics2D;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import java.awt.Shape;<a name="line.4"></a>
+<FONT color="green">005</FONT>    import java.awt.geom.Line2D;<a name="line.5"></a>
+<FONT color="green">006</FONT>    import java.awt.geom.Point2D;<a name="line.6"></a>
+<FONT color="green">007</FONT>    import java.awt.geom.Rectangle2D;<a name="line.7"></a>
+<FONT color="green">008</FONT>    <a name="line.8"></a>
+<FONT color="green">009</FONT>    /**<a name="line.9"></a>
+<FONT color="green">010</FONT>       A class that assumes that an edge can yield its shape<a name="line.10"></a>
+<FONT color="green">011</FONT>       and then takes advantage of the fact that containment testing can <a name="line.11"></a>
+<FONT color="green">012</FONT>       be done by stroking the shape with a fat stroke.<a name="line.12"></a>
+<FONT color="green">013</FONT>    */<a name="line.13"></a>
+<FONT color="green">014</FONT>    public abstract class ShapeEdge extends AbstractEdge<a name="line.14"></a>
+<FONT color="green">015</FONT>    {  <a name="line.15"></a>
+<FONT color="green">016</FONT>       /**<a name="line.16"></a>
+<FONT color="green">017</FONT>          Returns the path that should be stroked to<a name="line.17"></a>
+<FONT color="green">018</FONT>          draw this edge. The path does not include<a name="line.18"></a>
+<FONT color="green">019</FONT>          arrow tips or labels.<a name="line.19"></a>
+<FONT color="green">020</FONT>          @return a path along the edge<a name="line.20"></a>
+<FONT color="green">021</FONT>       */<a name="line.21"></a>
+<FONT color="green">022</FONT>       public abstract Shape getShape();<a name="line.22"></a>
+<FONT color="green">023</FONT>    <a name="line.23"></a>
+<FONT color="green">024</FONT>       public Rectangle2D getBounds(Graphics2D g2)<a name="line.24"></a>
+<FONT color="green">025</FONT>       {<a name="line.25"></a>
+<FONT color="green">026</FONT>          return getShape().getBounds();<a name="line.26"></a>
+<FONT color="green">027</FONT>       }<a name="line.27"></a>
+<FONT color="green">028</FONT>    <a name="line.28"></a>
+<FONT color="green">029</FONT>       public boolean contains(Point2D aPoint)<a name="line.29"></a>
+<FONT color="green">030</FONT>       {<a name="line.30"></a>
+<FONT color="green">031</FONT>          final double MAX_DIST = 3;<a name="line.31"></a>
+<FONT color="green">032</FONT>    <a name="line.32"></a>
+<FONT color="green">033</FONT>          // the end points may contain small nodes, so don't<a name="line.33"></a>
+<FONT color="green">034</FONT>          // match them<a name="line.34"></a>
+<FONT color="green">035</FONT>          Line2D conn = getConnectionPoints();<a name="line.35"></a>
+<FONT color="green">036</FONT>          if (aPoint.distance(conn.getP1()) &lt;= MAX_DIST <a name="line.36"></a>
+<FONT color="green">037</FONT>             || aPoint.distance(conn.getP2()) &lt;= MAX_DIST)<a name="line.37"></a>
+<FONT color="green">038</FONT>             return false;<a name="line.38"></a>
+<FONT color="green">039</FONT>    <a name="line.39"></a>
+<FONT color="green">040</FONT>          Shape p = getShape();<a name="line.40"></a>
+<FONT color="green">041</FONT>          BasicStroke fatStroke = new BasicStroke(<a name="line.41"></a>
+<FONT color="green">042</FONT>             (float)(2 * MAX_DIST));<a name="line.42"></a>
+<FONT color="green">043</FONT>          Shape fatPath = fatStroke.createStrokedShape(p);<a name="line.43"></a>
+<FONT color="green">044</FONT>          return fatPath.contains(aPoint);<a name="line.44"></a>
+<FONT color="green">045</FONT>       }<a name="line.45"></a>
+<FONT color="green">046</FONT>    }<a name="line.46"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

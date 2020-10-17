@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch08_umleditor<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>BasicStroke<span style="color: #990000">;</span>
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>Graphics2D<span style="color: #990000">;</span>
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>Shape<span style="color: #990000">;</span>
+<span style="color: #000000">00005:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>geom<span style="color: #990000">.</span>Line2D<span style="color: #990000">;</span>
+<span style="color: #000000">00006:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>geom<span style="color: #990000">.</span>Point2D<span style="color: #990000">;</span>
+<span style="color: #000000">00007:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>geom<span style="color: #990000">.</span>Rectangle2D<span style="color: #990000">;</span>
+<span style="color: #000000">00008:</span> 
+<span style="color: #000000">00009:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00010:</span> <span style="font-style: italic"><span style="color: #9A1900">   A class that assumes that an edge can yield its shape</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">   and then takes advantage of the fact that containment testing can </span></span>
+<span style="color: #000000">00012:</span> <span style="font-style: italic"><span style="color: #9A1900">   be done by stroking the shape with a fat stroke.</span></span>
+<span style="color: #000000">00013:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span>
+<span style="color: #000000">00014:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">abstract</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">ShapeEdge</span> <span style="font-weight: bold"><span style="color: #0000FF">extends</span></span> AbstractEdge
+<span style="color: #000000">00015:</span> <span style="color: #FF0000">{</span>  
+<span style="color: #000000">00016:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00017:</span> <span style="font-style: italic"><span style="color: #9A1900">      Returns the path that should be stroked to</span></span>
+<span style="color: #000000">00018:</span> <span style="font-style: italic"><span style="color: #9A1900">      draw this edge. The path does not include</span></span>
+<span style="color: #000000">00019:</span> <span style="font-style: italic"><span style="color: #9A1900">      arrow tips or labels.</span></span>
+<span style="color: #000000">00020:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> a path along the edge</span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00022:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">abstract</span></span> Shape <span style="font-weight: bold"><span style="color: #000000">getShape</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00023:</span> 
+<span style="color: #000000">00024:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Rectangle2D <span style="font-weight: bold"><span style="color: #000000">getBounds</span></span><span style="color: #990000">(</span>Graphics2D g2<span style="color: #990000">)</span>
+<span style="color: #000000">00025:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00026:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">getShape</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">getBounds</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00027:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00028:</span> 
+<span style="color: #000000">00029:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">boolean</span> <span style="font-weight: bold"><span style="color: #000000">contains</span></span><span style="color: #990000">(</span>Point2D aPoint<span style="color: #990000">)</span>
+<span style="color: #000000">00030:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00031:</span>       <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">double</span> MAX_DIST <span style="color: #990000">=</span> <span style="color: #993399">3</span><span style="color: #990000">;</span>
+<span style="color: #000000">00032:</span> 
+<span style="color: #000000">00033:</span>       <span style="font-style: italic"><span style="color: #9A1900">// the end points may contain small nodes, so don't</span></span>
+<span style="color: #000000">00034:</span>       <span style="font-style: italic"><span style="color: #9A1900">// match them</span></span>
+<span style="color: #000000">00035:</span>       Line2D conn <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">getConnectionPoints</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00036:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>aPoint<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">distance</span></span><span style="color: #990000">(</span>conn<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getP1</span></span><span style="color: #990000">())</span> <span style="color: #990000">&lt;=</span> MAX_DIST 
+<span style="color: #000000">00037:</span>          <span style="color: #990000">||</span> aPoint<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">distance</span></span><span style="color: #990000">(</span>conn<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getP2</span></span><span style="color: #990000">())</span> <span style="color: #990000">&lt;=</span> MAX_DIST<span style="color: #990000">)</span>
+<span style="color: #000000">00038:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">false</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00039:</span> 
+<span style="color: #000000">00040:</span>       Shape p <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">getShape</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00041:</span>       BasicStroke fatStroke <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">BasicStroke</span></span><span style="color: #990000">(</span>
+<span style="color: #000000">00042:</span>          <span style="color: #990000">(</span><span style="color: #009900">float</span><span style="color: #990000">)(</span><span style="color: #993399">2</span> <span style="color: #990000">*</span> MAX_DIST<span style="color: #990000">));</span>
+<span style="color: #000000">00043:</span>       Shape fatPath <span style="color: #990000">=</span> fatStroke<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">createStrokedShape</span></span><span style="color: #990000">(</span>p<span style="color: #990000">);</span>
+<span style="color: #000000">00044:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> fatPath<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">contains</span></span><span style="color: #990000">(</span>aPoint<span style="color: #990000">);</span>
+<span style="color: #000000">00045:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00046:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch02_mail<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>util<span style="color: #990000">.</span>Scanner<span style="color: #990000">;</span>
+<span style="color: #000000">00003:</span> 
+<span style="color: #000000">00004:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00005:</span> <span style="font-style: italic"><span style="color: #9A1900">   A telephone that takes simulated keystrokes and voice input</span></span>
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">   from the user and simulates spoken text.</span></span>
+<span style="color: #000000">00007:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span>
+<span style="color: #000000">00008:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">Telephone</span>
+<span style="color: #000000">00009:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00010:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">      Construct phone object.</span></span>
+<span style="color: #000000">00012:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aScanner that reads text from a character-input stream</span></span>
+<span style="color: #000000">00013:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00014:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">Telephone</span></span><span style="color: #990000">(</span>Scanner aScanner<span style="color: #990000">)</span>
+<span style="color: #000000">00015:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00016:</span>       scanner <span style="color: #990000">=</span> aScanner<span style="color: #990000">;</span>
+<span style="color: #000000">00017:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00018:</span> 
+<span style="color: #000000">00019:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00020:</span> <span style="font-style: italic"><span style="color: #9A1900">      Speak a message to System.out.</span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> output the text that will be "spoken"</span></span>
+<span style="color: #000000">00022:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00023:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>String output<span style="color: #990000">)</span>
+<span style="color: #000000">00024:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00025:</span>       System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span>output<span style="color: #990000">);</span>
+<span style="color: #000000">00026:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00027:</span> 
+<span style="color: #000000">00028:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00029:</span> <span style="font-style: italic"><span style="color: #9A1900">      Loops reading user input and passes the input to the</span></span>
+<span style="color: #000000">00030:</span> <span style="font-style: italic"><span style="color: #9A1900">      Connection object's methods dial, record or hangup.</span></span>
+<span style="color: #000000">00031:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> c the connection that connects this phone to the</span></span>
+<span style="color: #000000">00032:</span> <span style="font-style: italic"><span style="color: #9A1900">      voice mail system</span></span>
+<span style="color: #000000">00033:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00034:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>Connection c<span style="color: #990000">)</span>
+<span style="color: #000000">00035:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00036:</span>       <span style="color: #009900">boolean</span> more <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">true</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00037:</span>       <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #990000">(</span>more<span style="color: #990000">)</span>
+<span style="color: #000000">00038:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00039:</span>          String input <span style="color: #990000">=</span> scanner<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">nextLine</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00040:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>input <span style="color: #990000">==</span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00041:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>input<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equalsIgnoreCase</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"H"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00042:</span>             c<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">hangup</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00043:</span>          <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>input<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equalsIgnoreCase</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Q"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00044:</span>             more <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">false</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00045:</span>          <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>input<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">length</span></span><span style="color: #990000">()</span> <span style="color: #990000">==</span> <span style="color: #993399">1</span>
+<span style="color: #000000">00046:</span>             <span style="color: #990000">&amp;&amp;</span> <span style="color: #FF0000">"1234567890#"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">indexOf</span></span><span style="color: #990000">(</span>input<span style="color: #990000">)</span> <span style="color: #990000">&gt;=</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00047:</span>             c<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">dial</span></span><span style="color: #990000">(</span>input<span style="color: #990000">);</span>
+<span style="color: #000000">00048:</span>          <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00049:</span>             c<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">record</span></span><span style="color: #990000">(</span>input<span style="color: #990000">);</span>
+<span style="color: #000000">00050:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00051:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00052:</span> 
+<span style="color: #000000">00053:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Scanner scanner<span style="color: #990000">;</span>
+<span style="color: #000000">00054:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

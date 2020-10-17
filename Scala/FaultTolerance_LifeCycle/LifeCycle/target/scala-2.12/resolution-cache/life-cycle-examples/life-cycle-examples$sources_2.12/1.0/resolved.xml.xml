@@ -4,7 +4,7 @@
 		module="life-cycle-examples$sources_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20190514110043"
+		publication="20201013153543"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

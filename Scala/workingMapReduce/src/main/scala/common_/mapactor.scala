@@ -31,8 +31,6 @@ class MapActor(reduceActors: ActorRef) extends Actor {
     for (word <- content.split("[\\p{Punct}\\s]+")) {
       if (word.charAt(0).isUpper && word.length >= 3 && !STOP_WORDS_LIST.contains(word) && !namesFound.contains(word)) {
         reduceActors ! Word(word, title)
-
-
       }
     }
   }

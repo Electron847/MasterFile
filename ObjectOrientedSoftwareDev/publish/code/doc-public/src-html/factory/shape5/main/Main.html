@@ -1,0 +1,83 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package factory.shape5.main;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import factory.shape5.Shape;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import factory.shape5.ShapeFactory;<a name="line.3"></a>
+<FONT color="green">004</FONT>    public class Main {<a name="line.4"></a>
+<FONT color="green">005</FONT>      public static void main (String[] args)<a name="line.5"></a>
+<FONT color="green">006</FONT>        throws ClassNotFoundException<a name="line.6"></a>
+<FONT color="green">007</FONT>      {<a name="line.7"></a>
+<FONT color="green">008</FONT>        ShapeFactory.addShape("Triangle", "shape.main.Triangle");<a name="line.8"></a>
+<FONT color="green">009</FONT>        Shape[] a = new Shape[3];<a name="line.9"></a>
+<FONT color="green">010</FONT>        a[0] = ShapeFactory.newShape("Circle");<a name="line.10"></a>
+<FONT color="green">011</FONT>        a[1] = ShapeFactory.newShape("Square");<a name="line.11"></a>
+<FONT color="green">012</FONT>        a[2] = ShapeFactory.newShape("Triangle");<a name="line.12"></a>
+<FONT color="green">013</FONT>        System.out.println(a[0]);<a name="line.13"></a>
+<FONT color="green">014</FONT>        System.out.println(a[1]);<a name="line.14"></a>
+<FONT color="green">015</FONT>        System.out.println(a[2]);<a name="line.15"></a>
+<FONT color="green">016</FONT>      }<a name="line.16"></a>
+<FONT color="green">017</FONT>    }<a name="line.17"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

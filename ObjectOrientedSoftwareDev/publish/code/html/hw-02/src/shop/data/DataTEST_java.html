@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> shop<span style="color: #990000">.</span>data<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> junit<span style="color: #990000">.</span>framework<span style="color: #990000">.</span>Assert<span style="color: #990000">;</span>
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> junit<span style="color: #990000">.</span>framework<span style="color: #990000">.</span>TestCase<span style="color: #990000">;</span>
+<span style="color: #000000">00005:</span> 
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">// TODO: complete the tests</span></span>
+<span style="color: #000000">00007:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">DataTEST</span> <span style="font-weight: bold"><span style="color: #0000FF">extends</span></span> TestCase <span style="color: #FF0000">{</span>
+<span style="color: #000000">00008:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">DataTEST</span></span><span style="color: #990000">(</span>String name<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00009:</span>     <span style="font-weight: bold"><span style="color: #0000FF">super</span></span><span style="color: #990000">(</span>name<span style="color: #990000">);</span>
+<span style="color: #000000">00010:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00011:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">testConstructorAndAttributes</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00012:</span>     String title1 <span style="color: #990000">=</span> <span style="color: #FF0000">"XX"</span><span style="color: #990000">;</span>
+<span style="color: #000000">00013:</span>     String director1 <span style="color: #990000">=</span> <span style="color: #FF0000">"XY"</span><span style="color: #990000">;</span>
+<span style="color: #000000">00014:</span>     String title2 <span style="color: #990000">=</span> <span style="color: #FF0000">" XX "</span><span style="color: #990000">;</span>
+<span style="color: #000000">00015:</span>     String director2 <span style="color: #990000">=</span> <span style="color: #FF0000">" XY "</span><span style="color: #990000">;</span>
+<span style="color: #000000">00016:</span>     <span style="color: #009900">int</span> year <span style="color: #990000">=</span> <span style="color: #993399">2002</span><span style="color: #990000">;</span>
+<span style="color: #000000">00017:</span> 
+<span style="color: #000000">00018:</span>     Video v1 <span style="color: #990000">=</span> Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span>title1<span style="color: #990000">,</span> year<span style="color: #990000">,</span> director1<span style="color: #990000">);</span>
+<span style="color: #000000">00019:</span>     Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">assertSame</span></span><span style="color: #990000">(</span>title1<span style="color: #990000">,</span> v1<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">title</span></span><span style="color: #990000">());</span>
+<span style="color: #000000">00020:</span>     Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">assertEquals</span></span><span style="color: #990000">(</span>year<span style="color: #990000">,</span> v1<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">year</span></span><span style="color: #990000">());</span>
+<span style="color: #000000">00021:</span>     Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">assertSame</span></span><span style="color: #990000">(</span>director1<span style="color: #990000">,</span> v1<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">director</span></span><span style="color: #990000">());</span>
+<span style="color: #000000">00022:</span> 
+<span style="color: #000000">00023:</span>     Video v2 <span style="color: #990000">=</span> Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span>title2<span style="color: #990000">,</span> year<span style="color: #990000">,</span> director2<span style="color: #990000">);</span>
+<span style="color: #000000">00024:</span>     Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">assertEquals</span></span><span style="color: #990000">(</span>title1<span style="color: #990000">,</span> v2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">title</span></span><span style="color: #990000">());</span>
+<span style="color: #000000">00025:</span>     Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">assertEquals</span></span><span style="color: #990000">(</span>director1<span style="color: #990000">,</span> v2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">director</span></span><span style="color: #990000">());</span>
+<span style="color: #000000">00026:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00027:</span> 
+<span style="color: #000000">00028:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">testConstructorExceptionYear</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00029:</span>     <span style="font-weight: bold"><span style="color: #0000FF">try</span></span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00030:</span>       Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"X"</span><span style="color: #990000">,</span> <span style="color: #993399">1800</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Y"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00031:</span>       Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">fail</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00032:</span>     <span style="color: #FF0000">}</span> <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>IllegalArgumentException e<span style="color: #990000">)</span> <span style="color: #FF0000">{</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00033:</span>     <span style="font-weight: bold"><span style="color: #0000FF">try</span></span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00034:</span>       Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"X"</span><span style="color: #990000">,</span> <span style="color: #993399">5000</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Y"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00035:</span>       Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">fail</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00036:</span>     <span style="color: #FF0000">}</span> <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>IllegalArgumentException e<span style="color: #990000">)</span> <span style="color: #FF0000">{</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00037:</span>     <span style="font-weight: bold"><span style="color: #0000FF">try</span></span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00038:</span>       Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"X"</span><span style="color: #990000">,</span> <span style="color: #993399">1801</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Y"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00039:</span>       Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"X"</span><span style="color: #990000">,</span> <span style="color: #993399">4999</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Y"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00040:</span>     <span style="color: #FF0000">}</span> <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>IllegalArgumentException e<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00041:</span>       Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">fail</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00042:</span>     <span style="color: #FF0000">}</span>
+<span style="color: #000000">00043:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00044:</span> 
+<span style="color: #000000">00045:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">testConstructorExceptionTitle</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00046:</span>     <span style="font-weight: bold"><span style="color: #0000FF">try</span></span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00047:</span>       Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">,</span> <span style="color: #993399">2002</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Y"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00048:</span>       Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">fail</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00049:</span>     <span style="color: #FF0000">}</span> <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>IllegalArgumentException e<span style="color: #990000">)</span> <span style="color: #FF0000">{</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00050:</span>     <span style="font-weight: bold"><span style="color: #0000FF">try</span></span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00051:</span>       Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">""</span><span style="color: #990000">,</span> <span style="color: #993399">2002</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Y"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00052:</span>       Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">fail</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00053:</span>     <span style="color: #FF0000">}</span> <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>IllegalArgumentException e<span style="color: #990000">)</span> <span style="color: #FF0000">{</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00054:</span>     <span style="font-weight: bold"><span style="color: #0000FF">try</span></span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00055:</span>       Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">" "</span><span style="color: #990000">,</span> <span style="color: #993399">2002</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Y"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00056:</span>       Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">fail</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00057:</span>     <span style="color: #FF0000">}</span> <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>IllegalArgumentException e<span style="color: #990000">)</span> <span style="color: #FF0000">{</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00058:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00059:</span> 
+<span style="color: #000000">00060:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">testConstructorExceptionDirector</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00061:</span>     <span style="font-style: italic"><span style="color: #9A1900">// TODO</span></span>
+<span style="color: #000000">00062:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00063:</span> 
+<span style="color: #000000">00064:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">testToString</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00065:</span>     String s <span style="color: #990000">=</span> Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"A"</span><span style="color: #990000">,</span><span style="color: #993399">2000</span><span style="color: #990000">,</span><span style="color: #FF0000">"B"</span><span style="color: #990000">).</span><span style="font-weight: bold"><span style="color: #000000">toString</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00066:</span>     Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">assertEquals</span></span><span style="color: #990000">(</span> s<span style="color: #990000">,</span> <span style="color: #FF0000">"A (2000) : B"</span> <span style="color: #990000">);</span>
+<span style="color: #000000">00067:</span>     s <span style="color: #990000">=</span> Data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newVideo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">" A "</span><span style="color: #990000">,</span><span style="color: #993399">2000</span><span style="color: #990000">,</span><span style="color: #FF0000">" B "</span><span style="color: #990000">).</span><span style="font-weight: bold"><span style="color: #000000">toString</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00068:</span>     Assert<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">assertEquals</span></span><span style="color: #990000">(</span> s<span style="color: #990000">,</span> <span style="color: #FF0000">"A (2000) : B"</span> <span style="color: #990000">);</span>
+<span style="color: #000000">00069:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00070:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

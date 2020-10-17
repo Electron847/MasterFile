@@ -1,0 +1,87 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package headfirst.facade.hometheater;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    public class HomeTheaterTestDrive {<a name="line.3"></a>
+<FONT color="green">004</FONT>            public static void main(String[] args) {<a name="line.4"></a>
+<FONT color="green">005</FONT>                    Amplifier amp = new Amplifier("Top-O-Line Amplifier");<a name="line.5"></a>
+<FONT color="green">006</FONT>                    Tuner tuner = new Tuner("Top-O-Line AM/FM Tuner", amp);<a name="line.6"></a>
+<FONT color="green">007</FONT>                    DvdPlayer dvd = new DvdPlayer("Top-O-Line DVD Player", amp);<a name="line.7"></a>
+<FONT color="green">008</FONT>                    CdPlayer cd = new CdPlayer("Top-O-Line CD Player", amp);<a name="line.8"></a>
+<FONT color="green">009</FONT>                    Projector projector = new Projector("Top-O-Line Projector", dvd);<a name="line.9"></a>
+<FONT color="green">010</FONT>                    TheaterLights lights = new TheaterLights("Theater Ceiling Lights");<a name="line.10"></a>
+<FONT color="green">011</FONT>                    Screen screen = new Screen("Theater Screen");<a name="line.11"></a>
+<FONT color="green">012</FONT>                    PopcornPopper popper = new PopcornPopper("Popcorn Popper");<a name="line.12"></a>
+<FONT color="green">013</FONT>     <a name="line.13"></a>
+<FONT color="green">014</FONT>                    HomeTheaterFacade homeTheater = <a name="line.14"></a>
+<FONT color="green">015</FONT>                                    new HomeTheaterFacade(amp, tuner, dvd, cd, <a name="line.15"></a>
+<FONT color="green">016</FONT>                                                    projector, screen, lights, popper);<a name="line.16"></a>
+<FONT color="green">017</FONT>     <a name="line.17"></a>
+<FONT color="green">018</FONT>                    homeTheater.watchMovie("Raiders of the Lost Ark");<a name="line.18"></a>
+<FONT color="green">019</FONT>                    homeTheater.endMovie();<a name="line.19"></a>
+<FONT color="green">020</FONT>            }<a name="line.20"></a>
+<FONT color="green">021</FONT>    }<a name="line.21"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

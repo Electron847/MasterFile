@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="bin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/hw-02/bin/hw2-doc.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/hw-02/bin/hw2-src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/hw-02/bin/hw2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

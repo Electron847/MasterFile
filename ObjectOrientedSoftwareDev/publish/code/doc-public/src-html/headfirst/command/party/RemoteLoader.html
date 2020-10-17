@@ -1,0 +1,103 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package headfirst.command.party;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    public class RemoteLoader {<a name="line.3"></a>
+<FONT color="green">004</FONT>    <a name="line.4"></a>
+<FONT color="green">005</FONT>            public static void main(String[] args) {<a name="line.5"></a>
+<FONT color="green">006</FONT>    <a name="line.6"></a>
+<FONT color="green">007</FONT>                    RemoteControl remoteControl = new RemoteControl();<a name="line.7"></a>
+<FONT color="green">008</FONT>    <a name="line.8"></a>
+<FONT color="green">009</FONT>                    Light light = new Light("Living Room");<a name="line.9"></a>
+<FONT color="green">010</FONT>                    TV tv = new TV("Living Room");<a name="line.10"></a>
+<FONT color="green">011</FONT>                    Stereo stereo = new Stereo("Living Room");<a name="line.11"></a>
+<FONT color="green">012</FONT>                    Hottub hottub = new Hottub();<a name="line.12"></a>
+<FONT color="green">013</FONT>     <a name="line.13"></a>
+<FONT color="green">014</FONT>                    LightOnCommand lightOn = new LightOnCommand(light);<a name="line.14"></a>
+<FONT color="green">015</FONT>                    StereoOnCommand stereoOn = new StereoOnCommand(stereo);<a name="line.15"></a>
+<FONT color="green">016</FONT>                    TVOnCommand tvOn = new TVOnCommand(tv);<a name="line.16"></a>
+<FONT color="green">017</FONT>                    HottubOnCommand hottubOn = new HottubOnCommand(hottub);<a name="line.17"></a>
+<FONT color="green">018</FONT>                    LightOffCommand lightOff = new LightOffCommand(light);<a name="line.18"></a>
+<FONT color="green">019</FONT>                    StereoOffCommand stereoOff = new StereoOffCommand(stereo);<a name="line.19"></a>
+<FONT color="green">020</FONT>                    TVOffCommand tvOff = new TVOffCommand(tv);<a name="line.20"></a>
+<FONT color="green">021</FONT>                    HottubOffCommand hottubOff = new HottubOffCommand(hottub);<a name="line.21"></a>
+<FONT color="green">022</FONT>    <a name="line.22"></a>
+<FONT color="green">023</FONT>                    Command[] partyOn = { lightOn, stereoOn, tvOn, hottubOn};<a name="line.23"></a>
+<FONT color="green">024</FONT>                    Command[] partyOff = { lightOff, stereoOff, tvOff, hottubOff};<a name="line.24"></a>
+<FONT color="green">025</FONT>      <a name="line.25"></a>
+<FONT color="green">026</FONT>                    MacroCommand partyOnMacro = new MacroCommand(partyOn);<a name="line.26"></a>
+<FONT color="green">027</FONT>                    MacroCommand partyOffMacro = new MacroCommand(partyOff);<a name="line.27"></a>
+<FONT color="green">028</FONT>     <a name="line.28"></a>
+<FONT color="green">029</FONT>                    remoteControl.setCommand(0, partyOnMacro, partyOffMacro);<a name="line.29"></a>
+<FONT color="green">030</FONT>      <a name="line.30"></a>
+<FONT color="green">031</FONT>                    System.out.println(remoteControl);<a name="line.31"></a>
+<FONT color="green">032</FONT>                    System.out.println("--- Pushing Macro On---");<a name="line.32"></a>
+<FONT color="green">033</FONT>                    remoteControl.onButtonWasPushed(0);<a name="line.33"></a>
+<FONT color="green">034</FONT>                    System.out.println("--- Pushing Macro Off---");<a name="line.34"></a>
+<FONT color="green">035</FONT>                    remoteControl.offButtonWasPushed(0);<a name="line.35"></a>
+<FONT color="green">036</FONT>            }<a name="line.36"></a>
+<FONT color="green">037</FONT>    }<a name="line.37"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

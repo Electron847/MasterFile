@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> project<span style="color: #990000">.</span>animator<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>util<span style="color: #990000">.</span>Observable<span style="color: #990000">;</span>
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>util<span style="color: #990000">.</span>Observer<span style="color: #990000">;</span>
+<span style="color: #000000">00005:</span>   
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00007:</span> <span style="font-style: italic"><span style="color: #9A1900"> * An interface for displaying simulations.</span></span>
+<span style="color: #000000">00008:</span> <span style="font-style: italic"><span style="color: #9A1900"> * This interface specializes the {</span></span><span style="color: #009900">@link</span><span style="font-style: italic"><span style="color: #9A1900"> Observer} interface.</span></span>
+<span style="color: #000000">00009:</span> <span style="font-style: italic"><span style="color: #9A1900"> * Calls to {</span></span><span style="color: #009900">@link</span><span style="font-style: italic"><span style="color: #9A1900"> Observer#update(Observable o, Object arg1)} will</span></span>
+<span style="color: #000000">00010:</span> <span style="font-style: italic"><span style="color: #9A1900"> * result in a callback to</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900"> * {</span></span><span style="color: #009900">@link</span><span style="font-style: italic"><span style="color: #9A1900"> AnimationPainter#paint(Object arg2)} on </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">o</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">:</span></span>
+<span style="color: #000000">00012:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;ul&gt;</span></span>
+<span style="color: #000000">00013:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;li&gt;</span></span>
+<span style="color: #000000">00014:</span> <span style="font-style: italic"><span style="color: #9A1900"> * If </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">o</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> is not an instance of {</span></span><span style="color: #009900">@link</span><span style="font-style: italic"><span style="color: #9A1900"> AnimationPainter},</span></span>
+<span style="color: #000000">00015:</span> <span style="font-style: italic"><span style="color: #9A1900"> * then </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">update</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> thows an {</span></span><span style="color: #009900">@link</span><span style="font-style: italic"><span style="color: #9A1900"> IllegalStateException}.</span></span>
+<span style="color: #000000">00016:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/li&gt;</span></span>
+<span style="color: #000000">00017:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;li&gt;</span></span>
+<span style="color: #000000">00018:</span> <span style="font-style: italic"><span style="color: #9A1900"> * The argument </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">arg1</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> of </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">update</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> is ignored.</span></span>
+<span style="color: #000000">00019:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/li&gt;</span></span>
+<span style="color: #000000">00020:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;li&gt;</span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900"> * The argument </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">arg2</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> of </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">paint</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> is provided by</span></span>
+<span style="color: #000000">00022:</span> <span style="font-style: italic"><span style="color: #9A1900"> * the </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">Animator</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">.  </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">arg2</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> is intended to</span></span>
+<span style="color: #000000">00023:</span> <span style="font-style: italic"><span style="color: #9A1900"> * provide an object for displaying the informtion, such as an</span></span>
+<span style="color: #000000">00024:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">OutputStream</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900"> or a </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">Graphics</span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/code&gt;</span></span><span style="font-style: italic"><span style="color: #9A1900">.</span></span>
+<span style="color: #000000">00025:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/li&gt;</span></span>
+<span style="color: #000000">00026:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;li&gt;</span></span>
+<span style="color: #000000">00027:</span> <span style="font-style: italic"><span style="color: #9A1900"> * This callback is executed in the swing thread.</span></span>
+<span style="color: #000000">00028:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/li&gt;</span></span>
+<span style="color: #000000">00029:</span> <span style="font-style: italic"><span style="color: #9A1900"> * </span></span><span style="font-weight: bold"><span style="color: #0000FF">&lt;/ul&gt;</span></span>
+<span style="color: #000000">00030:</span> <span style="font-style: italic"><span style="color: #9A1900"> */</span></span>
+<span style="color: #000000">00031:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">interface</span></span> <span style="color: #009900">Animator</span> <span style="font-weight: bold"><span style="color: #0000FF">extends</span></span> Observer <span style="color: #FF0000">{</span>
+<span style="color: #000000">00032:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">dispose</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00033:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00034:</span> 
+<span style="color: #000000">00035:</span> 
+</tt></pre>
+  </body>
+</html>

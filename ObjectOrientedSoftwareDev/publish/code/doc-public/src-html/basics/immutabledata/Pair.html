@@ -1,0 +1,108 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package basics.immutabledata;<a name="line.1"></a>
+<FONT color="green">002</FONT>    final public class Pair&lt;S extends Comparable&lt;S&gt;, T extends Comparable&lt;T&gt;&gt;<a name="line.2"></a>
+<FONT color="green">003</FONT>      implements Comparable&lt;Pair&lt;S,T&gt;&gt;<a name="line.3"></a>
+<FONT color="green">004</FONT>    {<a name="line.4"></a>
+<FONT color="green">005</FONT>      final private S _x;<a name="line.5"></a>
+<FONT color="green">006</FONT>      final private T _y;<a name="line.6"></a>
+<FONT color="green">007</FONT>      public Pair(S x, T y) {<a name="line.7"></a>
+<FONT color="green">008</FONT>        if (x == null || y == null)<a name="line.8"></a>
+<FONT color="green">009</FONT>          throw new IllegalArgumentException();<a name="line.9"></a>
+<FONT color="green">010</FONT>        _x = x;<a name="line.10"></a>
+<FONT color="green">011</FONT>        _y = y;<a name="line.11"></a>
+<FONT color="green">012</FONT>      }<a name="line.12"></a>
+<FONT color="green">013</FONT>      public S first() { return _x; }<a name="line.13"></a>
+<FONT color="green">014</FONT>      public T second() { return _y; }<a name="line.14"></a>
+<FONT color="green">015</FONT>      public String toString() { return "Pair(" + _x + "," + _y + ")"; }<a name="line.15"></a>
+<FONT color="green">016</FONT>      public boolean equals(Object thatObject) {<a name="line.16"></a>
+<FONT color="green">017</FONT>        if (this == thatObject)<a name="line.17"></a>
+<FONT color="green">018</FONT>          return true;<a name="line.18"></a>
+<FONT color="green">019</FONT>        // equals should not throw ClassCastException<a name="line.19"></a>
+<FONT color="green">020</FONT>        if (!(this.getClass().equals(thatObject.getClass())))<a name="line.20"></a>
+<FONT color="green">021</FONT>          return false;<a name="line.21"></a>
+<FONT color="green">022</FONT>        Pair that = (Pair) thatObject;<a name="line.22"></a>
+<FONT color="green">023</FONT>        return _x.equals(that._x)<a name="line.23"></a>
+<FONT color="green">024</FONT>            &amp;&amp; _y.equals(that._y);<a name="line.24"></a>
+<FONT color="green">025</FONT>      }<a name="line.25"></a>
+<FONT color="green">026</FONT>      private int hcode;<a name="line.26"></a>
+<FONT color="green">027</FONT>      public int hashCode() {<a name="line.27"></a>
+<FONT color="green">028</FONT>        if (hcode == 0) {<a name="line.28"></a>
+<FONT color="green">029</FONT>          hcode = 17;<a name="line.29"></a>
+<FONT color="green">030</FONT>          hcode = 37*hcode + _x.hashCode();<a name="line.30"></a>
+<FONT color="green">031</FONT>          hcode = 37*hcode + _y.hashCode();<a name="line.31"></a>
+<FONT color="green">032</FONT>        }<a name="line.32"></a>
+<FONT color="green">033</FONT>        return hcode;<a name="line.33"></a>
+<FONT color="green">034</FONT>      }<a name="line.34"></a>
+<FONT color="green">035</FONT>      public int compareTo(Pair&lt;S,T&gt; that) {<a name="line.35"></a>
+<FONT color="green">036</FONT>        // compareTo may throw ClassCastException<a name="line.36"></a>
+<FONT color="green">037</FONT>        int ix = _x.compareTo(that._x);<a name="line.37"></a>
+<FONT color="green">038</FONT>        if (ix != 0)<a name="line.38"></a>
+<FONT color="green">039</FONT>          return ix;<a name="line.39"></a>
+<FONT color="green">040</FONT>        return _y.compareTo(that._y);<a name="line.40"></a>
+<FONT color="green">041</FONT>      }<a name="line.41"></a>
+<FONT color="green">042</FONT>    }<a name="line.42"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

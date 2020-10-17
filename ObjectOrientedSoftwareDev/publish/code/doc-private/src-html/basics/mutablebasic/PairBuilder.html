@@ -1,0 +1,94 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package basics.mutablebasic;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import basics.immutabledata.Pair;<a name="line.2"></a>
+<FONT color="green">003</FONT>    public class Main {<a name="line.3"></a>
+<FONT color="green">004</FONT>      private Main() {}<a name="line.4"></a>
+<FONT color="green">005</FONT>      static public void main (final String[] args) {<a name="line.5"></a>
+<FONT color="green">006</FONT>        final PairBuilder&lt;Integer,String&gt; pb1 = new PairBuilder&lt;Integer,String&gt;();<a name="line.6"></a>
+<FONT color="green">007</FONT>        pb1.setFirst(42);<a name="line.7"></a>
+<FONT color="green">008</FONT>        pb1.setSecond("dog");<a name="line.8"></a>
+<FONT color="green">009</FONT>        System.out.println(pb1);<a name="line.9"></a>
+<FONT color="green">010</FONT>        final Pair&lt;Integer,String&gt; p1 = pb1.toPair();<a name="line.10"></a>
+<FONT color="green">011</FONT>        System.out.println(p1);<a name="line.11"></a>
+<FONT color="green">012</FONT>        <a name="line.12"></a>
+<FONT color="green">013</FONT>        final PairBuilder&lt;Integer,String&gt; pb2 = new PairBuilder&lt;Integer,String&gt;();<a name="line.13"></a>
+<FONT color="green">014</FONT>        final Pair&lt;Integer,String&gt; p2 = pb2.toPair();<a name="line.14"></a>
+<FONT color="green">015</FONT>      }<a name="line.15"></a>
+<FONT color="green">016</FONT>    }<a name="line.16"></a>
+<FONT color="green">017</FONT>    final class PairBuilder&lt;S extends Comparable&lt;S&gt;, T extends Comparable&lt;T&gt;&gt; {<a name="line.17"></a>
+<FONT color="green">018</FONT>      private S _x;<a name="line.18"></a>
+<FONT color="green">019</FONT>      private T _y;<a name="line.19"></a>
+<FONT color="green">020</FONT>      public PairBuilder() { }<a name="line.20"></a>
+<FONT color="green">021</FONT>      public void setFirst(S x) { _x = x; }<a name="line.21"></a>
+<FONT color="green">022</FONT>      public void setSecond(T y) { _y = y; }<a name="line.22"></a>
+<FONT color="green">023</FONT>      public Pair&lt;S,T&gt; toPair() {<a name="line.23"></a>
+<FONT color="green">024</FONT>        if (_x == null || _y == null)<a name="line.24"></a>
+<FONT color="green">025</FONT>          throw new NullPointerException();<a name="line.25"></a>
+<FONT color="green">026</FONT>        return new Pair&lt;S,T&gt;(_x,_y);<a name="line.26"></a>
+<FONT color="green">027</FONT>      }<a name="line.27"></a>
+<FONT color="green">028</FONT>    }    <a name="line.28"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

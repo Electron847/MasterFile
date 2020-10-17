@@ -25,10 +25,14 @@ class PingPong extends Actor {
   var recording = Map[ActorRef, Queue[Any]]()
   var closed = Map[ActorRef, Boolean]()
   var numOpen = 2
+  var transitMsgsCaught1 = 0
+  var transitMsgsCaught2 = 0
 
   def receive = {
 
+
     case PING =>
+      self ! Start
       PINGcount = PINGcount + 1
       printf("%12s : PING=%d, PONG=%d\n", self.path.toStringWithoutAddress, PINGcount, PONGcount)
 
@@ -38,8 +42,9 @@ class PingPong extends Actor {
         printf("%12s : MESSAGE RECORDING\n%26s ---> %s\n", self.path.toStringWithoutAddress, sender.path.toStringWithoutAddress, PING)
       }
 
-      Thread sleep 2
+      Thread sleep 60
       left ! PING
+
 
     case PONG =>
       PONGcount = PONGcount + 1
@@ -51,11 +56,11 @@ class PingPong extends Actor {
         printf("%12s : MESSAGE RECORDING\n%26s ---> %s\n", self.path.toStringWithoutAddress, sender.path.toStringWithoutAddress, PONG)
       }
 
-      Thread sleep 2
+      Thread sleep 60
       right ! PONG
 
     // SNAPSHOT: snapshot message
-    case token : Token => 
+    case token : Token =>
       if (inSnapshot) {
       // SNAPSHOT: stop recording from sender + print state if done
         closed(sender) = true
@@ -63,8 +68,15 @@ class PingPong extends Actor {
         if (numOpen == 0) {
           printf("%12s : SNAPSHOT\n               STATE: %d %d\n               MESSAGES IN TRANSIT:\n               %s--->%s\n               %s--->%s\n", self.path.toStringWithoutAddress, snapshot(0), snapshot(1), left.path.toStringWithoutAddress, recording(left), right.path.toStringWithoutAddress, recording(right))
           inSnapshot = false
+          if (!recording(left).isEmpty)
+            transitMsgsCaught1 += 1
+            println("The number of messages caught in transit clockwise were: " + transitMsgsCaught1)
+          if (!recording(right).isEmpty)
+            transitMsgsCaught2 += 1
+          println("The number of messages caught in transit counter-clockwise were: " + transitMsgsCaught2)
+
         }
-      } else { 
+      } else {
         // SNAPSHOT: start snapshot
         printf("%12s : STARTING SNAPSHOT\n               STATE: %d %d\n", self.path.toStringWithoutAddress, PINGcount, PONGcount)
         inSnapshot = true
@@ -84,11 +96,14 @@ class PingPong extends Actor {
         left ! Marker
         right ! Marker
       }
-      
+
     case Neighbors(l, r) =>
       left = l
       right = r
+
+
   }
+
 }
 
 object Server extends App {
@@ -102,9 +117,9 @@ object Server extends App {
   first ! PING
   first ! PONG
   Thread.sleep(50)
-  first ! Start
+  //first ! Start
   Thread.sleep(500)
-  second ! Start
+  //second ! Start
   Thread.sleep(500)
   system.terminate
 }

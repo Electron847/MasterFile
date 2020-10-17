@@ -26,8 +26,6 @@ class clientMasterActor extends Actor {
 
 
   val reduceActors = context.actorOf(RemoteRouterConfig(ConsistentHashingPool(numberReducers, hashMapping = hashMapping), addresses).props(Props[ReduceActor]))
-
-
   val mapActors = context.actorOf(RemoteRouterConfig(RoundRobinPool(numberMappers),addresses).props(Props(classOf[MapActor], reduceActors)))
 
   def receive = {

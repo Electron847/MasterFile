@@ -1,0 +1,120 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package subclass.equals;<a name="line.1"></a>
+<FONT color="green">002</FONT>    class C1 {<a name="line.2"></a>
+<FONT color="green">003</FONT>      int _i;<a name="line.3"></a>
+<FONT color="green">004</FONT>      public C1(int i) { _i = i; }<a name="line.4"></a>
+<FONT color="green">005</FONT>      public boolean equals(Object thatObject) {<a name="line.5"></a>
+<FONT color="green">006</FONT>        if (!(thatObject instanceof C1))<a name="line.6"></a>
+<FONT color="green">007</FONT>          return false;<a name="line.7"></a>
+<FONT color="green">008</FONT>        C1 that = (C1) thatObject;<a name="line.8"></a>
+<FONT color="green">009</FONT>        return that._i == this._i;<a name="line.9"></a>
+<FONT color="green">010</FONT>      }<a name="line.10"></a>
+<FONT color="green">011</FONT>    }<a name="line.11"></a>
+<FONT color="green">012</FONT>    class D1 extends C1 {<a name="line.12"></a>
+<FONT color="green">013</FONT>      int _j;<a name="line.13"></a>
+<FONT color="green">014</FONT>      public D1(int i, int j) { super(i); _j = j; }<a name="line.14"></a>
+<FONT color="green">015</FONT>      public boolean equals(Object thatObject) {<a name="line.15"></a>
+<FONT color="green">016</FONT>        if (!(thatObject instanceof D1))<a name="line.16"></a>
+<FONT color="green">017</FONT>          return false;<a name="line.17"></a>
+<FONT color="green">018</FONT>        D1 that = (D1) thatObject;<a name="line.18"></a>
+<FONT color="green">019</FONT>        return that._i == this._i &amp;&amp; that._j == this._j;<a name="line.19"></a>
+<FONT color="green">020</FONT>      }<a name="line.20"></a>
+<FONT color="green">021</FONT>    }<a name="line.21"></a>
+<FONT color="green">022</FONT>    class C2 {<a name="line.22"></a>
+<FONT color="green">023</FONT>      int _i;<a name="line.23"></a>
+<FONT color="green">024</FONT>      public C2(int i) { _i = i; }<a name="line.24"></a>
+<FONT color="green">025</FONT>      public boolean equals(Object thatObject) {<a name="line.25"></a>
+<FONT color="green">026</FONT>        if ((thatObject == null) || (thatObject.getClass() != this.getClass()))<a name="line.26"></a>
+<FONT color="green">027</FONT>          return false;<a name="line.27"></a>
+<FONT color="green">028</FONT>        C2 that = (C2) thatObject;<a name="line.28"></a>
+<FONT color="green">029</FONT>        return that._i == this._i;<a name="line.29"></a>
+<FONT color="green">030</FONT>      }<a name="line.30"></a>
+<FONT color="green">031</FONT>    }<a name="line.31"></a>
+<FONT color="green">032</FONT>    class D2 extends C2{<a name="line.32"></a>
+<FONT color="green">033</FONT>      int _j;<a name="line.33"></a>
+<FONT color="green">034</FONT>      public D2(int i, int j) { super(i); _j = j; }<a name="line.34"></a>
+<FONT color="green">035</FONT>      public boolean equals(Object thatObject) {<a name="line.35"></a>
+<FONT color="green">036</FONT>        if ((thatObject == null) || (thatObject.getClass() != this.getClass()))<a name="line.36"></a>
+<FONT color="green">037</FONT>          return false;<a name="line.37"></a>
+<FONT color="green">038</FONT>        D2 that = (D2) thatObject;<a name="line.38"></a>
+<FONT color="green">039</FONT>        return that._i == this._i &amp;&amp; that._j == this._j;<a name="line.39"></a>
+<FONT color="green">040</FONT>      }<a name="line.40"></a>
+<FONT color="green">041</FONT>    }<a name="line.41"></a>
+<FONT color="green">042</FONT>    public class Main {<a name="line.42"></a>
+<FONT color="green">043</FONT>      public static void main(String[] args) {<a name="line.43"></a>
+<FONT color="green">044</FONT>        C1 x1 = new C1(27);<a name="line.44"></a>
+<FONT color="green">045</FONT>        C1 y1 = new D1(27,42);<a name="line.45"></a>
+<FONT color="green">046</FONT>        System.out.println("x1==y1? " + (x1.equals(y1) ? "true" : "false"));<a name="line.46"></a>
+<FONT color="green">047</FONT>        System.out.println("y1==x1? " + (y1.equals(x1) ? "true" : "false"));<a name="line.47"></a>
+<FONT color="green">048</FONT>    <a name="line.48"></a>
+<FONT color="green">049</FONT>        C2 x2 = new C2(27);<a name="line.49"></a>
+<FONT color="green">050</FONT>        C2 y2 = new D2(27,42);<a name="line.50"></a>
+<FONT color="green">051</FONT>        System.out.println("x2==y2? " + (x2.equals(y2) ? "true" : "false"));<a name="line.51"></a>
+<FONT color="green">052</FONT>        System.out.println("y2==x2? " + (y2.equals(x2) ? "true" : "false"));<a name="line.52"></a>
+<FONT color="green">053</FONT>      }<a name="line.53"></a>
+<FONT color="green">054</FONT>    }<a name="line.54"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

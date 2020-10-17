@@ -1,0 +1,84 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package headfirst.singleton.threadsafe;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    public class Singleton {<a name="line.3"></a>
+<FONT color="green">004</FONT>            private static Singleton uniqueInstance;<a name="line.4"></a>
+<FONT color="green">005</FONT>     <a name="line.5"></a>
+<FONT color="green">006</FONT>            // other useful instance variables here<a name="line.6"></a>
+<FONT color="green">007</FONT>     <a name="line.7"></a>
+<FONT color="green">008</FONT>            private Singleton() {}<a name="line.8"></a>
+<FONT color="green">009</FONT>     <a name="line.9"></a>
+<FONT color="green">010</FONT>            public static synchronized Singleton getInstance() {<a name="line.10"></a>
+<FONT color="green">011</FONT>                    if (uniqueInstance == null) {<a name="line.11"></a>
+<FONT color="green">012</FONT>                            uniqueInstance = new Singleton();<a name="line.12"></a>
+<FONT color="green">013</FONT>                    }<a name="line.13"></a>
+<FONT color="green">014</FONT>                    return uniqueInstance;<a name="line.14"></a>
+<FONT color="green">015</FONT>            }<a name="line.15"></a>
+<FONT color="green">016</FONT>     <a name="line.16"></a>
+<FONT color="green">017</FONT>            // other useful methods here<a name="line.17"></a>
+<FONT color="green">018</FONT>    }<a name="line.18"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch04_sort2<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>util<span style="color: #990000">.*;</span>
+<span style="color: #000000">00003:</span> 
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">ComparatorTester</span>
+<span style="color: #000000">00005:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00006:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>String<span style="color: #990000">[]</span> args<span style="color: #990000">)</span>
+<span style="color: #000000">00007:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00008:</span>       ArrayList<span style="color: #990000">&lt;</span>Country<span style="color: #990000">&gt;</span> countries <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> ArrayList<span style="color: #990000">&lt;</span>Country<span style="color: #990000">&gt;();</span>
+<span style="color: #000000">00009:</span>       countries<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Country</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Uruguay"</span><span style="color: #990000">,</span> <span style="color: #993399">176220</span><span style="color: #990000">));</span>
+<span style="color: #000000">00010:</span>       countries<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Country</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Thailand"</span><span style="color: #990000">,</span> <span style="color: #993399">514000</span><span style="color: #990000">));</span>
+<span style="color: #000000">00011:</span>       countries<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Country</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Belgium"</span><span style="color: #990000">,</span> <span style="color: #993399">30510</span><span style="color: #990000">));</span>
+<span style="color: #000000">00012:</span>       Comparator<span style="color: #990000">&lt;</span>Country<span style="color: #990000">&gt;</span>  comp <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">CountryComparatorByName</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00013:</span>       Collections<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">sort</span></span><span style="color: #990000">(</span>countries<span style="color: #990000">,</span> comp<span style="color: #990000">);</span>
+<span style="color: #000000">00014:</span>          <span style="font-style: italic"><span style="color: #9A1900">// Now the array list is sorted by area</span></span>
+<span style="color: #000000">00015:</span>       <span style="font-weight: bold"><span style="color: #0000FF">for</span></span> <span style="color: #990000">(</span>Country c <span style="color: #990000">:</span> countries<span style="color: #990000">)</span>
+<span style="color: #000000">00016:</span>         System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span>c<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getName</span></span><span style="color: #990000">()</span> <span style="color: #990000">+</span> <span style="color: #FF0000">" "</span> <span style="color: #990000">+</span> c<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getArea</span></span><span style="color: #990000">());</span>
+<span style="color: #000000">00017:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00018:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00019:</span> 
+</tt></pre>
+  </body>
+</html>

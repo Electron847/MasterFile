@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch05_mailgui<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00003:</span> <span style="font-style: italic"><span style="color: #9A1900">   A mailbox contains messages that can be listed, kept or discarded.</span></span>
+<span style="color: #000000">00004:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span>
+<span style="color: #000000">00005:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">Mailbox</span>
+<span style="color: #000000">00006:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00007:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00008:</span> <span style="font-style: italic"><span style="color: #9A1900">      Create Mailbox object.</span></span>
+<span style="color: #000000">00009:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aPasscode passcode number</span></span>
+<span style="color: #000000">00010:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aGreeting greeting string</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00012:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">Mailbox</span></span><span style="color: #990000">(</span>String aPasscode<span style="color: #990000">,</span> String aGreeting<span style="color: #990000">)</span>
+<span style="color: #000000">00013:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00014:</span>       passcode <span style="color: #990000">=</span> aPasscode<span style="color: #990000">;</span>
+<span style="color: #000000">00015:</span>       greeting <span style="color: #990000">=</span> aGreeting<span style="color: #990000">;</span>
+<span style="color: #000000">00016:</span>       newMessages <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">MessageQueue</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00017:</span>       keptMessages <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">MessageQueue</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00018:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00019:</span> 
+<span style="color: #000000">00020:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900">      Check if the entered supplied is correct.</span></span>
+<span style="color: #000000">00022:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aPasscode a passcode to check</span></span>
+<span style="color: #000000">00023:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> true if the supplied passcode matches the mailbox passcode</span></span>
+<span style="color: #000000">00024:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00025:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">boolean</span> <span style="font-weight: bold"><span style="color: #000000">checkPasscode</span></span><span style="color: #990000">(</span>String aPasscode<span style="color: #990000">)</span>
+<span style="color: #000000">00026:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00027:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> aPasscode<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span>passcode<span style="color: #990000">);</span>
+<span style="color: #000000">00028:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00029:</span> 
+<span style="color: #000000">00030:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00031:</span> <span style="font-style: italic"><span style="color: #9A1900">      Add a message to the mailbox.</span></span>
+<span style="color: #000000">00032:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aMessage the message to be added</span></span>
+<span style="color: #000000">00033:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00034:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">addMessage</span></span><span style="color: #990000">(</span>Message aMessage<span style="color: #990000">)</span>
+<span style="color: #000000">00035:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00036:</span>       newMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>aMessage<span style="color: #990000">);</span>
+<span style="color: #000000">00037:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00038:</span> 
+<span style="color: #000000">00039:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00040:</span> <span style="font-style: italic"><span style="color: #9A1900">      Get the current message.</span></span>
+<span style="color: #000000">00041:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the current message</span></span>
+<span style="color: #000000">00042:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00043:</span>    Message <span style="font-weight: bold"><span style="color: #000000">getCurrentMessage</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00044:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00045:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>newMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getLength</span></span><span style="color: #990000">()</span> <span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00046:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> newMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getHead</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00047:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>keptMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getLength</span></span><span style="color: #990000">()</span> <span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00048:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> keptMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getHead</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00049:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00050:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00051:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00052:</span> 
+<span style="color: #000000">00053:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00054:</span> <span style="font-style: italic"><span style="color: #9A1900">      Remove the current message from the mailbox.</span></span>
+<span style="color: #000000">00055:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the message that has just been removed</span></span>
+<span style="color: #000000">00056:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00057:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Message <span style="font-weight: bold"><span style="color: #000000">removeCurrentMessage</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00058:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00059:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>newMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getLength</span></span><span style="color: #990000">()</span> <span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00060:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> newMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00061:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>keptMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getLength</span></span><span style="color: #990000">()</span> <span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00062:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> keptMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00063:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00064:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00065:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00066:</span> 
+<span style="color: #000000">00067:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00068:</span> <span style="font-style: italic"><span style="color: #9A1900">      Save the current message</span></span>
+<span style="color: #000000">00069:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00070:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">saveCurrentMessage</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00071:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00072:</span>       Message m <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">removeCurrentMessage</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00073:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>m <span style="color: #990000">!=</span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">)</span>
+<span style="color: #000000">00074:</span>          keptMessages<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>m<span style="color: #990000">);</span>
+<span style="color: #000000">00075:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00076:</span> 
+<span style="color: #000000">00077:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00078:</span> <span style="font-style: italic"><span style="color: #9A1900">      Change mailbox's greeting.</span></span>
+<span style="color: #000000">00079:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> newGreeting the new greeting string</span></span>
+<span style="color: #000000">00080:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00081:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setGreeting</span></span><span style="color: #990000">(</span>String newGreeting<span style="color: #990000">)</span>
+<span style="color: #000000">00082:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00083:</span>       greeting <span style="color: #990000">=</span> newGreeting<span style="color: #990000">;</span>
+<span style="color: #000000">00084:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00085:</span> 
+<span style="color: #000000">00086:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00087:</span> <span style="font-style: italic"><span style="color: #9A1900">      Change mailbox's passcode.</span></span>
+<span style="color: #000000">00088:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> newPasscode the new passcode</span></span>
+<span style="color: #000000">00089:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00090:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setPasscode</span></span><span style="color: #990000">(</span>String newPasscode<span style="color: #990000">)</span>
+<span style="color: #000000">00091:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00092:</span>       passcode <span style="color: #990000">=</span> newPasscode<span style="color: #990000">;</span>
+<span style="color: #000000">00093:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00094:</span> 
+<span style="color: #000000">00095:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00096:</span> <span style="font-style: italic"><span style="color: #9A1900">      Get the mailbox's greeting.</span></span>
+<span style="color: #000000">00097:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the greeting</span></span>
+<span style="color: #000000">00098:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00099:</span>    String <span style="font-weight: bold"><span style="color: #000000">getGreeting</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00100:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00101:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> greeting<span style="color: #990000">;</span>
+<span style="color: #000000">00102:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00103:</span> 
+<span style="color: #000000">00104:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> MessageQueue newMessages<span style="color: #990000">;</span>
+<span style="color: #000000">00105:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> MessageQueue keptMessages<span style="color: #990000">;</span>
+<span style="color: #000000">00106:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> String greeting<span style="color: #990000">;</span>
+<span style="color: #000000">00107:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> String passcode<span style="color: #990000">;</span>
+<span style="color: #000000">00108:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

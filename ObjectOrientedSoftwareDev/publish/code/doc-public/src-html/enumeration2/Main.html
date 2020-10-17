@@ -1,0 +1,91 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package enumeration2;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.util.ArrayList;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import java.util.Collections;<a name="line.4"></a>
+<FONT color="green">005</FONT>    import java.util.List;<a name="line.5"></a>
+<FONT color="green">006</FONT>    <a name="line.6"></a>
+<FONT color="green">007</FONT>    public class Main {<a name="line.7"></a>
+<FONT color="green">008</FONT>      private Main() {}<a name="line.8"></a>
+<FONT color="green">009</FONT>      public static void main(String args[]) {<a name="line.9"></a>
+<FONT color="green">010</FONT>        int numHands = Integer.parseInt(args[0]);<a name="line.10"></a>
+<FONT color="green">011</FONT>        int cardsPerHand = Integer.parseInt(args[1]);<a name="line.11"></a>
+<FONT color="green">012</FONT>        List&lt;Card&gt; deck  = Card.newDeck();<a name="line.12"></a>
+<FONT color="green">013</FONT>        Collections.shuffle(deck);<a name="line.13"></a>
+<FONT color="green">014</FONT>        for (int i=0; i &lt; numHands; i++)<a name="line.14"></a>
+<FONT color="green">015</FONT>          System.out.println(deal(deck, cardsPerHand));<a name="line.15"></a>
+<FONT color="green">016</FONT>      }<a name="line.16"></a>
+<FONT color="green">017</FONT>      <a name="line.17"></a>
+<FONT color="green">018</FONT>      public static List&lt;Card&gt; deal(List&lt;Card&gt; deck, int n) {<a name="line.18"></a>
+<FONT color="green">019</FONT>        int deckSize = deck.size();<a name="line.19"></a>
+<FONT color="green">020</FONT>        List&lt;Card&gt; handView = deck.subList(deckSize-n, deckSize);<a name="line.20"></a>
+<FONT color="green">021</FONT>        List&lt;Card&gt; hand = new ArrayList&lt;Card&gt;(handView);<a name="line.21"></a>
+<FONT color="green">022</FONT>        handView.clear();<a name="line.22"></a>
+<FONT color="green">023</FONT>        return hand;<a name="line.23"></a>
+<FONT color="green">024</FONT>      }<a name="line.24"></a>
+<FONT color="green">025</FONT>    }<a name="line.25"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

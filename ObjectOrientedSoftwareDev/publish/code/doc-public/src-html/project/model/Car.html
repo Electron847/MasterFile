@@ -1,0 +1,99 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package project.model;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    /**<a name="line.3"></a>
+<FONT color="green">004</FONT>     * A car remembers its position from the beginning of its road.<a name="line.4"></a>
+<FONT color="green">005</FONT>     * Cars have random velocity and random movement pattern:<a name="line.5"></a>
+<FONT color="green">006</FONT>     * when reaching the end of a road, the dot either resets its position<a name="line.6"></a>
+<FONT color="green">007</FONT>     * to the beginning of the road, or reverses its direction.<a name="line.7"></a>
+<FONT color="green">008</FONT>     */<a name="line.8"></a>
+<FONT color="green">009</FONT>    public class Car implements Agent {<a name="line.9"></a>
+<FONT color="green">010</FONT>      Car() { } // Created only by this package<a name="line.10"></a>
+<FONT color="green">011</FONT>    <a name="line.11"></a>
+<FONT color="green">012</FONT>      private boolean _backAndForth = Math.round(Math.random())==1 ? true : false;<a name="line.12"></a>
+<FONT color="green">013</FONT>      private double _position = 0;<a name="line.13"></a>
+<FONT color="green">014</FONT>      private double _velocity = (int) Math.ceil(Math.random() * MP.maxVelocity);<a name="line.14"></a>
+<FONT color="green">015</FONT>      private java.awt.Color _color = new java.awt.Color((int)Math.ceil(Math.random()*255),(int)Math.ceil(Math.random()*255),(int)Math.ceil(Math.random()*255));<a name="line.15"></a>
+<FONT color="green">016</FONT>      <a name="line.16"></a>
+<FONT color="green">017</FONT>      public double getPosition() {<a name="line.17"></a>
+<FONT color="green">018</FONT>        return _position;<a name="line.18"></a>
+<FONT color="green">019</FONT>      }<a name="line.19"></a>
+<FONT color="green">020</FONT>      public java.awt.Color getColor() {<a name="line.20"></a>
+<FONT color="green">021</FONT>        return _color;<a name="line.21"></a>
+<FONT color="green">022</FONT>      }<a name="line.22"></a>
+<FONT color="green">023</FONT>      public void run(double time) {<a name="line.23"></a>
+<FONT color="green">024</FONT>        if (_backAndForth) {<a name="line.24"></a>
+<FONT color="green">025</FONT>          if (((_position + _velocity) &lt; 0) || ((_position + _velocity) &gt; (MP.roadLength-MP.carLength)))<a name="line.25"></a>
+<FONT color="green">026</FONT>            _velocity *= -1;<a name="line.26"></a>
+<FONT color="green">027</FONT>        } else {<a name="line.27"></a>
+<FONT color="green">028</FONT>          if ((_position + _velocity) &gt; (MP.roadLength-MP.carLength))<a name="line.28"></a>
+<FONT color="green">029</FONT>            _position = 0;<a name="line.29"></a>
+<FONT color="green">030</FONT>        }<a name="line.30"></a>
+<FONT color="green">031</FONT>        _position += _velocity;<a name="line.31"></a>
+<FONT color="green">032</FONT>      }<a name="line.32"></a>
+<FONT color="green">033</FONT>    }<a name="line.33"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

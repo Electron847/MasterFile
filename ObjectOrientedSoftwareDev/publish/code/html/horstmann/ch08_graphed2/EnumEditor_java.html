@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch08_graphed2<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>beans<span style="color: #990000">.*;</span>
+<span style="color: #000000">00003:</span> 
+<span style="color: #000000">00004:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00005:</span> <span style="font-style: italic"><span style="color: #9A1900">   A property editor for enumerated types.</span></span>
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span>
+<span style="color: #000000">00007:</span> @<span style="font-weight: bold"><span style="color: #000000">SuppressWarnings</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"unchecked"</span><span style="color: #990000">)</span>
+<span style="color: #000000">00008:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">EnumEditor</span> <span style="font-weight: bold"><span style="color: #0000FF">extends</span></span> PropertyEditorSupport
+<span style="color: #000000">00009:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00010:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">      Constructs a property editor for an enumerated type</span></span>
+<span style="color: #000000">00012:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> cl the class object for the enumerated type</span></span>
+<span style="color: #000000">00013:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00014:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">EnumEditor</span></span><span style="color: #990000">(</span>Class cl<span style="color: #990000">)</span>
+<span style="color: #000000">00015:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00016:</span>       <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>cl <span style="color: #990000">=</span> cl<span style="color: #990000">;</span>
+<span style="color: #000000">00017:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00018:</span> 
+<span style="color: #000000">00019:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> String<span style="color: #990000">[]</span> <span style="font-weight: bold"><span style="color: #000000">getTags</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00020:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00021:</span>       <span style="font-weight: bold"><span style="color: #0000FF">try</span></span>
+<span style="color: #000000">00022:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00023:</span>          Object<span style="color: #990000">[]</span> values <span style="color: #990000">=</span> <span style="color: #990000">(</span>Object<span style="color: #990000">[])</span> cl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getMethod</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"values"</span><span style="color: #990000">).</span><span style="font-weight: bold"><span style="color: #000000">invoke</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00024:</span>          String<span style="color: #990000">[]</span> result <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> String<span style="color: #990000">[</span>values<span style="color: #990000">.</span>length<span style="color: #990000">];</span>
+<span style="color: #000000">00025:</span>          <span style="font-weight: bold"><span style="color: #0000FF">for</span></span> <span style="color: #990000">(</span><span style="color: #009900">int</span> i <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> i <span style="color: #990000">&lt;</span> values<span style="color: #990000">.</span>length<span style="color: #990000">;</span> i<span style="color: #990000">++)</span>
+<span style="color: #000000">00026:</span>             result<span style="color: #990000">[</span>i<span style="color: #990000">]</span> <span style="color: #990000">=</span> values<span style="color: #990000">[</span>i<span style="color: #990000">].</span><span style="font-weight: bold"><span style="color: #000000">toString</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00027:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> result<span style="color: #990000">;</span>
+<span style="color: #000000">00028:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00029:</span>       <span style="font-weight: bold"><span style="color: #0000FF">catch</span></span> <span style="color: #990000">(</span>Exception ex<span style="color: #990000">)</span>
+<span style="color: #000000">00030:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00031:</span>          <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00032:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00033:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00034:</span> 
+<span style="color: #000000">00035:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> String <span style="font-weight: bold"><span style="color: #000000">getAsText</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00036:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00037:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">getValue</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">toString</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00038:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00039:</span> 
+<span style="color: #000000">00040:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setAsText</span></span><span style="color: #990000">(</span>String s<span style="color: #990000">)</span>
+<span style="color: #000000">00041:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00042:</span>       <span style="font-weight: bold"><span style="color: #000000">setValue</span></span><span style="color: #990000">(</span>Enum<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">valueOf</span></span><span style="color: #990000">(</span>cl<span style="color: #990000">,</span> s<span style="color: #990000">));</span>
+<span style="color: #000000">00043:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00044:</span> 
+<span style="color: #000000">00045:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Class cl<span style="color: #990000">;</span>
+<span style="color: #000000">00046:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

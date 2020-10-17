@@ -1,0 +1,113 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package horstmann.ch10_command;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.awt.event.*;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import javax.swing.*;<a name="line.3"></a>
+<FONT color="green">004</FONT>    <a name="line.4"></a>
+<FONT color="green">005</FONT>    /**<a name="line.5"></a>
+<FONT color="green">006</FONT>       This action places a greeting into a text field <a name="line.6"></a>
+<FONT color="green">007</FONT>       and afterwards disables itself and enables its <a name="line.7"></a>
+<FONT color="green">008</FONT>       opposite action.<a name="line.8"></a>
+<FONT color="green">009</FONT>    */<a name="line.9"></a>
+<FONT color="green">010</FONT>    public class GreetingAction extends AbstractAction<a name="line.10"></a>
+<FONT color="green">011</FONT>    {<a name="line.11"></a>
+<FONT color="green">012</FONT>       /**<a name="line.12"></a>
+<FONT color="green">013</FONT>          Constructs a greeting action.<a name="line.13"></a>
+<FONT color="green">014</FONT>          @param greeting the string to add to the text area<a name="line.14"></a>
+<FONT color="green">015</FONT>          @param textArea the text area to which to add the greeting<a name="line.15"></a>
+<FONT color="green">016</FONT>       */      <a name="line.16"></a>
+<FONT color="green">017</FONT>       public GreetingAction(String greeting, JTextArea textArea)<a name="line.17"></a>
+<FONT color="green">018</FONT>       {<a name="line.18"></a>
+<FONT color="green">019</FONT>          this.greeting = greeting;<a name="line.19"></a>
+<FONT color="green">020</FONT>          this.textArea = textArea;<a name="line.20"></a>
+<FONT color="green">021</FONT>       }<a name="line.21"></a>
+<FONT color="green">022</FONT>    <a name="line.22"></a>
+<FONT color="green">023</FONT>       /**<a name="line.23"></a>
+<FONT color="green">024</FONT>          Sets the opposite action.<a name="line.24"></a>
+<FONT color="green">025</FONT>          @param action the action to be enabled after this action was<a name="line.25"></a>
+<FONT color="green">026</FONT>          carried out<a name="line.26"></a>
+<FONT color="green">027</FONT>       */<a name="line.27"></a>
+<FONT color="green">028</FONT>       public void setOpposite(Action action)<a name="line.28"></a>
+<FONT color="green">029</FONT>       {<a name="line.29"></a>
+<FONT color="green">030</FONT>          oppositeAction = action;<a name="line.30"></a>
+<FONT color="green">031</FONT>       }<a name="line.31"></a>
+<FONT color="green">032</FONT>    <a name="line.32"></a>
+<FONT color="green">033</FONT>       public void actionPerformed(ActionEvent event)<a name="line.33"></a>
+<FONT color="green">034</FONT>       {<a name="line.34"></a>
+<FONT color="green">035</FONT>          textArea.append(greeting);<a name="line.35"></a>
+<FONT color="green">036</FONT>          textArea.append("\n");<a name="line.36"></a>
+<FONT color="green">037</FONT>          if (oppositeAction != null)<a name="line.37"></a>
+<FONT color="green">038</FONT>          {<a name="line.38"></a>
+<FONT color="green">039</FONT>             setEnabled(false);<a name="line.39"></a>
+<FONT color="green">040</FONT>             oppositeAction.setEnabled(true);<a name="line.40"></a>
+<FONT color="green">041</FONT>          }<a name="line.41"></a>
+<FONT color="green">042</FONT>       }<a name="line.42"></a>
+<FONT color="green">043</FONT>    <a name="line.43"></a>
+<FONT color="green">044</FONT>       private String greeting;<a name="line.44"></a>
+<FONT color="green">045</FONT>       private JTextArea textArea;<a name="line.45"></a>
+<FONT color="green">046</FONT>       private Action oppositeAction;<a name="line.46"></a>
+<FONT color="green">047</FONT>    }<a name="line.47"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

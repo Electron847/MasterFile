@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> headfirst<span style="color: #990000">.</span>command<span style="color: #990000">.</span>remote<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">RemoteLoader</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00004:</span>  
+<span style="color: #000000">00005:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>String<span style="color: #990000">[]</span> args<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00006:</span>                 RemoteControl remoteControl <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">RemoteControl</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00007:</span>  
+<span style="color: #000000">00008:</span>                 Light livingRoomLight <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Light</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Living Room"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00009:</span>                 Light kitchenLight <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Light</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Kitchen"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00010:</span>                 CeilingFan ceilingFan<span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">CeilingFan</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Living Room"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00011:</span>                 GarageDoor garageDoor <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">GarageDoor</span></span><span style="color: #990000">(</span><span style="color: #FF0000">""</span><span style="color: #990000">);</span>
+<span style="color: #000000">00012:</span>                 Stereo stereo <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Stereo</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Living Room"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00013:</span>   
+<span style="color: #000000">00014:</span>                 LightOnCommand livingRoomLightOn <span style="color: #990000">=</span> 
+<span style="color: #000000">00015:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">LightOnCommand</span></span><span style="color: #990000">(</span>livingRoomLight<span style="color: #990000">);</span>
+<span style="color: #000000">00016:</span>                 LightOffCommand livingRoomLightOff <span style="color: #990000">=</span> 
+<span style="color: #000000">00017:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">LightOffCommand</span></span><span style="color: #990000">(</span>livingRoomLight<span style="color: #990000">);</span>
+<span style="color: #000000">00018:</span>                 LightOnCommand kitchenLightOn <span style="color: #990000">=</span> 
+<span style="color: #000000">00019:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">LightOnCommand</span></span><span style="color: #990000">(</span>kitchenLight<span style="color: #990000">);</span>
+<span style="color: #000000">00020:</span>                 LightOffCommand kitchenLightOff <span style="color: #990000">=</span> 
+<span style="color: #000000">00021:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">LightOffCommand</span></span><span style="color: #990000">(</span>kitchenLight<span style="color: #990000">);</span>
+<span style="color: #000000">00022:</span>   
+<span style="color: #000000">00023:</span>                 CeilingFanOnCommand ceilingFanOn <span style="color: #990000">=</span> 
+<span style="color: #000000">00024:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">CeilingFanOnCommand</span></span><span style="color: #990000">(</span>ceilingFan<span style="color: #990000">);</span>
+<span style="color: #000000">00025:</span>                 CeilingFanOffCommand ceilingFanOff <span style="color: #990000">=</span> 
+<span style="color: #000000">00026:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">CeilingFanOffCommand</span></span><span style="color: #990000">(</span>ceilingFan<span style="color: #990000">);</span>
+<span style="color: #000000">00027:</span>  
+<span style="color: #000000">00028:</span>                 GarageDoorUpCommand garageDoorUp <span style="color: #990000">=</span>
+<span style="color: #000000">00029:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">GarageDoorUpCommand</span></span><span style="color: #990000">(</span>garageDoor<span style="color: #990000">);</span>
+<span style="color: #000000">00030:</span>                 GarageDoorDownCommand garageDoorDown <span style="color: #990000">=</span>
+<span style="color: #000000">00031:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">GarageDoorDownCommand</span></span><span style="color: #990000">(</span>garageDoor<span style="color: #990000">);</span>
+<span style="color: #000000">00032:</span>  
+<span style="color: #000000">00033:</span>                 StereoOnWithCDCommand stereoOnWithCD <span style="color: #990000">=</span>
+<span style="color: #000000">00034:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">StereoOnWithCDCommand</span></span><span style="color: #990000">(</span>stereo<span style="color: #990000">);</span>
+<span style="color: #000000">00035:</span>                 StereoOffCommand  stereoOff <span style="color: #990000">=</span>
+<span style="color: #000000">00036:</span>                                 <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">StereoOffCommand</span></span><span style="color: #990000">(</span>stereo<span style="color: #990000">);</span>
+<span style="color: #000000">00037:</span>  
+<span style="color: #000000">00038:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setCommand</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">,</span> livingRoomLightOn<span style="color: #990000">,</span> livingRoomLightOff<span style="color: #990000">);</span>
+<span style="color: #000000">00039:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setCommand</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">,</span> kitchenLightOn<span style="color: #990000">,</span> kitchenLightOff<span style="color: #990000">);</span>
+<span style="color: #000000">00040:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setCommand</span></span><span style="color: #990000">(</span><span style="color: #993399">2</span><span style="color: #990000">,</span> ceilingFanOn<span style="color: #990000">,</span> ceilingFanOff<span style="color: #990000">);</span>
+<span style="color: #000000">00041:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setCommand</span></span><span style="color: #990000">(</span><span style="color: #993399">3</span><span style="color: #990000">,</span> stereoOnWithCD<span style="color: #990000">,</span> stereoOff<span style="color: #990000">);</span>
+<span style="color: #000000">00042:</span>   
+<span style="color: #000000">00043:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span>remoteControl<span style="color: #990000">);</span>
+<span style="color: #000000">00044:</span>  
+<span style="color: #000000">00045:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">onButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">);</span>
+<span style="color: #000000">00046:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">offButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">);</span>
+<span style="color: #000000">00047:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">onButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">);</span>
+<span style="color: #000000">00048:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">offButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">);</span>
+<span style="color: #000000">00049:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">onButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #993399">2</span><span style="color: #990000">);</span>
+<span style="color: #000000">00050:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">offButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #993399">2</span><span style="color: #990000">);</span>
+<span style="color: #000000">00051:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">onButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #993399">3</span><span style="color: #990000">);</span>
+<span style="color: #000000">00052:</span>                 remoteControl<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">offButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #993399">3</span><span style="color: #990000">);</span>
+<span style="color: #000000">00053:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00054:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

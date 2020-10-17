@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch07_carbean<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.*;</span>
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>geom<span style="color: #990000">.*;</span>
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> javax<span style="color: #990000">.</span>swing<span style="color: #990000">.*;</span>
+<span style="color: #000000">00005:</span> 
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00007:</span> <span style="font-style: italic"><span style="color: #9A1900">   A component that draws a car shape.</span></span>
+<span style="color: #000000">00008:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span>
+<span style="color: #000000">00009:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">CarBean</span> <span style="font-weight: bold"><span style="color: #0000FF">extends</span></span> JComponent
+<span style="color: #000000">00010:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00011:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00012:</span> <span style="font-style: italic"><span style="color: #9A1900">      Constructs a default car bean.</span></span>
+<span style="color: #000000">00013:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00014:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">CarBean</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00015:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00016:</span>       x <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span>
+<span style="color: #000000">00017:</span>       y <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span>
+<span style="color: #000000">00018:</span>       width <span style="color: #990000">=</span> DEFAULT_CAR_WIDTH<span style="color: #990000">;</span>
+<span style="color: #000000">00019:</span>       height <span style="color: #990000">=</span> DEFAULT_CAR_HEIGHT<span style="color: #990000">;</span>      
+<span style="color: #000000">00020:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00021:</span> 
+<span style="color: #000000">00022:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00023:</span> <span style="font-style: italic"><span style="color: #9A1900">      Sets the x property.</span></span>
+<span style="color: #000000">00024:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> newValue the new x position</span></span>
+<span style="color: #000000">00025:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00026:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setX</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> newValue<span style="color: #990000">)</span>
+<span style="color: #000000">00027:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00028:</span>       x <span style="color: #990000">=</span> newValue<span style="color: #990000">;</span>
+<span style="color: #000000">00029:</span>       <span style="font-weight: bold"><span style="color: #000000">repaint</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00030:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00031:</span> 
+<span style="color: #000000">00032:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00033:</span> <span style="font-style: italic"><span style="color: #9A1900">      Gets the x property.</span></span>
+<span style="color: #000000">00034:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the x position</span></span>
+<span style="color: #000000">00035:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00036:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">getX</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00037:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00038:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> x<span style="color: #990000">;</span>
+<span style="color: #000000">00039:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00040:</span> 
+<span style="color: #000000">00041:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00042:</span> <span style="font-style: italic"><span style="color: #9A1900">      Sets the y property.</span></span>
+<span style="color: #000000">00043:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> newValue the new y position</span></span>
+<span style="color: #000000">00044:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00045:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setY</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> newValue<span style="color: #990000">)</span>
+<span style="color: #000000">00046:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00047:</span>       y <span style="color: #990000">=</span> newValue<span style="color: #990000">;</span>
+<span style="color: #000000">00048:</span>       <span style="font-weight: bold"><span style="color: #000000">repaint</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00049:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00050:</span> 
+<span style="color: #000000">00051:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00052:</span> <span style="font-style: italic"><span style="color: #9A1900">      Gets the y property.</span></span>
+<span style="color: #000000">00053:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the y position</span></span>
+<span style="color: #000000">00054:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00055:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">getY</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00056:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00057:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> y<span style="color: #990000">;</span>
+<span style="color: #000000">00058:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00059:</span> 
+<span style="color: #000000">00060:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">paintComponent</span></span><span style="color: #990000">(</span>Graphics g<span style="color: #990000">)</span>
+<span style="color: #000000">00061:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00062:</span>       Graphics2D g2 <span style="color: #990000">=</span> <span style="color: #990000">(</span>Graphics2D<span style="color: #990000">)</span> g<span style="color: #990000">;</span>
+<span style="color: #000000">00063:</span>       Rectangle2D<span style="color: #990000">.</span>Double body
+<span style="color: #000000">00064:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Rectangle2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>x<span style="color: #990000">,</span> y <span style="color: #990000">+</span> height <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">,</span> 
+<span style="color: #000000">00065:</span>             width <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">,</span> height <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">);</span>
+<span style="color: #000000">00066:</span>       Ellipse2D<span style="color: #990000">.</span>Double frontTire
+<span style="color: #000000">00067:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Ellipse2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>x <span style="color: #990000">+</span> width <span style="color: #990000">/</span> <span style="color: #993399">6</span><span style="color: #990000">,</span> 
+<span style="color: #000000">00068:</span>             y <span style="color: #990000">+</span> height <span style="color: #990000">*</span> <span style="color: #993399">2</span> <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">,</span> height <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">,</span> height <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">);</span>
+<span style="color: #000000">00069:</span>       Ellipse2D<span style="color: #990000">.</span>Double rearTire
+<span style="color: #000000">00070:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Ellipse2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>x <span style="color: #990000">+</span> width <span style="color: #990000">*</span> <span style="color: #993399">2</span> <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">,</span> 
+<span style="color: #000000">00071:</span>             y <span style="color: #990000">+</span> height <span style="color: #990000">*</span> <span style="color: #993399">2</span> <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">,</span> height <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">,</span> height <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">);</span>
+<span style="color: #000000">00072:</span> 
+<span style="color: #000000">00073:</span>       <span style="font-style: italic"><span style="color: #9A1900">// The bottom of the front windshield</span></span>
+<span style="color: #000000">00074:</span>       Point2D<span style="color: #990000">.</span>Double r1
+<span style="color: #000000">00075:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Point2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>x <span style="color: #990000">+</span> width <span style="color: #990000">/</span> <span style="color: #993399">6</span><span style="color: #990000">,</span> y <span style="color: #990000">+</span> height <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">);</span>
+<span style="color: #000000">00076:</span>       <span style="font-style: italic"><span style="color: #9A1900">// The front of the roof</span></span>
+<span style="color: #000000">00077:</span>       Point2D<span style="color: #990000">.</span>Double r2
+<span style="color: #000000">00078:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Point2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>x <span style="color: #990000">+</span> width <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">,</span> y<span style="color: #990000">);</span>
+<span style="color: #000000">00079:</span>       <span style="font-style: italic"><span style="color: #9A1900">// The rear of the roof</span></span>
+<span style="color: #000000">00080:</span>       Point2D<span style="color: #990000">.</span>Double r3
+<span style="color: #000000">00081:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Point2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>x <span style="color: #990000">+</span> width <span style="color: #990000">*</span> <span style="color: #993399">2</span> <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">,</span> y<span style="color: #990000">);</span>
+<span style="color: #000000">00082:</span>       <span style="font-style: italic"><span style="color: #9A1900">// The bottom of the rear windshield</span></span>
+<span style="color: #000000">00083:</span>       Point2D<span style="color: #990000">.</span>Double r4
+<span style="color: #000000">00084:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Point2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>x <span style="color: #990000">+</span> width <span style="color: #990000">*</span> <span style="color: #993399">5</span> <span style="color: #990000">/</span> <span style="color: #993399">6</span><span style="color: #990000">,</span> y <span style="color: #990000">+</span> height <span style="color: #990000">/</span> <span style="color: #993399">3</span><span style="color: #990000">);</span>
+<span style="color: #000000">00085:</span> 
+<span style="color: #000000">00086:</span>       Line2D<span style="color: #990000">.</span>Double frontWindshield
+<span style="color: #000000">00087:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Line2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>r1<span style="color: #990000">,</span> r2<span style="color: #990000">);</span>
+<span style="color: #000000">00088:</span>       Line2D<span style="color: #990000">.</span>Double roofTop
+<span style="color: #000000">00089:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Line2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>r2<span style="color: #990000">,</span> r3<span style="color: #990000">);</span>
+<span style="color: #000000">00090:</span>       Line2D<span style="color: #990000">.</span>Double rearWindshield
+<span style="color: #000000">00091:</span>          <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Line2D<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">Double</span></span><span style="color: #990000">(</span>r3<span style="color: #990000">,</span> r4<span style="color: #990000">);</span>
+<span style="color: #000000">00092:</span> 
+<span style="color: #000000">00093:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">draw</span></span><span style="color: #990000">(</span>body<span style="color: #990000">);</span>
+<span style="color: #000000">00094:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">draw</span></span><span style="color: #990000">(</span>frontTire<span style="color: #990000">);</span>
+<span style="color: #000000">00095:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">draw</span></span><span style="color: #990000">(</span>rearTire<span style="color: #990000">);</span>
+<span style="color: #000000">00096:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">draw</span></span><span style="color: #990000">(</span>frontWindshield<span style="color: #990000">);</span>
+<span style="color: #000000">00097:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">draw</span></span><span style="color: #990000">(</span>roofTop<span style="color: #990000">);</span>
+<span style="color: #000000">00098:</span>       g2<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">draw</span></span><span style="color: #990000">(</span>rearWindshield<span style="color: #990000">);</span>
+<span style="color: #000000">00099:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00100:</span> 
+<span style="color: #000000">00101:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Dimension <span style="font-weight: bold"><span style="color: #000000">getPreferredSize</span></span><span style="color: #990000">()</span> 
+<span style="color: #000000">00102:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00103:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Dimension</span></span><span style="color: #990000">(</span>DEFAULT_PANEL_WIDTH<span style="color: #990000">,</span> 
+<span style="color: #000000">00104:</span>          DEFAULT_PANEL_HEIGHT<span style="color: #990000">);</span>
+<span style="color: #000000">00105:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00106:</span> 
+<span style="color: #000000">00107:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> x<span style="color: #990000">;</span>
+<span style="color: #000000">00108:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> y<span style="color: #990000">;</span>
+<span style="color: #000000">00109:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> width<span style="color: #990000">;</span>
+<span style="color: #000000">00110:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> height<span style="color: #990000">;</span>
+<span style="color: #000000">00111:</span>    
+<span style="color: #000000">00112:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> DEFAULT_CAR_WIDTH <span style="color: #990000">=</span> <span style="color: #993399">60</span><span style="color: #990000">;</span>
+<span style="color: #000000">00113:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> DEFAULT_CAR_HEIGHT <span style="color: #990000">=</span> <span style="color: #993399">30</span><span style="color: #990000">;</span>
+<span style="color: #000000">00114:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> DEFAULT_PANEL_WIDTH <span style="color: #990000">=</span> <span style="color: #993399">160</span><span style="color: #990000">;</span>
+<span style="color: #000000">00115:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> DEFAULT_PANEL_HEIGHT <span style="color: #990000">=</span> <span style="color: #993399">130</span><span style="color: #990000">;</span>
+<span style="color: #000000">00116:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

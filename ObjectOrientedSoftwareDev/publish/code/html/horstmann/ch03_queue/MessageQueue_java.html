@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch03_queue<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00003:</span> <span style="font-style: italic"><span style="color: #9A1900">    A first-in, first-out bounded collection of messages. </span></span>
+<span style="color: #000000">00004:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span> 
+<span style="color: #000000">00005:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">MessageQueue</span> 
+<span style="color: #000000">00006:</span> <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00007:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00008:</span> <span style="font-style: italic"><span style="color: #9A1900">       Constructs an empty message queue. </span></span>
+<span style="color: #000000">00009:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> capacity the maximum capacity of the queue </span></span>
+<span style="color: #000000">00010:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@precondition</span><span style="font-style: italic"><span style="color: #9A1900"> capacity &gt; 0</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00012:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">MessageQueue</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> capacity<span style="color: #990000">)</span> 
+<span style="color: #000000">00013:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00014:</span>       elements <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Message<span style="color: #990000">[</span>capacity<span style="color: #990000">];</span> 
+<span style="color: #000000">00015:</span>       count <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> 
+<span style="color: #000000">00016:</span>       head <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> 
+<span style="color: #000000">00017:</span>       tail <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> 
+<span style="color: #000000">00018:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00019:</span> 
+<span style="color: #000000">00020:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900">       Remove message at head. </span></span>
+<span style="color: #000000">00022:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the message that has been removed from the queue</span></span>
+<span style="color: #000000">00023:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@precondition</span><span style="font-style: italic"><span style="color: #9A1900"> size() &gt; 0 </span></span>
+<span style="color: #000000">00024:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00025:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Message <span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">()</span> 
+<span style="color: #000000">00026:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00027:</span>       Message r <span style="color: #990000">=</span> elements<span style="color: #990000">[</span>head<span style="color: #990000">];</span> 
+<span style="color: #000000">00028:</span>       head <span style="color: #990000">=</span> <span style="color: #990000">(</span>head <span style="color: #990000">+</span> <span style="color: #993399">1</span><span style="color: #990000">)</span> <span style="color: #990000">%</span> elements<span style="color: #990000">.</span>length<span style="color: #990000">;</span> 
+<span style="color: #000000">00029:</span>       count<span style="color: #990000">--;</span> 
+<span style="color: #000000">00030:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> r<span style="color: #990000">;</span> 
+<span style="color: #000000">00031:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00032:</span> 
+<span style="color: #000000">00033:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00034:</span> <span style="font-style: italic"><span style="color: #9A1900">       Append a message at tail. </span></span>
+<span style="color: #000000">00035:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aMessage the message to be appended </span></span>
+<span style="color: #000000">00036:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@precondition</span><span style="font-style: italic"><span style="color: #9A1900"> !isFull();</span></span>
+<span style="color: #000000">00037:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00038:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>Message aMessage<span style="color: #990000">)</span> 
+<span style="color: #000000">00039:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00040:</span>       elements<span style="color: #990000">[</span>tail<span style="color: #990000">]</span> <span style="color: #990000">=</span> aMessage<span style="color: #990000">;</span> 
+<span style="color: #000000">00041:</span>       tail <span style="color: #990000">=</span> <span style="color: #990000">(</span>tail <span style="color: #990000">+</span> <span style="color: #993399">1</span><span style="color: #990000">)</span> <span style="color: #990000">%</span> elements<span style="color: #990000">.</span>length<span style="color: #990000">;</span> 
+<span style="color: #000000">00042:</span>       count<span style="color: #990000">++;</span> 
+<span style="color: #000000">00043:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00044:</span> 
+<span style="color: #000000">00045:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00046:</span> <span style="font-style: italic"><span style="color: #9A1900">       Get the total number of messages in the queue. </span></span>
+<span style="color: #000000">00047:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the total number of messages in the queue </span></span>
+<span style="color: #000000">00048:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00049:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">size</span></span><span style="color: #990000">()</span> 
+<span style="color: #000000">00050:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00051:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> count<span style="color: #990000">;</span> 
+<span style="color: #000000">00052:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00053:</span> 
+<span style="color: #000000">00054:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00055:</span> <span style="font-style: italic"><span style="color: #9A1900">       Checks whether this queue is full</span></span>
+<span style="color: #000000">00056:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> true if the queue is full</span></span>
+<span style="color: #000000">00057:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00058:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">boolean</span> <span style="font-weight: bold"><span style="color: #000000">isFull</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00059:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00060:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> count <span style="color: #990000">==</span> elements<span style="color: #990000">.</span>length<span style="color: #990000">;</span> 
+<span style="color: #000000">00061:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00062:</span> 
+<span style="color: #000000">00063:</span>    <span style="font-style: italic"><span style="color: #9A1900">/** </span></span>
+<span style="color: #000000">00064:</span> <span style="font-style: italic"><span style="color: #9A1900">       Get message at head. </span></span>
+<span style="color: #000000">00065:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the message that is at the head of the queue </span></span>
+<span style="color: #000000">00066:</span> <span style="font-style: italic"><span style="color: #9A1900">       </span></span><span style="color: #009900">@precondition</span><span style="font-style: italic"><span style="color: #9A1900"> size() &gt; 0 </span></span>
+<span style="color: #000000">00067:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span> 
+<span style="color: #000000">00068:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Message <span style="font-weight: bold"><span style="color: #000000">peek</span></span><span style="color: #990000">()</span> 
+<span style="color: #000000">00069:</span>    <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00070:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> elements<span style="color: #990000">[</span>head<span style="color: #990000">];</span> 
+<span style="color: #000000">00071:</span>    <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00072:</span> 
+<span style="color: #000000">00073:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Message<span style="color: #990000">[]</span> elements<span style="color: #990000">;</span> 
+<span style="color: #000000">00074:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> head<span style="color: #990000">;</span> 
+<span style="color: #000000">00075:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> tail<span style="color: #990000">;</span> 
+<span style="color: #000000">00076:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> count<span style="color: #990000">;</span> 
+<span style="color: #000000">00077:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

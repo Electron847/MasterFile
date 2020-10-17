@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> agent<span style="color: #990000">.</span>two<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> agent<span style="color: #990000">.</span>Agent<span style="color: #990000">;</span>
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> agent<span style="color: #990000">.</span>TimeServer<span style="color: #990000">;</span>
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> agent<span style="color: #990000">.</span>TimeServerLinked<span style="color: #990000">;</span>
+<span style="color: #000000">00005:</span> 
+<span style="color: #000000">00006:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">Main</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00007:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">main </span></span><span style="color: #990000">(</span>String<span style="color: #990000">[]</span> args<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00008:</span>     World w <span style="color: #990000">=</span> World<span style="color: #990000">.</span>instance<span style="color: #990000">;</span>
+<span style="color: #000000">00009:</span>     Agent a <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Tiger</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00010:</span>     w<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">time</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">enqueue</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">,</span>a<span style="color: #990000">);</span>
+<span style="color: #000000">00011:</span>     w<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">time</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span><span style="color: #993399">100</span><span style="color: #990000">);</span>
+<span style="color: #000000">00012:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00013:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00014:</span> 
+<span style="color: #000000">00015:</span> <span style="font-weight: bold"><span style="color: #0000FF">interface</span></span> <span style="color: #009900">World</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00016:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> World instance <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">WorldObj</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00017:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> TimeServer <span style="font-weight: bold"><span style="color: #000000">time</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00018:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Object<span style="color: #990000">[][]</span> <span style="font-weight: bold"><span style="color: #000000">space</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00019:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00020:</span> 
+<span style="color: #000000">00021:</span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">WorldObj</span> <span style="font-weight: bold"><span style="color: #0000FF">implements</span></span> World <span style="color: #FF0000">{</span>
+<span style="color: #000000">00022:</span>   <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> TimeServer _time <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">TimeServerLinked</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00023:</span>   <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Object<span style="color: #990000">[][]</span> _space <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Object<span style="color: #990000">[</span><span style="color: #993399">100</span><span style="color: #990000">][</span><span style="color: #993399">100</span><span style="color: #990000">];</span>
+<span style="color: #000000">00024:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> TimeServer <span style="font-weight: bold"><span style="color: #000000">time</span></span><span style="color: #990000">()</span>  <span style="color: #FF0000">{</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> _time<span style="color: #990000">;</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00025:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Object<span style="color: #990000">[][]</span> <span style="font-weight: bold"><span style="color: #000000">space</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> _space<span style="color: #990000">;</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00026:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00027:</span>   
+<span style="color: #000000">00028:</span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">Tiger</span> <span style="font-weight: bold"><span style="color: #0000FF">implements</span></span> Agent <span style="color: #FF0000">{</span>
+<span style="color: #000000">00029:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00030:</span>     World w <span style="color: #990000">=</span> World<span style="color: #990000">.</span>instance<span style="color: #990000">;</span>
+<span style="color: #000000">00031:</span>     System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"It's "</span> <span style="color: #990000">+</span> w<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">time</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">currentTime</span></span><span style="color: #990000">()</span> <span style="color: #990000">+</span> <span style="color: #FF0000">" and I'm alive!"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00032:</span>     w<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">time</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">enqueue</span></span><span style="color: #990000">(</span><span style="color: #993399">10</span><span style="color: #990000">+</span>w<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">time</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">currentTime</span></span><span style="color: #990000">(),</span> <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00033:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00034:</span> <span style="color: #FF0000">}</span>  
+</tt></pre>
+  </body>
+</html>

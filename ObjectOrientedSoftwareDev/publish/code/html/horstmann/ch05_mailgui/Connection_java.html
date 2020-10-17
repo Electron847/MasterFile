@@ -1,0 +1,260 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch05_mailgui<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00003:</span> <span style="font-style: italic"><span style="color: #9A1900">   Connect a phone to the mail system.</span></span>
+<span style="color: #000000">00004:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span>
+<span style="color: #000000">00005:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">Connection</span>
+<span style="color: #000000">00006:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00007:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00008:</span> <span style="font-style: italic"><span style="color: #9A1900">      Construct a Connection object.</span></span>
+<span style="color: #000000">00009:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> s a MailSystem object</span></span>
+<span style="color: #000000">00010:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> p a Telephone object</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00012:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">Connection</span></span><span style="color: #990000">(</span>MailSystem s<span style="color: #990000">,</span> Telephone p<span style="color: #990000">)</span>
+<span style="color: #000000">00013:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00014:</span>       system <span style="color: #990000">=</span> s<span style="color: #990000">;</span>
+<span style="color: #000000">00015:</span>       thePhone <span style="color: #990000">=</span> p<span style="color: #990000">;</span>
+<span style="color: #000000">00016:</span>       <span style="font-weight: bold"><span style="color: #000000">resetConnection</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00017:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00018:</span> 
+<span style="color: #000000">00019:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00020:</span> <span style="font-style: italic"><span style="color: #9A1900">      Respond to the user's pressing a key on the phone touchpad</span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> key the phone key pressed by the user</span></span>
+<span style="color: #000000">00022:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00023:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">dial</span></span><span style="color: #990000">(</span>String key<span style="color: #990000">)</span>
+<span style="color: #000000">00024:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00025:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>state <span style="color: #990000">==</span> CONNECTED<span style="color: #990000">)</span>
+<span style="color: #000000">00026:</span>          <span style="font-weight: bold"><span style="color: #000000">connect</span></span><span style="color: #990000">(</span>key<span style="color: #990000">);</span>
+<span style="color: #000000">00027:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>state <span style="color: #990000">==</span> RECORDING<span style="color: #990000">)</span>
+<span style="color: #000000">00028:</span>          <span style="font-weight: bold"><span style="color: #000000">login</span></span><span style="color: #990000">(</span>key<span style="color: #990000">);</span>
+<span style="color: #000000">00029:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>state <span style="color: #990000">==</span> CHANGE_PASSCODE<span style="color: #990000">)</span>
+<span style="color: #000000">00030:</span>          <span style="font-weight: bold"><span style="color: #000000">changePasscode</span></span><span style="color: #990000">(</span>key<span style="color: #990000">);</span>
+<span style="color: #000000">00031:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>state <span style="color: #990000">==</span> CHANGE_GREETING<span style="color: #990000">)</span>
+<span style="color: #000000">00032:</span>          <span style="font-weight: bold"><span style="color: #000000">changeGreeting</span></span><span style="color: #990000">(</span>key<span style="color: #990000">);</span>
+<span style="color: #000000">00033:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>state <span style="color: #990000">==</span> MAILBOX_MENU<span style="color: #990000">)</span>
+<span style="color: #000000">00034:</span>          <span style="font-weight: bold"><span style="color: #000000">mailboxMenu</span></span><span style="color: #990000">(</span>key<span style="color: #990000">);</span>
+<span style="color: #000000">00035:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>state <span style="color: #990000">==</span> MESSAGE_MENU<span style="color: #990000">)</span>
+<span style="color: #000000">00036:</span>          <span style="font-weight: bold"><span style="color: #000000">messageMenu</span></span><span style="color: #990000">(</span>key<span style="color: #990000">);</span>
+<span style="color: #000000">00037:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00038:</span> 
+<span style="color: #000000">00039:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00040:</span> <span style="font-style: italic"><span style="color: #9A1900">      Record voice.</span></span>
+<span style="color: #000000">00041:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> voice voice spoken by the user</span></span>
+<span style="color: #000000">00042:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00043:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">record</span></span><span style="color: #990000">(</span>String voice<span style="color: #990000">)</span>
+<span style="color: #000000">00044:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00045:</span>       currentRecording <span style="color: #990000">+=</span> voice<span style="color: #990000">;</span>
+<span style="color: #000000">00046:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00047:</span> 
+<span style="color: #000000">00048:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00049:</span> <span style="font-style: italic"><span style="color: #9A1900">      The user hangs up the phone.</span></span>
+<span style="color: #000000">00050:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00051:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">hangup</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00052:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00053:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>state <span style="color: #990000">==</span> RECORDING<span style="color: #990000">)</span>
+<span style="color: #000000">00054:</span>          currentMailbox<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addMessage</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Message</span></span><span style="color: #990000">(</span>currentRecording<span style="color: #990000">));</span>
+<span style="color: #000000">00055:</span>       <span style="font-weight: bold"><span style="color: #000000">resetConnection</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00056:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00057:</span> 
+<span style="color: #000000">00058:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00059:</span> <span style="font-style: italic"><span style="color: #9A1900">      Reset the connection to the initial state and prompt</span></span>
+<span style="color: #000000">00060:</span> <span style="font-style: italic"><span style="color: #9A1900">      for mailbox number</span></span>
+<span style="color: #000000">00061:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00062:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">resetConnection</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00063:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00064:</span>       currentRecording <span style="color: #990000">=</span> <span style="color: #FF0000">""</span><span style="color: #990000">;</span>
+<span style="color: #000000">00065:</span>       accumulatedKeys <span style="color: #990000">=</span> <span style="color: #FF0000">""</span><span style="color: #990000">;</span>
+<span style="color: #000000">00066:</span>       state <span style="color: #990000">=</span> CONNECTED<span style="color: #990000">;</span>
+<span style="color: #000000">00067:</span>       thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>initialPrompt<span style="color: #990000">);</span>
+<span style="color: #000000">00068:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00069:</span> 
+<span style="color: #000000">00070:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00071:</span> <span style="font-style: italic"><span style="color: #9A1900">      Try to connect the user with the specified mail box.</span></span>
+<span style="color: #000000">00072:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> key the phone key pressed by the user</span></span>
+<span style="color: #000000">00073:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00074:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">connect</span></span><span style="color: #990000">(</span>String key<span style="color: #990000">)</span>
+<span style="color: #000000">00075:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00076:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"#"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00077:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00078:</span>          currentMailbox <span style="color: #990000">=</span> system<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">findMailbox</span></span><span style="color: #990000">(</span>accumulatedKeys<span style="color: #990000">);</span>
+<span style="color: #000000">00079:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>currentMailbox <span style="color: #990000">!=</span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">)</span>
+<span style="color: #000000">00080:</span>          <span style="color: #FF0000">{</span>
+<span style="color: #000000">00081:</span>             state <span style="color: #990000">=</span> RECORDING<span style="color: #990000">;</span>
+<span style="color: #000000">00082:</span>             thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>currentMailbox<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getGreeting</span></span><span style="color: #990000">());</span>
+<span style="color: #000000">00083:</span>          <span style="color: #FF0000">}</span>
+<span style="color: #000000">00084:</span>          <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00085:</span>             thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Incorrect mailbox number. Try again!"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00086:</span>          accumulatedKeys <span style="color: #990000">=</span> <span style="color: #FF0000">""</span><span style="color: #990000">;</span>
+<span style="color: #000000">00087:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00088:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00089:</span>          accumulatedKeys <span style="color: #990000">+=</span> key<span style="color: #990000">;</span>
+<span style="color: #000000">00090:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00091:</span> 
+<span style="color: #000000">00092:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00093:</span> <span style="font-style: italic"><span style="color: #9A1900">      Try to log in the user.</span></span>
+<span style="color: #000000">00094:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> key the phone key pressed by the user</span></span>
+<span style="color: #000000">00095:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00096:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">login</span></span><span style="color: #990000">(</span>String key<span style="color: #990000">)</span>
+<span style="color: #000000">00097:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00098:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"#"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00099:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00100:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>currentMailbox<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">checkPasscode</span></span><span style="color: #990000">(</span>accumulatedKeys<span style="color: #990000">))</span>
+<span style="color: #000000">00101:</span>          <span style="color: #FF0000">{</span>
+<span style="color: #000000">00102:</span>             state <span style="color: #990000">=</span> MAILBOX_MENU<span style="color: #990000">;</span>
+<span style="color: #000000">00103:</span>             thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>mailboxMenu<span style="color: #990000">);</span>
+<span style="color: #000000">00104:</span>          <span style="color: #FF0000">}</span>
+<span style="color: #000000">00105:</span>          <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00106:</span>             thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Incorrect passcode. Try again!"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00107:</span>          accumulatedKeys <span style="color: #990000">=</span> <span style="color: #FF0000">""</span><span style="color: #990000">;</span>
+<span style="color: #000000">00108:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00109:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00110:</span>          accumulatedKeys <span style="color: #990000">+=</span> key<span style="color: #990000">;</span>
+<span style="color: #000000">00111:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00112:</span> 
+<span style="color: #000000">00113:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00114:</span> <span style="font-style: italic"><span style="color: #9A1900">      Change passcode.</span></span>
+<span style="color: #000000">00115:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> key the phone key pressed by the user</span></span>
+<span style="color: #000000">00116:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00117:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">changePasscode</span></span><span style="color: #990000">(</span>String key<span style="color: #990000">)</span>
+<span style="color: #000000">00118:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00119:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"#"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00120:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00121:</span>          currentMailbox<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setPasscode</span></span><span style="color: #990000">(</span>accumulatedKeys<span style="color: #990000">);</span>
+<span style="color: #000000">00122:</span>          state <span style="color: #990000">=</span> MAILBOX_MENU<span style="color: #990000">;</span>
+<span style="color: #000000">00123:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>mailboxMenu<span style="color: #990000">);</span>
+<span style="color: #000000">00124:</span>          accumulatedKeys <span style="color: #990000">=</span> <span style="color: #FF0000">""</span><span style="color: #990000">;</span>
+<span style="color: #000000">00125:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00126:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00127:</span>          accumulatedKeys <span style="color: #990000">+=</span> key<span style="color: #990000">;</span>
+<span style="color: #000000">00128:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00129:</span> 
+<span style="color: #000000">00130:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00131:</span> <span style="font-style: italic"><span style="color: #9A1900">      Change greeting.</span></span>
+<span style="color: #000000">00132:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> key the phone key pressed by the user</span></span>
+<span style="color: #000000">00133:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00134:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">changeGreeting</span></span><span style="color: #990000">(</span>String key<span style="color: #990000">)</span>
+<span style="color: #000000">00135:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00136:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"#"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00137:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00138:</span>          currentMailbox<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setGreeting</span></span><span style="color: #990000">(</span>currentRecording<span style="color: #990000">);</span>
+<span style="color: #000000">00139:</span>          currentRecording <span style="color: #990000">=</span> <span style="color: #FF0000">""</span><span style="color: #990000">;</span>
+<span style="color: #000000">00140:</span>          state <span style="color: #990000">=</span> MAILBOX_MENU<span style="color: #990000">;</span>
+<span style="color: #000000">00141:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>mailboxMenu<span style="color: #990000">);</span>
+<span style="color: #000000">00142:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00143:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00144:</span> 
+<span style="color: #000000">00145:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00146:</span> <span style="font-style: italic"><span style="color: #9A1900">      Respond to the user's selection from mailbox menu.</span></span>
+<span style="color: #000000">00147:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> key the phone key pressed by the user</span></span>
+<span style="color: #000000">00148:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00149:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">mailboxMenu</span></span><span style="color: #990000">(</span>String key<span style="color: #990000">)</span>
+<span style="color: #000000">00150:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00151:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"1"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00152:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00153:</span>          state <span style="color: #990000">=</span> MESSAGE_MENU<span style="color: #990000">;</span>
+<span style="color: #000000">00154:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>messageMenu<span style="color: #990000">);</span>
+<span style="color: #000000">00155:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00156:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"2"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00157:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00158:</span>          state <span style="color: #990000">=</span> CHANGE_PASSCODE<span style="color: #990000">;</span>
+<span style="color: #000000">00159:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Enter new passcode followed by the # key"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00160:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00161:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"3"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00162:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00163:</span>          state <span style="color: #990000">=</span> CHANGE_GREETING<span style="color: #990000">;</span>
+<span style="color: #000000">00164:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Record your greeting, then press the # key"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00165:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00166:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00167:</span> 
+<span style="color: #000000">00168:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00169:</span> <span style="font-style: italic"><span style="color: #9A1900">      Respond to the user's selection from message menu.</span></span>
+<span style="color: #000000">00170:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> key the phone key pressed by the user</span></span>
+<span style="color: #000000">00171:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00172:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">messageMenu</span></span><span style="color: #990000">(</span>String key<span style="color: #990000">)</span>
+<span style="color: #000000">00173:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00174:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"1"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00175:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00176:</span>          String output <span style="color: #990000">=</span> <span style="color: #FF0000">""</span><span style="color: #990000">;</span>
+<span style="color: #000000">00177:</span>          Message m <span style="color: #990000">=</span> currentMailbox<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getCurrentMessage</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00178:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>m <span style="color: #990000">==</span> <span style="font-weight: bold"><span style="color: #0000FF">null</span></span><span style="color: #990000">)</span> output <span style="color: #990000">+=</span> <span style="color: #FF0000">"No messages."</span> <span style="color: #990000">+</span> <span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span><span style="color: #990000">;</span>
+<span style="color: #000000">00179:</span>          <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> output <span style="color: #990000">+=</span> m<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getText</span></span><span style="color: #990000">()</span> <span style="color: #990000">+</span> <span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span><span style="color: #990000">;</span>
+<span style="color: #000000">00180:</span>          output <span style="color: #990000">+=</span> messageMenu<span style="color: #990000">;</span>
+<span style="color: #000000">00181:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>output<span style="color: #990000">);</span>
+<span style="color: #000000">00182:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00183:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"2"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00184:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00185:</span>          currentMailbox<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">saveCurrentMessage</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00186:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>messageMenu<span style="color: #990000">);</span>
+<span style="color: #000000">00187:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00188:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"3"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00189:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00190:</span>          currentMailbox<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">removeCurrentMessage</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00191:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>messageMenu<span style="color: #990000">);</span>
+<span style="color: #000000">00192:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00193:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>key<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">equals</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"4"</span><span style="color: #990000">))</span>
+<span style="color: #000000">00194:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00195:</span>          state <span style="color: #990000">=</span> MAILBOX_MENU<span style="color: #990000">;</span>
+<span style="color: #000000">00196:</span>          thePhone<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">speak</span></span><span style="color: #990000">(</span>mailboxMenu<span style="color: #990000">);</span>
+<span style="color: #000000">00197:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00198:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00199:</span> 
+<span style="color: #000000">00200:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> MailSystem system<span style="color: #990000">;</span>
+<span style="color: #000000">00201:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Mailbox currentMailbox<span style="color: #990000">;</span>
+<span style="color: #000000">00202:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> String currentRecording<span style="color: #990000">;</span>
+<span style="color: #000000">00203:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> String accumulatedKeys<span style="color: #990000">;</span>
+<span style="color: #000000">00204:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Telephone thePhone<span style="color: #990000">;</span>
+<span style="color: #000000">00205:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> state<span style="color: #990000">;</span>
+<span style="color: #000000">00206:</span> 
+<span style="color: #000000">00207:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> DISCONNECTED <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span>
+<span style="color: #000000">00208:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> CONNECTED <span style="color: #990000">=</span> <span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00209:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> RECORDING <span style="color: #990000">=</span> <span style="color: #993399">2</span><span style="color: #990000">;</span>
+<span style="color: #000000">00210:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> MAILBOX_MENU <span style="color: #990000">=</span> <span style="color: #993399">3</span><span style="color: #990000">;</span>
+<span style="color: #000000">00211:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> MESSAGE_MENU <span style="color: #990000">=</span> <span style="color: #993399">4</span><span style="color: #990000">;</span>
+<span style="color: #000000">00212:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> CHANGE_PASSCODE <span style="color: #990000">=</span> <span style="color: #993399">5</span><span style="color: #990000">;</span>
+<span style="color: #000000">00213:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> CHANGE_GREETING <span style="color: #990000">=</span> <span style="color: #993399">6</span><span style="color: #990000">;</span>
+<span style="color: #000000">00214:</span> 
+<span style="color: #000000">00215:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> String initialPrompt <span style="color: #990000">=</span> 
+<span style="color: #000000">00216:</span>       <span style="color: #FF0000">"Please enter mailbox number followed by #"</span><span style="color: #990000">;</span>      
+<span style="color: #000000">00217:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> String mailboxMenu <span style="color: #990000">=</span> 
+<span style="color: #000000">00218:</span>       <span style="color: #FF0000">"Enter 1 to listen to your messages</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span>
+<span style="color: #000000">00219:</span>       <span style="color: #990000">+</span> <span style="color: #FF0000">"Enter 2 to change your passcode</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span>
+<span style="color: #000000">00220:</span>       <span style="color: #990000">+</span> <span style="color: #FF0000">"Enter 3 to change your greeting"</span><span style="color: #990000">;</span>
+<span style="color: #000000">00221:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> String messageMenu <span style="color: #990000">=</span> 
+<span style="color: #000000">00222:</span>       <span style="color: #FF0000">"Enter 1 to listen to the current message</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span>
+<span style="color: #000000">00223:</span>       <span style="color: #990000">+</span> <span style="color: #FF0000">"Enter 2 to save the current message</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span>
+<span style="color: #000000">00224:</span>       <span style="color: #990000">+</span> <span style="color: #FF0000">"Enter 3 to delete the current message</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span>
+<span style="color: #000000">00225:</span>       <span style="color: #990000">+</span> <span style="color: #FF0000">"Enter 4 to return to the main menu"</span><span style="color: #990000">;</span>
+<span style="color: #000000">00226:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00227:</span> 
+<span style="color: #000000">00228:</span> 
+<span style="color: #000000">00229:</span> 
+<span style="color: #000000">00230:</span> 
+<span style="color: #000000">00231:</span> 
+<span style="color: #000000">00232:</span> 
+<span style="color: #000000">00233:</span> 
+<span style="color: #000000">00234:</span> 
+<span style="color: #000000">00235:</span> 
+<span style="color: #000000">00236:</span> 
+<span style="color: #000000">00237:</span> 
+</tt></pre>
+  </body>
+</html>

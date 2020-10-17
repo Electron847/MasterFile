@@ -1,0 +1,93 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package iterator.exprtwo;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.util.Iterator;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import enumeration.Op;<a name="line.3"></a>
+<FONT color="green">004</FONT>    <a name="line.4"></a>
+<FONT color="green">005</FONT>    public class Main {<a name="line.5"></a>
+<FONT color="green">006</FONT>      public static void main (String[] args) {<a name="line.6"></a>
+<FONT color="green">007</FONT>        AbsExpr one = new Const(1);<a name="line.7"></a>
+<FONT color="green">008</FONT>        AbsExpr onePtwo = new BinOp (new Const(1), Op.ADD, new Const(2));<a name="line.8"></a>
+<FONT color="green">009</FONT>        AbsExpr threeMfour = new BinOp (new Const(3), Op.MUL, new Const(4));<a name="line.9"></a>
+<FONT color="green">010</FONT>        AbsExpr m = new BinOp (onePtwo, Op.SUB, threeMfour);<a name="line.10"></a>
+<FONT color="green">011</FONT>        Expr n = new BinOp (m, Op.DIV, new Const(5));<a name="line.11"></a>
+<FONT color="green">012</FONT>        <a name="line.12"></a>
+<FONT color="green">013</FONT>        for (Iterator i = n.postorderIterator(); i.hasNext(); )<a name="line.13"></a>
+<FONT color="green">014</FONT>          System.out.print (i.next() + " ");<a name="line.14"></a>
+<FONT color="green">015</FONT>        System.out.println ("");<a name="line.15"></a>
+<FONT color="green">016</FONT>        <a name="line.16"></a>
+<FONT color="green">017</FONT>        for (Iterator i = n.preorderIterator(); i.hasNext(); )<a name="line.17"></a>
+<FONT color="green">018</FONT>          System.out.print (i.next() + " ");<a name="line.18"></a>
+<FONT color="green">019</FONT>        System.out.println ("");<a name="line.19"></a>
+<FONT color="green">020</FONT>        <a name="line.20"></a>
+<FONT color="green">021</FONT>        for (Iterator i = n.breadthIterator(); i.hasNext(); )<a name="line.21"></a>
+<FONT color="green">022</FONT>          System.out.print (i.next() + " ");<a name="line.22"></a>
+<FONT color="green">023</FONT>        System.out.println ("");<a name="line.23"></a>
+<FONT color="green">024</FONT>        <a name="line.24"></a>
+<FONT color="green">025</FONT>        System.out.println ("Value: " + n.evaluate());<a name="line.25"></a>
+<FONT color="green">026</FONT>      }<a name="line.26"></a>
+<FONT color="green">027</FONT>    }<a name="line.27"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

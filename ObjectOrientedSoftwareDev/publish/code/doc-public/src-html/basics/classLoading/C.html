@@ -1,0 +1,89 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package basics.classLoading;<a name="line.1"></a>
+<FONT color="green">002</FONT>    public class Main {<a name="line.2"></a>
+<FONT color="green">003</FONT>      private Main() {}<a name="line.3"></a>
+<FONT color="green">004</FONT>      // The following is a static initializer.<a name="line.4"></a>
+<FONT color="green">005</FONT>      // It will execute the first time a class is used.<a name="line.5"></a>
+<FONT color="green">006</FONT>      static { System.out.println("Main initialized"); }<a name="line.6"></a>
+<FONT color="green">007</FONT>      static public void main (String[] args) {<a name="line.7"></a>
+<FONT color="green">008</FONT>        System.out.print("1. ");  C.f();<a name="line.8"></a>
+<FONT color="green">009</FONT>        System.out.print("2. ");  C.f();<a name="line.9"></a>
+<FONT color="green">010</FONT>        System.out.print("3. ");  D.g();<a name="line.10"></a>
+<FONT color="green">011</FONT>        System.out.print("4. ");  D.g();<a name="line.11"></a>
+<FONT color="green">012</FONT>      }<a name="line.12"></a>
+<FONT color="green">013</FONT>    }<a name="line.13"></a>
+<FONT color="green">014</FONT>    class C {<a name="line.14"></a>
+<FONT color="green">015</FONT>      private C() {}<a name="line.15"></a>
+<FONT color="green">016</FONT>      static { System.out.print("C initialized; "); }<a name="line.16"></a>
+<FONT color="green">017</FONT>      static void f() { System.out.println("C.f()"); }<a name="line.17"></a>
+<FONT color="green">018</FONT>    }<a name="line.18"></a>
+<FONT color="green">019</FONT>    class D {<a name="line.19"></a>
+<FONT color="green">020</FONT>      private D() {}<a name="line.20"></a>
+<FONT color="green">021</FONT>      static { System.out.print("D initialized; "); }<a name="line.21"></a>
+<FONT color="green">022</FONT>      static void g() { System.out.println("D.g()"); }<a name="line.22"></a>
+<FONT color="green">023</FONT>    }<a name="line.23"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

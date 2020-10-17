@@ -1,0 +1,127 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package types.point4;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.awt.Color;<a name="line.2"></a>
+<FONT color="green">003</FONT>    interface Colored {<a name="line.3"></a>
+<FONT color="green">004</FONT>      Color getColor();<a name="line.4"></a>
+<FONT color="green">005</FONT>    }<a name="line.5"></a>
+<FONT color="green">006</FONT>    interface Point {<a name="line.6"></a>
+<FONT color="green">007</FONT>      double getX();<a name="line.7"></a>
+<FONT color="green">008</FONT>      double getY();<a name="line.8"></a>
+<FONT color="green">009</FONT>    }<a name="line.9"></a>
+<FONT color="green">010</FONT>    final class CartesianPoint implements Colored, Point {<a name="line.10"></a>
+<FONT color="green">011</FONT>      <a name="line.11"></a>
+<FONT color="green">012</FONT>      private final double _x;<a name="line.12"></a>
+<FONT color="green">013</FONT>      private final double _y;<a name="line.13"></a>
+<FONT color="green">014</FONT>      private final Color _color; <a name="line.14"></a>
+<FONT color="green">015</FONT>      public CartesianPoint(double x, double y, Color color) {<a name="line.15"></a>
+<FONT color="green">016</FONT>        _x = x;<a name="line.16"></a>
+<FONT color="green">017</FONT>        _y = y;<a name="line.17"></a>
+<FONT color="green">018</FONT>        _color = color;<a name="line.18"></a>
+<FONT color="green">019</FONT>      }<a name="line.19"></a>
+<FONT color="green">020</FONT>      public double getX() { return _x; }<a name="line.20"></a>
+<FONT color="green">021</FONT>      public double getY() { return _y; }<a name="line.21"></a>
+<FONT color="green">022</FONT>      public Color getColor() {<a name="line.22"></a>
+<FONT color="green">023</FONT>        System.out.println("It's Cartesian!");<a name="line.23"></a>
+<FONT color="green">024</FONT>        return _color;<a name="line.24"></a>
+<FONT color="green">025</FONT>      }<a name="line.25"></a>
+<FONT color="green">026</FONT>      <a name="line.26"></a>
+<FONT color="green">027</FONT>    }<a name="line.27"></a>
+<FONT color="green">028</FONT>    final class PolarPoint implements Colored, Point {<a name="line.28"></a>
+<FONT color="green">029</FONT>      <a name="line.29"></a>
+<FONT color="green">030</FONT>      private final double _theta;<a name="line.30"></a>
+<FONT color="green">031</FONT>      private final double _r;<a name="line.31"></a>
+<FONT color="green">032</FONT>      private final Color _color; <a name="line.32"></a>
+<FONT color="green">033</FONT>      public PolarPoint(double theta, double r, Color color) {<a name="line.33"></a>
+<FONT color="green">034</FONT>        _theta = theta;<a name="line.34"></a>
+<FONT color="green">035</FONT>        _r = r;<a name="line.35"></a>
+<FONT color="green">036</FONT>        _color = color;<a name="line.36"></a>
+<FONT color="green">037</FONT>      }<a name="line.37"></a>
+<FONT color="green">038</FONT>      public double getX() { return _r*Math.cos(_theta); }<a name="line.38"></a>
+<FONT color="green">039</FONT>      public double getY() { return _r*Math.sin(_theta); }<a name="line.39"></a>
+<FONT color="green">040</FONT>      public Color getColor() {<a name="line.40"></a>
+<FONT color="green">041</FONT>        System.out.println("It's Polar!");<a name="line.41"></a>
+<FONT color="green">042</FONT>        return _color;<a name="line.42"></a>
+<FONT color="green">043</FONT>      }<a name="line.43"></a>
+<FONT color="green">044</FONT>      <a name="line.44"></a>
+<FONT color="green">045</FONT>    }<a name="line.45"></a>
+<FONT color="green">046</FONT>    public class Main {<a name="line.46"></a>
+<FONT color="green">047</FONT>      private Main() {}<a name="line.47"></a>
+<FONT color="green">048</FONT>      public static void main(String[] args) {<a name="line.48"></a>
+<FONT color="green">049</FONT>        CartesianPoint p1 = new CartesianPoint(0,0,Color.RED);<a name="line.49"></a>
+<FONT color="green">050</FONT>        CartesianPoint q1 = new CartesianPoint(1,1,Color.BLUE);<a name="line.50"></a>
+<FONT color="green">051</FONT>        PolarPoint r1 = new PolarPoint(0,0,Color.RED);<a name="line.51"></a>
+<FONT color="green">052</FONT>    <a name="line.52"></a>
+<FONT color="green">053</FONT>        Point p2 = p1;<a name="line.53"></a>
+<FONT color="green">054</FONT>        Point q2 = q1;<a name="line.54"></a>
+<FONT color="green">055</FONT>        Point r2 = r1;<a name="line.55"></a>
+<FONT color="green">056</FONT>    <a name="line.56"></a>
+<FONT color="green">057</FONT>        Colored p3 = p1;<a name="line.57"></a>
+<FONT color="green">058</FONT>        Colored q3 = q1;<a name="line.58"></a>
+<FONT color="green">059</FONT>        Colored r3 = r1;<a name="line.59"></a>
+<FONT color="green">060</FONT>      }<a name="line.60"></a>
+<FONT color="green">061</FONT>    }<a name="line.61"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

@@ -4,7 +4,7 @@
 		module="mapreduce$sources"
 		revision="1.0"
 		status="integration"
-		publication="20200215005826"
+		publication="20201013162045"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

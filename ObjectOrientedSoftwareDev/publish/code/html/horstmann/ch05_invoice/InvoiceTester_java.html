@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch05_invoice<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.*;</span>
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>awt<span style="color: #990000">.</span>event<span style="color: #990000">.*;</span>
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> javax<span style="color: #990000">.</span>swing<span style="color: #990000">.*;</span>
+<span style="color: #000000">00005:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> javax<span style="color: #990000">.</span>swing<span style="color: #990000">.</span>event<span style="color: #990000">.*;</span>
+<span style="color: #000000">00006:</span> 
+<span style="color: #000000">00007:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00008:</span> <span style="font-style: italic"><span style="color: #9A1900">   A program that tests the invoice classes.</span></span>
+<span style="color: #000000">00009:</span> <span style="font-style: italic"><span style="color: #9A1900">*/</span></span>
+<span style="color: #000000">00010:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">InvoiceTester</span>
+<span style="color: #000000">00011:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00012:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>String<span style="color: #990000">[]</span> args<span style="color: #990000">)</span>
+<span style="color: #000000">00013:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00014:</span>       <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> Invoice invoice <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Invoice</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00015:</span>       <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> InvoiceFormatter formatter <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">SimpleFormatter</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00016:</span> 
+<span style="color: #000000">00017:</span>       <span style="font-style: italic"><span style="color: #9A1900">// This text area will contain the formatted invoice</span></span>
+<span style="color: #000000">00018:</span>       <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> JTextArea textArea <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">JTextArea</span></span><span style="color: #990000">(</span><span style="color: #993399">20</span><span style="color: #990000">,</span> <span style="color: #993399">40</span><span style="color: #990000">);</span>
+<span style="color: #000000">00019:</span> 
+<span style="color: #000000">00020:</span>       <span style="font-style: italic"><span style="color: #9A1900">// When the invoice changes, update the text area</span></span>
+<span style="color: #000000">00021:</span>       ChangeListener listener <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span>
+<span style="color: #000000">00022:</span>          <span style="font-weight: bold"><span style="color: #000000">ChangeListener</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00023:</span>          <span style="color: #FF0000">{</span>
+<span style="color: #000000">00024:</span>             <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">stateChanged</span></span><span style="color: #990000">(</span>ChangeEvent event<span style="color: #990000">)</span>
+<span style="color: #000000">00025:</span>             <span style="color: #FF0000">{</span>
+<span style="color: #000000">00026:</span>                textArea<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setText</span></span><span style="color: #990000">(</span>invoice<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>formatter<span style="color: #990000">));</span>
+<span style="color: #000000">00027:</span>             <span style="color: #FF0000">}</span>
+<span style="color: #000000">00028:</span>          <span style="color: #FF0000">}</span><span style="color: #990000">;</span>
+<span style="color: #000000">00029:</span>       invoice<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addChangeListener</span></span><span style="color: #990000">(</span>listener<span style="color: #990000">);</span>
+<span style="color: #000000">00030:</span> 
+<span style="color: #000000">00031:</span>       <span style="font-style: italic"><span style="color: #9A1900">// Add line items to a combo box</span></span>
+<span style="color: #000000">00032:</span>       <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> JComboBox combo <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">JComboBox</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00033:</span>       Product hammer <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Product</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hammer"</span><span style="color: #990000">,</span> <span style="color: #993399">19.95</span><span style="color: #990000">);</span>
+<span style="color: #000000">00034:</span>       Product nails <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Product</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Assorted nails"</span><span style="color: #990000">,</span> <span style="color: #993399">9.95</span><span style="color: #990000">);</span>
+<span style="color: #000000">00035:</span>       combo<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addItem</span></span><span style="color: #990000">(</span>hammer<span style="color: #990000">);</span>
+<span style="color: #000000">00036:</span>       Bundle bundle <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Bundle</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00037:</span>       bundle<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>hammer<span style="color: #990000">);</span>
+<span style="color: #000000">00038:</span>       bundle<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>nails<span style="color: #990000">);</span>
+<span style="color: #000000">00039:</span>       combo<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addItem</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">DiscountedItem</span></span><span style="color: #990000">(</span>bundle<span style="color: #990000">,</span> <span style="color: #993399">10</span><span style="color: #990000">));</span>
+<span style="color: #000000">00040:</span> 
+<span style="color: #000000">00041:</span>       <span style="font-style: italic"><span style="color: #9A1900">// Make a button for adding the currently selected</span></span>
+<span style="color: #000000">00042:</span>       <span style="font-style: italic"><span style="color: #9A1900">// item to the invoice</span></span>
+<span style="color: #000000">00043:</span>       JButton addButton <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">JButton</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Add"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00044:</span>       addButton<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addActionListener</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">new</span></span>
+<span style="color: #000000">00045:</span>          <span style="font-weight: bold"><span style="color: #000000">ActionListener</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00046:</span>          <span style="color: #FF0000">{</span>
+<span style="color: #000000">00047:</span>             <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">actionPerformed</span></span><span style="color: #990000">(</span>ActionEvent event<span style="color: #990000">)</span>
+<span style="color: #000000">00048:</span>             <span style="color: #FF0000">{</span>
+<span style="color: #000000">00049:</span>                LineItem item <span style="color: #990000">=</span> <span style="color: #990000">(</span>LineItem<span style="color: #990000">)</span> combo<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getSelectedItem</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00050:</span>                invoice<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addItem</span></span><span style="color: #990000">(</span>item<span style="color: #990000">);</span>
+<span style="color: #000000">00051:</span>             <span style="color: #FF0000">}</span>
+<span style="color: #000000">00052:</span>          <span style="color: #FF0000">}</span><span style="color: #990000">);</span>
+<span style="color: #000000">00053:</span> 
+<span style="color: #000000">00054:</span>       <span style="font-style: italic"><span style="color: #9A1900">// Put the combo box and the add button into a panel</span></span>
+<span style="color: #000000">00055:</span>       JPanel panel <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">JPanel</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00056:</span>       panel<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>combo<span style="color: #990000">);</span>
+<span style="color: #000000">00057:</span>       panel<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>addButton<span style="color: #990000">);</span>
+<span style="color: #000000">00058:</span> 
+<span style="color: #000000">00059:</span>       <span style="font-style: italic"><span style="color: #9A1900">// Add the text area and panel to the content pane</span></span>
+<span style="color: #000000">00060:</span>       JFrame frame <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">JFrame</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00061:</span>       frame<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">JScrollPane</span></span><span style="color: #990000">(</span>textArea<span style="color: #990000">),</span>
+<span style="color: #000000">00062:</span>          BorderLayout<span style="color: #990000">.</span>CENTER<span style="color: #990000">);</span>
+<span style="color: #000000">00063:</span>       frame<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>panel<span style="color: #990000">,</span> BorderLayout<span style="color: #990000">.</span>SOUTH<span style="color: #990000">);</span>
+<span style="color: #000000">00064:</span>       frame<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setDefaultCloseOperation</span></span><span style="color: #990000">(</span>JFrame<span style="color: #990000">.</span>EXIT_ON_CLOSE<span style="color: #990000">);</span>
+<span style="color: #000000">00065:</span>       frame<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">pack</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00066:</span>       frame<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">setVisible</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">true</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00067:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00068:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

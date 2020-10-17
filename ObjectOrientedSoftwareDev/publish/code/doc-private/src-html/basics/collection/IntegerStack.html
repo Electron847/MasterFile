@@ -1,0 +1,85 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package basics.collection;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.util.List;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.util.ArrayList;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import java.util.EmptyStackException;<a name="line.4"></a>
+<FONT color="green">005</FONT>    final public class IntegerStack {<a name="line.5"></a>
+<FONT color="green">006</FONT>      final private List&lt;Integer&gt; _l;<a name="line.6"></a>
+<FONT color="green">007</FONT>      public IntegerStack() { _l = new ArrayList&lt;Integer&gt;(); }<a name="line.7"></a>
+<FONT color="green">008</FONT>      public boolean isEmpty() { return _l.isEmpty(); }<a name="line.8"></a>
+<FONT color="green">009</FONT>      public void push(Integer x) {<a name="line.9"></a>
+<FONT color="green">010</FONT>        if (x == null)<a name="line.10"></a>
+<FONT color="green">011</FONT>          throw new IllegalArgumentException();<a name="line.11"></a>
+<FONT color="green">012</FONT>        _l.add(x);<a name="line.12"></a>
+<FONT color="green">013</FONT>      }<a name="line.13"></a>
+<FONT color="green">014</FONT>      public Integer pop() {<a name="line.14"></a>
+<FONT color="green">015</FONT>        if (_l.isEmpty())<a name="line.15"></a>
+<FONT color="green">016</FONT>          throw new EmptyStackException();<a name="line.16"></a>
+<FONT color="green">017</FONT>        return _l.remove(_l.size()-1);<a name="line.17"></a>
+<FONT color="green">018</FONT>      }<a name="line.18"></a>
+<FONT color="green">019</FONT>    }<a name="line.19"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

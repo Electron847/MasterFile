@@ -4,7 +4,7 @@
 		module="ping-pong$sources"
 		revision="1.0"
 		status="integration"
-		publication="20191014005550"
+		publication="20201013152725"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

@@ -1,0 +1,128 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package factory.person;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.util.Random;<a name="line.2"></a>
+<FONT color="green">003</FONT>    public class PersonFactory {<a name="line.3"></a>
+<FONT color="green">004</FONT>      private PersonFactory() {}<a name="line.4"></a>
+<FONT color="green">005</FONT>      static private Random _random = new Random();<a name="line.5"></a>
+<FONT color="green">006</FONT>      static public SSN newSSN(String s) {<a name="line.6"></a>
+<FONT color="green">007</FONT>        final int REQUIREDLENGTH = 9;<a name="line.7"></a>
+<FONT color="green">008</FONT>        if (null == s || REQUIREDLENGTH != s.length())<a name="line.8"></a>
+<FONT color="green">009</FONT>          throw new IllegalArgumentException();<a name="line.9"></a>
+<FONT color="green">010</FONT>        boolean someNonZeroDigit = false;<a name="line.10"></a>
+<FONT color="green">011</FONT>        for (int i=0; i&lt;REQUIREDLENGTH; i++) {<a name="line.11"></a>
+<FONT color="green">012</FONT>          char c = s.charAt(i);<a name="line.12"></a>
+<FONT color="green">013</FONT>          if (!Character.isDigit(c))<a name="line.13"></a>
+<FONT color="green">014</FONT>            throw new IllegalArgumentException();<a name="line.14"></a>
+<FONT color="green">015</FONT>          if (0 != Character.digit(c,10))<a name="line.15"></a>
+<FONT color="green">016</FONT>            someNonZeroDigit = true;<a name="line.16"></a>
+<FONT color="green">017</FONT>        }<a name="line.17"></a>
+<FONT color="green">018</FONT>        if (!someNonZeroDigit)<a name="line.18"></a>
+<FONT color="green">019</FONT>          throw new IllegalArgumentException();<a name="line.19"></a>
+<FONT color="green">020</FONT>        return new SSNObj(s);<a name="line.20"></a>
+<FONT color="green">021</FONT>      }<a name="line.21"></a>
+<FONT color="green">022</FONT>      static public Person newRandomPerson() {<a name="line.22"></a>
+<FONT color="green">023</FONT>        return new PersonObj(Integer.toString(_random.nextInt()),SSN.INVALID);<a name="line.23"></a>
+<FONT color="green">024</FONT>      }<a name="line.24"></a>
+<FONT color="green">025</FONT>      static public Person newPerson(String name, String ssn) {<a name="line.25"></a>
+<FONT color="green">026</FONT>        return new PersonObj(name,ssn);<a name="line.26"></a>
+<FONT color="green">027</FONT>      }<a name="line.27"></a>
+<FONT color="green">028</FONT>      static public Person newPerson(String name, SSN ssn) {<a name="line.28"></a>
+<FONT color="green">029</FONT>        return new PersonObj(name,ssn);<a name="line.29"></a>
+<FONT color="green">030</FONT>      }<a name="line.30"></a>
+<FONT color="green">031</FONT>    }<a name="line.31"></a>
+<FONT color="green">032</FONT>    <a name="line.32"></a>
+<FONT color="green">033</FONT>    final class SSNObj implements SSN {<a name="line.33"></a>
+<FONT color="green">034</FONT>      final private String _s;<a name="line.34"></a>
+<FONT color="green">035</FONT>      final private long _l;<a name="line.35"></a>
+<FONT color="green">036</FONT>      SSNObj(String s) {<a name="line.36"></a>
+<FONT color="green">037</FONT>        _s = s;<a name="line.37"></a>
+<FONT color="green">038</FONT>        _l = Long.parseLong(s);<a name="line.38"></a>
+<FONT color="green">039</FONT>      }<a name="line.39"></a>
+<FONT color="green">040</FONT>      public String toString() { return _s; }<a name="line.40"></a>
+<FONT color="green">041</FONT>      public long toLong() { return _l; }<a name="line.41"></a>
+<FONT color="green">042</FONT>      // TODO: define equals, hashcode, compareTo<a name="line.42"></a>
+<FONT color="green">043</FONT>      public int compareTo(SSN that) { return -1; }<a name="line.43"></a>
+<FONT color="green">044</FONT>    }<a name="line.44"></a>
+<FONT color="green">045</FONT>    <a name="line.45"></a>
+<FONT color="green">046</FONT>    final class PersonObj implements Person {<a name="line.46"></a>
+<FONT color="green">047</FONT>      final private String _name;<a name="line.47"></a>
+<FONT color="green">048</FONT>      final private SSN _ssn;<a name="line.48"></a>
+<FONT color="green">049</FONT>      PersonObj(String name, SSN ssn) {<a name="line.49"></a>
+<FONT color="green">050</FONT>        if (null == name || 0 == name.trim().length()) <a name="line.50"></a>
+<FONT color="green">051</FONT>          throw new IllegalArgumentException();<a name="line.51"></a>
+<FONT color="green">052</FONT>        _name = name.trim();<a name="line.52"></a>
+<FONT color="green">053</FONT>        _ssn = ssn;<a name="line.53"></a>
+<FONT color="green">054</FONT>      }<a name="line.54"></a>
+<FONT color="green">055</FONT>      PersonObj(String name, String ssn) {<a name="line.55"></a>
+<FONT color="green">056</FONT>        this(name,PersonFactory.newSSN(ssn));<a name="line.56"></a>
+<FONT color="green">057</FONT>      }<a name="line.57"></a>
+<FONT color="green">058</FONT>      public String name() { return _name; }<a name="line.58"></a>
+<FONT color="green">059</FONT>      public SSN ssn() { return _ssn; }<a name="line.59"></a>
+<FONT color="green">060</FONT>      // TODO: define equals, hashcode, compareTo<a name="line.60"></a>
+<FONT color="green">061</FONT>      public int compareTo(Person that) { return -1; }<a name="line.61"></a>
+<FONT color="green">062</FONT>    }    <a name="line.62"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

@@ -10,6 +10,7 @@ class ReduceActor extends Actor {
   println(self.path)
   var remainingMappers = ConfigFactory.load.getInt("number-mappers")
   var reduceMapTitle = HashMap[String, mutable.Set[String]]()
+  //var reduceMapCount = HashMap[String,Int]()
 
 
   def receive = {
@@ -17,17 +18,19 @@ class ReduceActor extends Actor {
 
       if(reduceMapTitle.contains(word)){
         if (!reduceMapTitle(word).contains(title))
+          //word -> (reduceMapCount(word) += 1)
           reduceMapTitle += (word -> (reduceMapTitle(word) += title))
-        //println("\n" + reduceMapTitle)
       }
 
       else
+        //reduceMapCount += (word -> 1)
         reduceMapTitle += (word -> (scala.collection.mutable.Set.empty[String] += title))
 
     case Flush =>
       remainingMappers -= 1
       if (remainingMappers == 0) {
         println(self.path.toStringWithoutAddress + " : " + reduceMapTitle)
+        //println(self.path.toStringWithoutAddress + " : " + reduceMapCount)
         context.actorSelection(("../..")) ! Done
       }
   }

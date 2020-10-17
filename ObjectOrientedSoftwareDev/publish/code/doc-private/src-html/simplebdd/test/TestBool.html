@@ -1,0 +1,124 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package simplebdd.test;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    import simplebdd.bool.BoolPred;<a name="line.3"></a>
+<FONT color="green">004</FONT>    <a name="line.4"></a>
+<FONT color="green">005</FONT>    public class TestBool {<a name="line.5"></a>
+<FONT color="green">006</FONT>      public static void main (String[] args) {<a name="line.6"></a>
+<FONT color="green">007</FONT>        new TestBool().run ();<a name="line.7"></a>
+<FONT color="green">008</FONT>      }<a name="line.8"></a>
+<FONT color="green">009</FONT>      <a name="line.9"></a>
+<FONT color="green">010</FONT>      final BoolPred x;<a name="line.10"></a>
+<FONT color="green">011</FONT>      final BoolPred y;<a name="line.11"></a>
+<FONT color="green">012</FONT>      final BoolPred z;<a name="line.12"></a>
+<FONT color="green">013</FONT>      TestBool () {<a name="line.13"></a>
+<FONT color="green">014</FONT>        this.x = BoolPred.factory.buildVar ("x");<a name="line.14"></a>
+<FONT color="green">015</FONT>        this.y = BoolPred.factory.buildVar ("y");<a name="line.15"></a>
+<FONT color="green">016</FONT>        this.z = BoolPred.factory.buildVar ("z");<a name="line.16"></a>
+<FONT color="green">017</FONT>      }<a name="line.17"></a>
+<FONT color="green">018</FONT>      <a name="line.18"></a>
+<FONT color="green">019</FONT>      void runtest (String s, BoolPred p, boolean expectedValue) {<a name="line.19"></a>
+<FONT color="green">020</FONT>        String trueString  = (expectedValue? "Good. " : "BAD!! ");<a name="line.20"></a>
+<FONT color="green">021</FONT>        String falseString = (expectedValue? "BAD!! " : "Good. ");<a name="line.21"></a>
+<FONT color="green">022</FONT>        if (p == BoolPred.T) {<a name="line.22"></a>
+<FONT color="green">023</FONT>          System.out.println <a name="line.23"></a>
+<FONT color="green">024</FONT>            (trueString + s + " is always true");<a name="line.24"></a>
+<FONT color="green">025</FONT>        } else {<a name="line.25"></a>
+<FONT color="green">026</FONT>          System.out.println <a name="line.26"></a>
+<FONT color="green">027</FONT>            (falseString + s + " is sometimes false");<a name="line.27"></a>
+<FONT color="green">028</FONT>        }<a name="line.28"></a>
+<FONT color="green">029</FONT>      }<a name="line.29"></a>
+<FONT color="green">030</FONT>      <a name="line.30"></a>
+<FONT color="green">031</FONT>      public void run () {<a name="line.31"></a>
+<FONT color="green">032</FONT>        System.out.println (BoolPred.T);<a name="line.32"></a>
+<FONT color="green">033</FONT>        System.out.println (BoolPred.functions.toGraphString(BoolPred.T));<a name="line.33"></a>
+<FONT color="green">034</FONT>        System.out.println (x);<a name="line.34"></a>
+<FONT color="green">035</FONT>        System.out.println (BoolPred.functions.toGraphString(x));<a name="line.35"></a>
+<FONT color="green">036</FONT>        System.out.println (x.not());<a name="line.36"></a>
+<FONT color="green">037</FONT>        System.out.println (BoolPred.functions.toGraphString(x.not()));<a name="line.37"></a>
+<FONT color="green">038</FONT>        System.out.println (x.ite(y,z));<a name="line.38"></a>
+<FONT color="green">039</FONT>        System.out.println (BoolPred.functions.toGraphString(x.ite(y,z)));<a name="line.39"></a>
+<FONT color="green">040</FONT>        System.out.println ("(y ? z : x)");<a name="line.40"></a>
+<FONT color="green">041</FONT>        System.out.println (BoolPred.functions.toGraphString(y.ite(z,x)));<a name="line.41"></a>
+<FONT color="green">042</FONT>        <a name="line.42"></a>
+<FONT color="green">043</FONT>        System.out.println ("x xor y xor z");<a name="line.43"></a>
+<FONT color="green">044</FONT>        System.out.println (BoolPred.functions.toGraphString(x.xor (y).xor (z)));<a name="line.44"></a>
+<FONT color="green">045</FONT>        System.out.println ("x and x");<a name="line.45"></a>
+<FONT color="green">046</FONT>        System.out.println (BoolPred.functions.toGraphString(x.and (x)));<a name="line.46"></a>
+<FONT color="green">047</FONT>        System.out.println ("x or y");<a name="line.47"></a>
+<FONT color="green">048</FONT>        System.out.println (BoolPred.functions.toGraphString(x.or (y)));<a name="line.48"></a>
+<FONT color="green">049</FONT>        System.out.println ("y or x");<a name="line.49"></a>
+<FONT color="green">050</FONT>        System.out.println (BoolPred.functions.toGraphString(y.or (x)));<a name="line.50"></a>
+<FONT color="green">051</FONT>        <a name="line.51"></a>
+<FONT color="green">052</FONT>        runtest (x.and (y) + "iff" + y.and (x),<a name="line.52"></a>
+<FONT color="green">053</FONT>                 x.and (y).iff (y.and (x)), true);<a name="line.53"></a>
+<FONT color="green">054</FONT>        runtest ("", x.and (BoolPred.T).iff (x), true);<a name="line.54"></a>
+<FONT color="green">055</FONT>        runtest ("", x.xor (y.xor (z)).iff (x.xor (y).xor (z)), true);<a name="line.55"></a>
+<FONT color="green">056</FONT>      }<a name="line.56"></a>
+<FONT color="green">057</FONT>      <a name="line.57"></a>
+<FONT color="green">058</FONT>    }<a name="line.58"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

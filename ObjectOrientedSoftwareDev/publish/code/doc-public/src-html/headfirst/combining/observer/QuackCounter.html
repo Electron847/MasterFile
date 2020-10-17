@@ -1,0 +1,97 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package headfirst.combining.observer;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    public class QuackCounter implements Quackable {<a name="line.3"></a>
+<FONT color="green">004</FONT>            Quackable duck;<a name="line.4"></a>
+<FONT color="green">005</FONT>            static int numberOfQuacks;<a name="line.5"></a>
+<FONT color="green">006</FONT>      <a name="line.6"></a>
+<FONT color="green">007</FONT>            public QuackCounter(Quackable duck) {<a name="line.7"></a>
+<FONT color="green">008</FONT>                    this.duck = duck;<a name="line.8"></a>
+<FONT color="green">009</FONT>            }<a name="line.9"></a>
+<FONT color="green">010</FONT>      <a name="line.10"></a>
+<FONT color="green">011</FONT>            public void quack() {<a name="line.11"></a>
+<FONT color="green">012</FONT>                    duck.quack();<a name="line.12"></a>
+<FONT color="green">013</FONT>                    numberOfQuacks++;<a name="line.13"></a>
+<FONT color="green">014</FONT>            }<a name="line.14"></a>
+<FONT color="green">015</FONT>     <a name="line.15"></a>
+<FONT color="green">016</FONT>            public static int getQuacks() {<a name="line.16"></a>
+<FONT color="green">017</FONT>                    return numberOfQuacks;<a name="line.17"></a>
+<FONT color="green">018</FONT>            }<a name="line.18"></a>
+<FONT color="green">019</FONT>     <a name="line.19"></a>
+<FONT color="green">020</FONT>            public void registerObserver(Observer observer) {<a name="line.20"></a>
+<FONT color="green">021</FONT>                    duck.registerObserver(observer);<a name="line.21"></a>
+<FONT color="green">022</FONT>            }<a name="line.22"></a>
+<FONT color="green">023</FONT>     <a name="line.23"></a>
+<FONT color="green">024</FONT>            public void notifyObservers() {<a name="line.24"></a>
+<FONT color="green">025</FONT>                    duck.notifyObservers();<a name="line.25"></a>
+<FONT color="green">026</FONT>            }<a name="line.26"></a>
+<FONT color="green">027</FONT>       <a name="line.27"></a>
+<FONT color="green">028</FONT>            public String toString() {<a name="line.28"></a>
+<FONT color="green">029</FONT>                    return duck.toString();<a name="line.29"></a>
+<FONT color="green">030</FONT>            }<a name="line.30"></a>
+<FONT color="green">031</FONT>    }<a name="line.31"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

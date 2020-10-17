@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> headfirst<span style="color: #990000">.</span>proxy<span style="color: #990000">.</span>gumball<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>rmi<span style="color: #990000">.*;</span>
+<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>rmi<span style="color: #990000">.</span>server<span style="color: #990000">.*;</span>
+<span style="color: #000000">00005:</span>  
+<span style="color: #000000">00006:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">GumballMachine</span>
+<span style="color: #000000">00007:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">extends</span></span> UnicastRemoteObject <span style="font-weight: bold"><span style="color: #0000FF">implements</span></span> GumballMachineRemote 
+<span style="color: #000000">00008:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00009:</span>         State soldOutState<span style="color: #990000">;</span>
+<span style="color: #000000">00010:</span>         State noQuarterState<span style="color: #990000">;</span>
+<span style="color: #000000">00011:</span>         State hasQuarterState<span style="color: #990000">;</span>
+<span style="color: #000000">00012:</span>         State soldState<span style="color: #990000">;</span>
+<span style="color: #000000">00013:</span>         State winnerState<span style="color: #990000">;</span>
+<span style="color: #000000">00014:</span>  
+<span style="color: #000000">00015:</span>         State state <span style="color: #990000">=</span> soldOutState<span style="color: #990000">;</span>
+<span style="color: #000000">00016:</span>         <span style="color: #009900">int</span> count <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span>
+<span style="color: #000000">00017:</span>         String location<span style="color: #990000">;</span>
+<span style="color: #000000">00018:</span> 
+<span style="color: #000000">00019:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">GumballMachine</span></span><span style="color: #990000">(</span>String location<span style="color: #990000">,</span> <span style="color: #009900">int</span> numberGumballs<span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">throws</span></span> RemoteException <span style="color: #FF0000">{</span>
+<span style="color: #000000">00020:</span>                 soldOutState <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">SoldOutState</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00021:</span>                 noQuarterState <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">NoQuarterState</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00022:</span>                 hasQuarterState <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">HasQuarterState</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00023:</span>                 soldState <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">SoldState</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00024:</span>                 winnerState <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">WinnerState</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00025:</span> 
+<span style="color: #000000">00026:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>count <span style="color: #990000">=</span> numberGumballs<span style="color: #990000">;</span>
+<span style="color: #000000">00027:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>numberGumballs <span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00028:</span>                         state <span style="color: #990000">=</span> noQuarterState<span style="color: #990000">;</span>
+<span style="color: #000000">00029:</span>                 <span style="color: #FF0000">}</span> 
+<span style="color: #000000">00030:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>location <span style="color: #990000">=</span> location<span style="color: #990000">;</span>
+<span style="color: #000000">00031:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00032:</span>  
+<span style="color: #000000">00033:</span>  
+<span style="color: #000000">00034:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">insertQuarter</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00035:</span>                 state<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">insertQuarter</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00036:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00037:</span>  
+<span style="color: #000000">00038:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">ejectQuarter</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00039:</span>                 state<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">ejectQuarter</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00040:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00041:</span>  
+<span style="color: #000000">00042:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">turnCrank</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00043:</span>                 state<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">turnCrank</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00044:</span>                 state<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">dispense</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00045:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00046:</span> 
+<span style="color: #000000">00047:</span>         <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setState</span></span><span style="color: #990000">(</span>State state<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00048:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>state <span style="color: #990000">=</span> state<span style="color: #990000">;</span>
+<span style="color: #000000">00049:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00050:</span>  
+<span style="color: #000000">00051:</span>         <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">releaseBall</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00052:</span>                 System<span style="color: #990000">.</span>out<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">println</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"A gumball comes rolling out the slot..."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00053:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>count <span style="color: #990000">!=</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00054:</span>                         count <span style="color: #990000">=</span> count <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00055:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00056:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00057:</span> 
+<span style="color: #000000">00058:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">refill</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> count<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00059:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span>count <span style="color: #990000">=</span> count<span style="color: #990000">;</span>
+<span style="color: #000000">00060:</span>                 state <span style="color: #990000">=</span> noQuarterState<span style="color: #990000">;</span>
+<span style="color: #000000">00061:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00062:</span>  
+<span style="color: #000000">00063:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">getCount</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00064:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> count<span style="color: #990000">;</span>
+<span style="color: #000000">00065:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00066:</span>  
+<span style="color: #000000">00067:</span>     <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> State <span style="font-weight: bold"><span style="color: #000000">getState</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00068:</span>         <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> state<span style="color: #990000">;</span>
+<span style="color: #000000">00069:</span>     <span style="color: #FF0000">}</span>
+<span style="color: #000000">00070:</span>  
+<span style="color: #000000">00071:</span>     <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> String <span style="font-weight: bold"><span style="color: #000000">getLocation</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00072:</span>         <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> location<span style="color: #990000">;</span>
+<span style="color: #000000">00073:</span>     <span style="color: #FF0000">}</span>
+<span style="color: #000000">00074:</span>   
+<span style="color: #000000">00075:</span>     <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> State <span style="font-weight: bold"><span style="color: #000000">getSoldOutState</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00076:</span>         <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> soldOutState<span style="color: #990000">;</span>
+<span style="color: #000000">00077:</span>     <span style="color: #FF0000">}</span>
+<span style="color: #000000">00078:</span> 
+<span style="color: #000000">00079:</span>     <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> State <span style="font-weight: bold"><span style="color: #000000">getNoQuarterState</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00080:</span>         <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> noQuarterState<span style="color: #990000">;</span>
+<span style="color: #000000">00081:</span>     <span style="color: #FF0000">}</span>
+<span style="color: #000000">00082:</span> 
+<span style="color: #000000">00083:</span>     <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> State <span style="font-weight: bold"><span style="color: #000000">getHasQuarterState</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00084:</span>         <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> hasQuarterState<span style="color: #990000">;</span>
+<span style="color: #000000">00085:</span>     <span style="color: #FF0000">}</span>
+<span style="color: #000000">00086:</span> 
+<span style="color: #000000">00087:</span>     <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> State <span style="font-weight: bold"><span style="color: #000000">getSoldState</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00088:</span>         <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> soldState<span style="color: #990000">;</span>
+<span style="color: #000000">00089:</span>     <span style="color: #FF0000">}</span>
+<span style="color: #000000">00090:</span> 
+<span style="color: #000000">00091:</span>     <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> State <span style="font-weight: bold"><span style="color: #000000">getWinnerState</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00092:</span>         <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> winnerState<span style="color: #990000">;</span>
+<span style="color: #000000">00093:</span>     <span style="color: #FF0000">}</span>
+<span style="color: #000000">00094:</span>  
+<span style="color: #000000">00095:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> String <span style="font-weight: bold"><span style="color: #000000">toString</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00096:</span>                 StringBuilder result <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">StringBuilder</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00097:</span>                 result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">Mighty Gumball, Inc."</span><span style="color: #990000">);</span>
+<span style="color: #000000">00098:</span>                 result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">Java-enabled Standing Gumball Model #2004"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00099:</span>                 result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">Inventory: "</span> <span style="color: #990000">+</span> count <span style="color: #990000">+</span> <span style="color: #FF0000">" gumball"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00100:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>count <span style="color: #990000">!=</span> <span style="color: #993399">1</span><span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00101:</span>                         result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"s"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00102:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00103:</span>                 result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00104:</span>                 result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Machine is "</span> <span style="color: #990000">+</span> state <span style="color: #990000">+</span> <span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00105:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">toString</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00106:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00107:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package enumeration;<a name="line.1"></a>
+<FONT color="green">002</FONT>    <a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.util.Arrays;<a name="line.3"></a>
+<FONT color="green">004</FONT>    import java.util.Collections;<a name="line.4"></a>
+<FONT color="green">005</FONT>    import java.util.List;<a name="line.5"></a>
+<FONT color="green">006</FONT>    <a name="line.6"></a>
+<FONT color="green">007</FONT>    <a name="line.7"></a>
+<FONT color="green">008</FONT>    // Ordinal-based typesafe enum (From Bloch)<a name="line.8"></a>
+<FONT color="green">009</FONT>    //<a name="line.9"></a>
+<FONT color="green">010</FONT>    // No need to override equals, since only one instance of each suit.<a name="line.10"></a>
+<FONT color="green">011</FONT>    // Note that _instanceNum and _name are instance fields.<a name="line.11"></a>
+<FONT color="green">012</FONT>    // Note that cNumInstances is a class field.<a name="line.12"></a>
+<FONT color="green">013</FONT>    // Note that the order of the constant definitions is important.<a name="line.13"></a>
+<FONT color="green">014</FONT>    // Note that VALUES is an immutable collection.<a name="line.14"></a>
+<FONT color="green">015</FONT>    // Java arrays are always mutable :-(<a name="line.15"></a>
+<FONT color="green">016</FONT>    public final class Suit implements Comparable&lt;Suit&gt; {<a name="line.16"></a>
+<FONT color="green">017</FONT>      // Number of instances<a name="line.17"></a>
+<FONT color="green">018</FONT>      private static int cNumInstances = 0;<a name="line.18"></a>
+<FONT color="green">019</FONT>    <a name="line.19"></a>
+<FONT color="green">020</FONT>      // Ordinal for this instance<a name="line.20"></a>
+<FONT color="green">021</FONT>      private final int _instanceNum;<a name="line.21"></a>
+<FONT color="green">022</FONT>    <a name="line.22"></a>
+<FONT color="green">023</FONT>      // Name of Suit<a name="line.23"></a>
+<FONT color="green">024</FONT>      private final String _name;<a name="line.24"></a>
+<FONT color="green">025</FONT>    <a name="line.25"></a>
+<FONT color="green">026</FONT>      // Private constructor: All instances created in the class<a name="line.26"></a>
+<FONT color="green">027</FONT>      private Suit(String name) {<a name="line.27"></a>
+<FONT color="green">028</FONT>        _name = name;<a name="line.28"></a>
+<FONT color="green">029</FONT>        _instanceNum = Suit.cNumInstances++;<a name="line.29"></a>
+<FONT color="green">030</FONT>      }<a name="line.30"></a>
+<FONT color="green">031</FONT>    <a name="line.31"></a>
+<FONT color="green">032</FONT>      public String toString() {<a name="line.32"></a>
+<FONT color="green">033</FONT>        return _name;<a name="line.33"></a>
+<FONT color="green">034</FONT>      }<a name="line.34"></a>
+<FONT color="green">035</FONT>    <a name="line.35"></a>
+<FONT color="green">036</FONT>      public int compareTo(Suit that) {<a name="line.36"></a>
+<FONT color="green">037</FONT>        return this._instanceNum - that._instanceNum;<a name="line.37"></a>
+<FONT color="green">038</FONT>      }<a name="line.38"></a>
+<FONT color="green">039</FONT>    <a name="line.39"></a>
+<FONT color="green">040</FONT>      public static final Suit CLUBS = new Suit("clubs");<a name="line.40"></a>
+<FONT color="green">041</FONT>      public static final Suit DIAMONDS = new Suit("diamonds");<a name="line.41"></a>
+<FONT color="green">042</FONT>      public static final Suit HEARTS = new Suit("hearts");<a name="line.42"></a>
+<FONT color="green">043</FONT>      public static final Suit SPADES = new Suit("spades");<a name="line.43"></a>
+<FONT color="green">044</FONT>    <a name="line.44"></a>
+<FONT color="green">045</FONT>      public static final List&lt;Suit&gt; VALUES;<a name="line.45"></a>
+<FONT color="green">046</FONT>      static {<a name="line.46"></a>
+<FONT color="green">047</FONT>        Suit[] values = { CLUBS, DIAMONDS, HEARTS, SPADES };<a name="line.47"></a>
+<FONT color="green">048</FONT>        VALUES = Collections.unmodifiableList(Arrays.asList(values));<a name="line.48"></a>
+<FONT color="green">049</FONT>      }<a name="line.49"></a>
+<FONT color="green">050</FONT>    }<a name="line.50"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

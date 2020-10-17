@@ -1,0 +1,1077 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+
+<HEAD>
+
+
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META name="GENERATOR" content="hevea 1.08">
+<STYLE type="text/css">
+.toc{list-style:none;}
+.title{margin:auto;text-align:center}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+.flushleft{text-align:left;margin-left:0ex;margin-right:auto;}
+.flushright{text-align:right;margin-left:auto;margin-right:0ex;}
+DIV TABLE{margin-left:inherit;margin-right:inherit;}
+PRE{text-align:left;margin-left:0ex;margin-right:auto;}
+BLOCKQUOTE{margin-left:4ex;margin-right:4ex;text-align:left;}
+.part{margin:auto;text-align:center}
+    span.red       { color: red; }
+    span.orange    { color: orange; }
+    span.purple    { color: purple; }
+    span.blue      { color: blue; }
+    span.brown     { color: brown; }
+    span.green     { color: lime; }
+</STYLE>
+</HEAD>
+
+<BODY >
+<!--HEVEA command line is: hevea EXAMS.tex -->
+<!--HTMLHEAD-->
+<!--ENDHTML-->
+<!--PREFIX <ARG ></ARG>-->
+<!--CUT DEF section 1 -->
+
+ <BR>
+<BR><BR><BR>
+<B>Explanation</B><BR>
+Some classes/interfaces from the j2sdk and junit:
+<PRE CLASS="verbatim">
+public interface Iterator {
+  public boolean hasNext();
+  public Object next();
+  public void remove();
+}
+public interface Collection {
+  public int size();
+  public boolean isEmpty();
+  public boolean contains(Object o);
+  public Iterator iterator();
+  public boolean add(Object o);
+  public boolean remove(Object o);
+  public void clear();
+  ...
+}
+public interface List extends Collection {
+  public Object get(int index);
+  public Object set(int index, Object element);
+  public void add(int index, Object element);
+  public Object remove(int index);
+  ...
+}
+public interface Observer {
+  public void update(Observable o, Object arg);
+}
+public class Observable {
+  public synchronized void addObserver(Observer o);
+  public void notifyObservers(Object arg);
+  protected synchronized void setChanged();
+  protected synchronized void clearChanged();
+  public synchronized boolean hasChanged();
+  ...
+}
+public class Assert {
+  static public void assertTrue(boolean condition);
+  static public void assertFalse(boolean condition);
+  static public void fail();
+  static public void assertEquals(Object expected, Object actual);
+  static public void assertEquals(int expected, int actual);
+  static public void assertNull(Object object);
+  static public void assertNotNull(Object object);
+  static public void assertSame(Object expected, Object actual);
+  static public void assertNotSame(Object expected, Object actual);
+  ...
+}
+</PRE><BR><BR>
+<B>Question 1</B><BR>
+    <p><span class="red">
+          This question covers material which is not covered by your midterm
+          (abstract classes)
+      </span></p>
+Draw a single UML class diagram that describes the following
+ situation. Make your diagram as precise as possible.
+ <OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+ Interface <CODE>I</CODE> defines method <CODE>f</CODE>.
+ <LI CLASS="li-enumerate">Interface <CODE>J</CODE> defines method <CODE>g</CODE>.
+ <LI CLASS="li-enumerate">Class <CODE>C</CODE> implements <CODE>I</CODE> and <CODE>J</CODE>;
+ <CODE>C</CODE> implements <CODE>f</CODE>;
+ <CODE>C</CODE> does <EM>not</EM> implement <CODE>g</CODE>.
+ <LI CLASS="li-enumerate">Class <CODE>D</CODE> extends <CODE>C</CODE> and implements <CODE>g</CODE>.
+ <LI CLASS="li-enumerate">Each instance of class <CODE>X</CODE> maintains references to
+ between zero and twenty instances&nbsp;of&nbsp;<CODE>I</CODE>.
+ </OL>
+<BR><BR>
+<B>Question 2</B><BR>
+    <p><span class="red">
+          This question covers material which is not covered by your midterm
+          (old homework, with abstract classes)
+      </span></p>
+Consider the following code from the homework assignments:
+<PRE CLASS="verbatim">
+abstract public class AbstractUndoableCommand implements UndoableCommand {
+  private CommandHistory _history;
+
+  protected AbstractUndoableCommand(CommandHistory history) { _history = history; }
+  abstract protected boolean setup();
+  abstract protected void dodo();
+  abstract public void undo();
+  final public void execute() {
+    if (setup()) {
+      dodo();
+      _history.addCommand(this);
+    }
+  }
+  final public void redo() {
+    dodo();
+  }
+}
+public class CompositeCommand extends AbstractUndoableCommand {
+  private final List _list;
+
+  public CompositeCommand(CommandHistory history) {
+     super(history);
+    _list = new ArrayList();
+  }
+  public void addCommand(AbstractUndoableCommand cmd) { _list.add(cmd); }
+  public boolean setup() { return true; }
+  public void dodo() {
+    Iterator i = _list.iterator(); 
+    while (i.hasNext()) {
+      AbstractUndoableCommand cmd = (AbstractUndoableCommand) i.next();
+      cmd.dodo();
+    }
+  }
+  public void undo() {
+    ListIterator i = _list.listIterator(_list.size()); 
+    while (i.hasPrevious()) {
+      AbstractUndoableCommand cmdObject = (AbstractUndoableCommand)  i.previous();
+      cmdObject.undo();
+    }
+  }
+}
+public class AddCommand extends AbstractUndoableCommand {
+  private Database _db;       private int _year;        
+  private Video _newVideo;    private String _category; 
+  private String _title;      private int _numCopies;   
+
+  public AddCommand(Database db, String title, int year, String category,
+  int numCopies) {
+    super(db);                _year = year;          
+    _db = db;                 _category = category;  
+    _title = title;           _numCopies = numCopies;
+  }
+  protected boolean setup() {
+    return (_db.findVideo(_title) == null);
+  }
+  public void dodo() {
+    _newVideo = new VideoImpl(_title, _year, _category, _numCopies);
+    _db.addVideo(_newVideo);
+  }
+  public void undo() {
+    _db.removeVideo(_title);
+  }
+}
+</PRE>
+ Given the following main program fragment
+<PRE CLASS="verbatim">
+  AbstractUndoableCommand c11 = new AddCommand(db, "Vanishing Point", 1973, "Drama", 1);
+  AbstractUndoableCommand c12 = new AddCommand(db, "American Graffiti", 1975, "Comedy", 3);
+  AbstractUndoableCommand c13 = new AddCommand(db, "El Mariachi", 1996, "Drama", 2);
+  AbstractUndoableCommand c14 = new AddCommand(db, "Play it again, Sam", 1978, "Comedy", 4);
+  CompositeCommand c1 = new CompositeCommand(db);
+  c1.addCommand(c11);
+  c1.addCommand(c12); 
+  c1.addCommand(c13);
+  c1.addCommand(c14);
+  c1.execute();
+</PRE>draw an object interaction diagram tracing the method executions for
+ the call <CODE>c1.execute()</CODE>. Your diagram should have columns
+ corresponding to objects <CODE>c1</CODE>, <CODE>c11</CODE>, <CODE>c12</CODE>,
+ <CODE>c13</CODE>, <CODE>c14</CODE>, with the leftmost column being <CODE>c1</CODE>. Do
+ not include any other objects.
+<BR>
+<BR><BR><BR>
+<B>Question 3</B><BR>
+In the following code, circle the uses of <CODE>x0</CODE>, <CODE>x1</CODE>,
+ <CODE>x2</CODE> and <CODE>x3</CODE> that are <EM>not</EM> allowed by the java
+ compiler; that is, circle the field usages that <EM>do not compile</EM>.<BR>
+<BR>
+<DIV CLASS="center">
+<PRE CLASS="verbatim">
+ package one;
+ public class A {
+     private int x0;
+             int x1;
+      public int x3;
+
+   int f1(A that) {
+     return this.x0 + this.x1  + this.x3
+          + that.x0 + that.x1  + that.x3;
+   }
+ }
+
+ package one;
+ class B {
+   int g1(A that) {
+     return that.x0 + that.x1 + that.x3;  
+   }
+ }
+</PRE></DIV>
+<DIV CLASS="center">
+<PRE CLASS="verbatim">
+ package two;
+ class D {
+   int g2(one.A that) {
+     return that.x0 + that.x1 + that.x3;
+   }
+ }
+</PRE></DIV>
+<BR>
+<BR><BR><BR>
+<B>Question 4</B><BR>
+In this problem, we will look at a data structure for representing
+ simple organizational charts (org charts).
+<PRE CLASS="verbatim">
+interface Node { int size(); }
+
+class P implements Node { // a node consisting of a single p(erson)
+  private String _name;
+  public P(String name) { _name = name }
+  public int size() {/* TODO */}
+}
+
+class OU implements Node { // an organizational unit: a node with zero or more children
+  private String _name;    // (any type of nodes including P and OU)
+  private List _children = new LinkedList();
+  public OU(String name) { _name = name; }
+  public Iterator getChildren() { _children.iterator(); }
+  public void addChild(Node node) { _children.add(node); }
+  public int size() {/* TODO */}
+}
+</PRE>
+ <OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+ Using the classes P and OU, write code that builds an org chart
+ for the following portion of a College (you may use the space to the
+ right of the following tree): 
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ The college itself
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ Malcolm (dean)
+ <LI CLASS="li-itemize">Arts department
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ Nancy (Chairman)
+ <LI CLASS="li-itemize">Xiaoping (Professor)
+ </UL>
+ <LI CLASS="li-itemize">Music department
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ Srinivas (Chairman)
+ <LI CLASS="li-itemize">Bob (Professor)
+ </UL>
+ </UL>
+ </UL><BR>
+<BR>
+<LI CLASS="li-enumerate">Recall that you can iterate over the elements in a list <CODE>x</CODE>
+ as follows:
+<PRE CLASS="verbatim">
+  Iterator i = x.iterator();
+  while (i.hasNext()) {
+    Node current = (Node) i.next();
+    // do something with current
+  } 
+</PRE>Assuming that each person is in at most one organizational unit,
+ complete the <CODE>size()</CODE> method in the classes <CODE>P</CODE> and
+ <CODE>OU</CODE>. Write your answers below.
+<PRE CLASS="verbatim">
+class P implements Node { // ...
+  public int size() {
+
+
+
+
+
+
+  }
+}
+
+class OU implements Node { // ...
+  public int size() {
+
+
+
+
+
+
+
+
+
+
+
+  }
+}
+</PRE></OL>
+<BR><BR>
+<B>Question 5</B><BR>
+Consider the interface <CODE>Predicate</CODE> defined as follows.
+<PRE CLASS="verbatim">
+interface Predicate { 
+  boolean eval(int j);
+}
+</PRE>
+ <OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+ <A NAME="x"></A>
+ Recall that you can check if an integer &#8220;<CODE>i</CODE>&#8221; is even by
+ using the expression &#8220;<CODE>i%2 == 0</CODE>&#8221;.
+ Write a class <CODE>IsEven</CODE> that determines whether a number is even:
+<PRE CLASS="verbatim">
+class IsEven implements Predicate {
+  public boolean eval(int j) {
+
+
+
+
+
+
+   }
+} 
+</PRE>For example, the following code
+<PRE CLASS="verbatim">
+  Predicate p = new IsEven();
+  if (  p.eval(2)) { System.out.println("2 is even"); }
+  if (! p.eval(3)) { System.out.println("3 is not even");
+</PRE>should produce the output
+<PRE CLASS="verbatim">
+  2 is even
+  3 is not even
+</PRE>
+ <LI CLASS="li-enumerate"><A NAME="y"></A>
+ Write a class <CODE>Alternate</CODE> that alternates between <CODE>true</CODE>
+ and <CODE>false</CODE>, starting with <CODE>true</CODE>.
+ You may add fields if necessary.
+<PRE CLASS="verbatim">
+class Alternate implements Predicate {
+
+
+
+  boolean eval(int j){
+
+
+
+
+
+
+
+  }
+}
+</PRE>For example, the following code
+<PRE CLASS="verbatim">
+  Predicate p = new Alternate();
+  in = new DataInputStream(System.in);  
+
+  for (int k=0; k&lt;4; k++){
+    int j = in.readInt();  // read a number from the user
+    if (p.eval(j)) {
+      System.out.println("true");
+    } else {
+      System.out.println("false");
+    }
+  } 
+</PRE>should produce the following output, no matter what input is given:
+<PRE CLASS="verbatim">
+  true
+  false
+  true
+  false
+</PRE>
+ <LI CLASS="li-enumerate">Write a class <CODE>Not</CODE> that implements logical negation:
+<PRE CLASS="verbatim">
+class Not implements Predicate {
+  Predicate _p;
+
+  Not(Predicate p) { _p =p; }
+  boolean eval(int j){
+
+
+
+
+
+
+  }
+}
+</PRE>For example, 
+<PRE CLASS="verbatim">
+  Predicate p = new IsEven();
+  Predicate q = new Not(p);
+  if (! q.eval(2)) { System.out.println("2 is even"); }
+  if (  q.eval(3)) { System.out.println("3 is not even");
+</PRE>should produce the same output as before, even though the negation
+ operator (<CODE>!</CODE>) is moved with respect to question <A HREF="#x">1</A>:
+<PRE CLASS="verbatim">
+  2 is even
+  3 is not even
+</PRE>
+ As another example, the code
+<PRE CLASS="verbatim">
+  Predicate p = new Alternate();
+  Predicate q = new Not(p);
+  in = new DataInputStream(System.in);  
+
+  for (int k=0; k&lt;4; k++){
+    int j = in.readInt();  // read a number from the user
+    if (q.eval(j)) {
+      System.out.println("true");
+    } else {
+      System.out.println("false");
+    }
+  }  
+</PRE>should produce the following output, no matter what input the user gives:
+<PRE CLASS="verbatim">
+  false
+  true
+  false
+  true
+</PRE>Notice that the outputs are just flipped, from <CODE>true</CODE> to
+ <CODE>false</CODE> and from <CODE>false</CODE> to <CODE>true</CODE>, in comparison
+ with question <A HREF="#y">2</A>.
+</OL>
+<BR><BR>
+<B>Question 6</B><BR>
+In this problem, we will look at the following &#8220;<CODE>Stream</CODE>&#8221; iterator. 
+<PRE CLASS="verbatim">
+abstract class Stream implements Iterator {
+  public final boolean hasNext() { return true; } 
+}
+
+class IntegerStream extends Stream { 
+  private int _i = -1;
+  public Object next() { _i++; return new Integer(_i);} 
+}
+</PRE>
+ See the comments for the output of the following code:
+<PRE CLASS="verbatim">
+  IntegerStream I = new IntegerStream();
+  System.out.println(I.next());   // prints 0 on the screen
+  System.out.println(I.next());   // prints 1 on the screen
+  System.out.println(I.next());   // prints 2 on the screen
+  System.out.println(I.next());   // prints 3 on the screen
+  System.out.println(I.next());   // prints 4 on the screen
+</PRE><OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+ Finish the code of class <CODE>FilteredStream</CODE> implementing
+ <CODE>Iterator</CODE> so that the following code fragments work as
+ indicated:
+<PRE CLASS="verbatim">
+IntegerStream I = new IntegerStream();
+FilteredStream F = new FilteredStream(I, new IsEven());
+System.out.println(F.next());   // prints 0 on the screen
+System.out.println(F.next());   // prints 2 on the screen
+System.out.println(F.next());   // prints 4 on the screen
+System.out.println(F.next());   // prints 6 on the screen
+System.out.println(F.next());   // prints 8 on the screen
+
+IntegerStream J = new IntegerStream();
+J.next();                       // move forward one item in J
+FilteredStream G = new FilteredStream(J, new IsEven());
+System.out.println(G.next());   // prints 2 on the screen
+System.out.println(G.next());   // prints 4 on the screen
+System.out.println(G.next());   // prints 6 on the screen
+System.out.println(G.next());   // prints 8 on the screen
+
+IntegerStream K = new IntegerStream();
+class Div3 implements Predicate {
+  public boolean eval(int n) { return (n%3) == 0; }
+}
+FilteredStream H = new FilteredStream(K, new Div3());
+System.out.println(H.next());   // prints 0 on the screen
+System.out.println(H.next());   // prints 3 on the screen
+System.out.println(H.next());   // prints 6 on the screen
+System.out.println(H.next());   // prints 9 on the screen
+</PRE>
+ Your job is to write the method <CODE>next()</CODE> in the following code. 
+<PRE CLASS="verbatim">
+class FilteredStream extends Stream { 
+  private Stream _it;
+  private Predicate _p;
+  
+  public FilteredStream(Stream it, Predicate p) {
+    _it = it;
+    _p =p;
+  }
+  
+  public Object next() {  
+
+
+
+
+
+
+
+
+
+  } 
+}
+</PRE>
+ <LI CLASS="li-enumerate">Consider the following classes:
+<PRE CLASS="verbatim">
+class NotDivn implements Predicate {
+  final private int _n;
+  NotDivn(int n) {
+    _n = n;
+  }
+  public boolean eval(int m) {
+    return (m%_n) != 0;
+  }
+}
+class WhatAPain extends Stream { 
+  private Stream _it;
+  
+  public WhatAPain(Stream it) {
+    _it = it;
+  }
+  
+  public Object next() {  
+    final int n = _it.next();
+    final Predicate d = new NotDivn(n);
+    Stream newit = new FilteredStream(_it, d);
+    _it = newit;
+    return (new Integer(n));
+  } 
+}
+</PRE>
+ What does the following code print?
+<PRE CLASS="verbatim">
+IntegerStream I = new IntegerStream();
+System.out.println(I.next());   // prints 0 on the screen
+System.out.println(I.next());   // prints 1 on the screen
+
+WhatAPain w = new WhatAPain(I); 
+
+System.out.println(w.next());   
+System.out.println(w.next()); 
+System.out.println(w.next());   
+System.out.println(w.next());   
+System.out.println(w.next());   
+System.out.println(w.next()); 
+</PRE>
+ </OL>
+<BR><BR>
+<B>Question 7</B><BR>
+What is the output of the following Java code?<BR>
+<BR>
+<EM>Briefly justify your answer.</EM>
+ <PRE CLASS="verbatim">
+class MyBool {
+  private boolean _v;
+  public MyBool(boolean v) { set(v); }
+  public void set(boolean v) { _v = v; }
+  public boolean get() { return _v; }
+  public boolean equals(Object that) {
+    return (that instanceof MyBool)
+        &amp;&amp; (this.get() == ((MyBool) that).get());
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    MyBool x = new MyBool(false);
+    MyBool y = x;
+    System.out.println( (x.equals(y)) + "," + (x == y) );
+    y.set(true);
+    System.out.println( (x.equals(y)) + "," + (x == y) );
+    
+    MyBool u = new MyBool(false);
+    MyBool v = new MyBool(false);
+    System.out.println( (u.equals(v)) + "," + (u == v) );
+    v.set(true);
+    System.out.println( (u.equals(v)) + "," + (u == v) );
+  }
+}
+</PRE>
+<BR><BR>
+<B>Question 8</B><BR>
+Consider the class <CODE>NonNegativeInteger</CODE> with the following
+ interface:
+<PRE CLASS="verbatim">
+class NonNegativeInteger {
+  public NonNegativeInteger();
+  public boolean equals (Object that);
+  public void set(int v) throws IllegalArgumentException;
+  public int get();
+}
+</PRE>The invariants for the class are:
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ if <CODE>set</CODE> has not been called, <CODE>get</CODE> should return 0
+ <LI CLASS="li-itemize">if <CODE>set</CODE> has been called, <CODE>get</CODE> should return the
+ value of the last <CODE>set</CODE>
+ <LI CLASS="li-itemize"><CODE>get</CODE> should never return a negative value
+ </UL>
+In this question you must write tests for <CODE>NonNegativeInteger</CODE>.
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ Write tests to check that this class obeys all of its
+ invariants.
+ <LI CLASS="li-itemize">Write a test to check the <CODE>equals</CODE> operation. (It should
+ return true exactly when <CODE>this.get()</CODE> is the same as
+ <CODE>that.get()</CODE>.)
+ </UL>
+ You may use methods from the <CODE>Assert</CODE> class summarized on the
+ last page of the exam.
+<PRE CLASS="verbatim">
+public class NonNegativeIntegerTEST extends TestCase {
+  public void test1() {
+</PRE><BR><BR>
+<B>Question 9</B><BR>
+    <p><span class="red">
+          This question covers material which is not covered by your midterm
+          (observer)
+      </span></p>
+Consider the following class:
+<PRE CLASS="verbatim">
+class MutableInteger {
+  private int _v;
+  public void set(int v) { _v = v; }
+  public int get() { return _v; }
+}
+</PRE>Suppose that you are required to modify <CODE>MutableInteger</CODE> to
+ perform some function each time a particular <CODE>MutableInteger</CODE>
+ is <CODE>set</CODE>. However, you do not know the exact function to be
+ performed. <BR>
+<BR>
+(For example, it might be neccesary to print some changes to the
+ screen, or to keep count of the number of times <CODE>set</CODE> has been
+ invoked.)
+<OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+ What pattern can help you re-write <CODE>MutableInteger</CODE> to
+ suit these requirements?
+ <BR>
+<LI CLASS="li-enumerate">Draw a UML class diagram sketching your solution. Draw your
+ classes within a package.<BR>
+<BR>
+Show two client classes in a separate package. Client class
+ <CODE>C1</CODE> will cause a print to occur whenever its
+ <CODE>MutableInteger</CODE> is set; Client class <CODE>C2</CODE> will keep a
+ count of the number of times its <CODE>MutableInteger</CODE> is set.<BR>
+<BR>
+In each class you <EM>must include</EM> the names of declared
+ methods.<BR>
+<BR>
+For each method you <EM>must also</EM> include parameter names and
+ types and a return type.
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+ <LI CLASS="li-enumerate">Draw a UML sequence diagram showing the interactions of a 
+ program that:
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ creates one instance each of <CODE>MutableInteger</CODE>,
+ <CODE>C1</CODE> and <CODE>C2</CODE>, informing <CODE>C1</CODE> and <CODE>C2</CODE> to
+ keep track of <CODE>set</CODE> methods on the <CODE>MutableInteger</CODE>.
+ <LI CLASS="li-itemize">calls <CODE>set</CODE> on the <CODE>MutableInteger</CODE>.
+ </UL>
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</OL>
+<BR><BR>
+<B>Question 10</B><BR>
+For the purposes of this problem, assume that you are given classes
+ <CODE>MyStack</CODE> and <CODE>MyQueue</CODE> to implement interface
+ <CODE>MyContainer</CODE> in the expected way.
+ <PRE CLASS="verbatim">
+interface MyContainer {
+  public Object get();       // return item in container
+  public void add(Object x); // add item into container
+  public void remove();      // remove item from container
+  public boolean isEmpty();  // check if container is empty
+}
+</PRE>You are given the following classes to establish a tree. The method
+ <CODE>children()</CODE> returns an iterator that is empty for leaves, and
+ returns first the left, then right child for internal nodes.
+ <PRE CLASS="verbatim">
+import java.util.ArrayList;
+import java.util.Iterator;
+interface Tree {
+  public void print();
+  public Iterator children();
+}
+class Node implements Tree {
+  private String _v;
+  private Tree _l, _r;
+  public Node(String v, Tree l, Tree r) { _v = v; _l =l; _r =r; }
+  public void print() { System.out.println(_v); }
+  public Iterator children() {
+    ArrayList A = new ArrayList();
+    A.add(_l); A.add(_r);
+    return A.iterator();
+  }
+}
+class Leaf implements Tree {
+  private Integer _v;
+  public Leaf(Integer v) { _v = v; }
+  public void print() { System.out.println(_v); }
+  public Iterator children() {
+    return new ArrayList().iterator();
+  }
+}
+</PRE>You must write the output of the main program on the following page.<BR>
+<BR>
+Consider the following implementation of <CODE>Iterator</CODE> and class
+ <CODE>Main</CODE>.
+ <PRE CLASS="verbatim">
+import java.util.Iterator;
+class TreeIterator implements Iterator {
+  private MyContainer _c;
+  public TreeIterator(Tree t, MyContainer c) {
+    _c = c; _c.add(t);
+  }
+  public boolean hasNext() { return ! _c.isEmpty(); }
+  public void remove() { throw new UnsupportedOperationException(); }
+  public Object next() {
+    Tree top = (Tree) _c.get();
+    _c.remove();
+    Iterator i = top.children();
+    while (i.hasNext())
+      _c.add(i.next());
+    return top;
+  }
+}
+</PRE><PRE CLASS="verbatim">
+import java.util.Iterator;
+class Main {
+  public static void main(String[] argv) {
+    Tree one = new Leaf(new Integer(1));
+    Tree two = new Leaf(new Integer(2));
+    Tree three = new Leaf(new Integer(3));
+    Tree onetwo = new Node("*", one, two);
+    Tree onetwothree = new Node("+", onetwo, three);
+    Tree t = new Node("-", onetwothree, onetwo);
+    
+    System.out.println("Iterate with Stack");
+    TreeIterator i1 = new TreeIterator(t, new MyStack());
+    while (i1.hasNext())
+      ((Tree) (i1.next())).print();
+    
+    System.out.println("Iterate with Queue");
+    TreeIterator i2 = new TreeIterator(t, new MyQueue());
+    while (i2.hasNext())
+      ((Tree) (i2.next())).print();
+  }
+}
+</PRE>What is the output generated by <CODE>Main</CODE>?
+<BR>
+<BR><BR><BR>
+<B>Question 11</B><BR>
+Consider the following interfaces for functions on integers and
+ integer arrays.
+<PRE CLASS="verbatim">
+interface IntFun { public int   exec(int   x); }
+interface ArrFun { public int[] exec(int[] x); }
+</PRE>Here are two classes, one implements an absolute value function, the
+ other a cube function:
+<PRE CLASS="verbatim">
+class Abs implements IntFun {
+  public int exec(int x) { return (x &lt; 0) ? -x : x; }
+}
+class Cube implements IntFun {
+  public int exec(int x) { return x*x*x; }
+}
+</PRE>Complete the following two questions.
+There is an example with output on the next page.
+<OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+Complete the following definition of <CODE>Comp</CODE> which composes
+ two functions. For example,
+ <DIV CLASS="center">
+ <CODE>new Comp(new Abs(), new Cube()).exec(-3)</CODE> 
+ </DIV>
+ should return 27 (computing the absolute value of -3 and the cubing
+ it).
+<PRE CLASS="verbatim">
+class Comp implements IntFun {
+  IntFun _f, _g;
+  public Comp(IntFun f, IntFun g) { _f = f; _g = g; }
+  public int exec(int x) {
+</PRE><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<LI CLASS="li-enumerate">Complete the following definition of <CODE>Map</CODE> which performs a
+ integer function <CODE>f</CODE> on every element of an array, returning a
+ new array.
+<PRE CLASS="verbatim">
+class Map implements ArrFun {
+  IntFun _f;
+  public Map(IntFun f) { _f = f; }
+  public int[] exec(int[] x) {
+</PRE><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+</OL>
+As an example, the following code prints:
+<PRE CLASS="verbatim">
+[ 0 1000 8000 27000 64000 125000 216000 343000 512000 729000 ]
+</PRE><PRE CLASS="verbatim">
+class Main {
+  public static void print(int[] x) {
+    System.out.print("[ ");
+    for (int i=0; i&lt;x.length; i++)
+      System.out.print(x[i]+ " ");
+    System.out.println("]");
+  }
+  public static void main(String[] argv) {
+    int[] a = new int[10];
+    for (int i=0; i&lt;a.length; i++)
+      a[i] = -i*10;
+
+    ArrFun mabs = new Map(new Comp(new Abs(), new Cube()));
+    print(mabs.exec(a));
+  }
+}
+</PRE><BR><BR>
+<B>Question 12</B><BR>
+This problem is about the construction of a simple music library. You are
+ given the following class to start off things:
+<PRE CLASS="verbatim">
+class Music {
+  static void play(int duration) {/*...*/}
+    // play note at the current pitch for the given duration
+    // in milliseconds (the initial pitch is A = 440 Hz)
+  static void rest(int duration) {/*...*/}
+    // rest for given duration
+  static void scalePitch(double factor) {/*...*/}
+    // multiply the pitch frequency by the given factor
+    // (a factor less than one will lower the pitch)
+  static void reset() {/*...*/}
+    // reset the pitch to note A = 440 Hz
+}
+</PRE>For example:
+<PRE CLASS="verbatim">
+Music.reset();             // initialize pitch to middle A (440 Hz)
+Music.play(500);           // play a middle A for half a second
+Music.rest(1000);          // rest for one second
+Music.scalePitch(2.0);     // set pitch an octave higher (880 Hz)
+Music.play(500);           // play a high A for half a second
+Music.rest(250);           // rest for a quarter of a second
+Music.scalePitch(1.0/2.0); // reset pitch to middle A (440 Hz)
+Music.play(500);           // play a low A for half a second
+</PRE>In this problem, we will write code to build and manipulate complex
+musical objects that are built out of notes and rests. The basic
+interface is <CODE>Event</CODE>, and one implementing class is <CODE>Note</CODE>:
+<PRE CLASS="verbatim">
+interface Event {
+  public void play();
+}
+class Note implements Event {
+  int _d;
+  double _f;
+  public Note(int duration, double factor) {
+    _d = duration;
+    _f = factor;
+  }
+  public void play() {
+    Music.scalePitch(_f);
+    Music.play(_d);
+    Music.scalePitch(1.0/_f);
+  }
+}
+</PRE>Now we look into mechanisms for building rests and more complex
+musical objects. Answer the following questions.
+<OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+Following <CODE>Note</CODE>, write a class <CODE>Rest</CODE> that, when
+ played, will rest for the given duration. Make the duration a
+ parameter of the constructor.
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<LI CLASS="li-enumerate">Finish the following code for the <CODE>EventGroup</CODE> class:
+<PRE CLASS="verbatim">
+class EventGroup implements Event {
+  List _events = new LinkedList();
+  public void add(Event e) {
+
+
+  }
+  public void play() {
+</PRE><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<LI CLASS="li-enumerate">Name the pattern most closely associated with <CODE>EventGroup</CODE>.
+ <BR>
+<LI CLASS="li-enumerate">Write a class <CODE>Transpose</CODE> that, when played, will play an
+ event at a scaled pitch. Make the event to be transposed and the
+ scaling factor both parameters of the constructor.
+    <p><span class="red">
+          This question covers material which is not covered by your midterm
+          (decorator)
+      </span></p>
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<LI CLASS="li-enumerate">Name the pattern most closely associated with <CODE>Transpose</CODE>.<BR>
+    <p><span class="red">
+          This question covers material which is not covered by your midterm
+          (decorator)
+      </span></p>
+<BR>
+<LI CLASS="li-enumerate">Using these classes, write Java code that declares a variable
+ <CODE>e1</CODE> and construct an object such that &#8220;<CODE>Music.reset();</CODE>
+ <CODE>e1.play();</CODE>&#8221; does the following:
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ play for 0.25 second a note at 880.0 Hz.
+ <LI CLASS="li-itemize">rest for 0.25 second
+ <LI CLASS="li-itemize">play for 0.5 second a note at 440.0 Hz.
+ <LI CLASS="li-itemize">rest for 0.5 second
+ <LI CLASS="li-itemize">play for 1.0 second a note at 220.0 Hz.
+ </UL>
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<LI CLASS="li-enumerate">Using these classes and <CODE>e1</CODE>, write Java code that declares
+ a variable <CODE>e2</CODE> and construct an object such that
+ &#8220;<CODE>Music.reset();</CODE> <CODE>e2.play();</CODE>&#8221; does the following:
+ <UL CLASS="itemize"><LI CLASS="li-itemize">
+ play the events of <CODE>e1</CODE>
+ <LI CLASS="li-itemize">rest for 1.0 second
+ <LI CLASS="li-itemize">play the events of <CODE>e1</CODE> transposed by a factor of 2.0
+ </UL>
+    <p><span class="red">
+          This question covers material which is not covered by your midterm
+          (decorator)
+      </span></p>
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<LI CLASS="li-enumerate">Draw a UML class diagram showing the relationships between these
+ classes.<BR>
+<BR>
+Show classes and interface only. (Do <EM>not</EM> show method names.)
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</OL>
+
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<HR SIZE=2><BLOCKQUOTE CLASS="quote"><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://pauillac.inria.fr/~maranget/hevea/index.html"><EM>H<FONT SIZE=2><sup>E</sup></FONT>V<FONT SIZE=2><sup>E</sup></FONT>A</EM></A><EM>.</EM></BLOCKQUOTE></BODY>
+</HTML>

@@ -1,0 +1,106 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package horstmann.ch06_scene3;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import java.awt.*;<a name="line.2"></a>
+<FONT color="green">003</FONT>    import java.awt.geom.*;<a name="line.3"></a>
+<FONT color="green">004</FONT>    <a name="line.4"></a>
+<FONT color="green">005</FONT>    /**<a name="line.5"></a>
+<FONT color="green">006</FONT>       A house shape.<a name="line.6"></a>
+<FONT color="green">007</FONT>    */<a name="line.7"></a>
+<FONT color="green">008</FONT>    public class HouseShape extends CompoundShape<a name="line.8"></a>
+<FONT color="green">009</FONT>    {<a name="line.9"></a>
+<FONT color="green">010</FONT>       /**<a name="line.10"></a>
+<FONT color="green">011</FONT>          Constructs a house shape.<a name="line.11"></a>
+<FONT color="green">012</FONT>          @param x the left of the bounding rectangle<a name="line.12"></a>
+<FONT color="green">013</FONT>          @param y the top of the bounding rectangle<a name="line.13"></a>
+<FONT color="green">014</FONT>          @param width the width of the bounding rectangle<a name="line.14"></a>
+<FONT color="green">015</FONT>       */<a name="line.15"></a>
+<FONT color="green">016</FONT>       public HouseShape(int x, int y, int width)<a name="line.16"></a>
+<FONT color="green">017</FONT>       {<a name="line.17"></a>
+<FONT color="green">018</FONT>          Rectangle2D.Double base <a name="line.18"></a>
+<FONT color="green">019</FONT>             = new Rectangle2D.Double(x, y + width, width, width);<a name="line.19"></a>
+<FONT color="green">020</FONT>    <a name="line.20"></a>
+<FONT color="green">021</FONT>          // The left bottom of the roof<a name="line.21"></a>
+<FONT color="green">022</FONT>          Point2D.Double r1<a name="line.22"></a>
+<FONT color="green">023</FONT>             = new Point2D.Double(x, y + width);<a name="line.23"></a>
+<FONT color="green">024</FONT>          // The top of the roof<a name="line.24"></a>
+<FONT color="green">025</FONT>          Point2D.Double r2<a name="line.25"></a>
+<FONT color="green">026</FONT>             = new Point2D.Double(x + width / 2, y);<a name="line.26"></a>
+<FONT color="green">027</FONT>          // The right bottom of the roof<a name="line.27"></a>
+<FONT color="green">028</FONT>          Point2D.Double r3<a name="line.28"></a>
+<FONT color="green">029</FONT>             = new Point2D.Double(x + width, y + width);<a name="line.29"></a>
+<FONT color="green">030</FONT>    <a name="line.30"></a>
+<FONT color="green">031</FONT>          Line2D.Double roofLeft<a name="line.31"></a>
+<FONT color="green">032</FONT>             = new Line2D.Double(r1, r2);<a name="line.32"></a>
+<FONT color="green">033</FONT>          Line2D.Double roofRight<a name="line.33"></a>
+<FONT color="green">034</FONT>             = new Line2D.Double(r2, r3);<a name="line.34"></a>
+<FONT color="green">035</FONT>    <a name="line.35"></a>
+<FONT color="green">036</FONT>          add(base);<a name="line.36"></a>
+<FONT color="green">037</FONT>          add(roofLeft);<a name="line.37"></a>
+<FONT color="green">038</FONT>          add(roofRight);<a name="line.38"></a>
+<FONT color="green">039</FONT>       }<a name="line.39"></a>
+<FONT color="green">040</FONT>    }<a name="line.40"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

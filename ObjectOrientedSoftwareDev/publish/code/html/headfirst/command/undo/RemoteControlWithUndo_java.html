@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> headfirst<span style="color: #990000">.</span>command<span style="color: #990000">.</span>undo<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #000080">import</span></span> java<span style="color: #990000">.</span>util<span style="color: #990000">.*;</span>
+<span style="color: #000000">00004:</span> 
+<span style="color: #000000">00005:</span> <span style="font-style: italic"><span style="color: #9A1900">//</span></span>
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">// This is the invoker</span></span>
+<span style="color: #000000">00007:</span> <span style="font-style: italic"><span style="color: #9A1900">//</span></span>
+<span style="color: #000000">00008:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">RemoteControlWithUndo</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00009:</span>         Command<span style="color: #990000">[]</span> onCommands<span style="color: #990000">;</span>
+<span style="color: #000000">00010:</span>         Command<span style="color: #990000">[]</span> offCommands<span style="color: #990000">;</span>
+<span style="color: #000000">00011:</span>         Command undoCommand<span style="color: #990000">;</span>
+<span style="color: #000000">00012:</span>  
+<span style="color: #000000">00013:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">RemoteControlWithUndo</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00014:</span>                 onCommands <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Command<span style="color: #990000">[</span><span style="color: #993399">7</span><span style="color: #990000">];</span>
+<span style="color: #000000">00015:</span>                 offCommands <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> Command<span style="color: #990000">[</span><span style="color: #993399">7</span><span style="color: #990000">];</span>
+<span style="color: #000000">00016:</span>  
+<span style="color: #000000">00017:</span>                 Command noCommand <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">NoCommand</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00018:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">for</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> i<span style="color: #990000">=</span><span style="color: #993399">0</span><span style="color: #990000">;</span>i<span style="color: #990000">&lt;</span><span style="color: #993399">7</span><span style="color: #990000">;</span>i<span style="color: #990000">++)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00019:</span>                         onCommands<span style="color: #990000">[</span>i<span style="color: #990000">]</span> <span style="color: #990000">=</span> noCommand<span style="color: #990000">;</span>
+<span style="color: #000000">00020:</span>                         offCommands<span style="color: #990000">[</span>i<span style="color: #990000">]</span> <span style="color: #990000">=</span> noCommand<span style="color: #990000">;</span>
+<span style="color: #000000">00021:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00022:</span>                 undoCommand <span style="color: #990000">=</span> noCommand<span style="color: #990000">;</span>
+<span style="color: #000000">00023:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00024:</span>   
+<span style="color: #000000">00025:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">setCommand</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> slot<span style="color: #990000">,</span> Command onCommand<span style="color: #990000">,</span> Command offCommand<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00026:</span>                 onCommands<span style="color: #990000">[</span>slot<span style="color: #990000">]</span> <span style="color: #990000">=</span> onCommand<span style="color: #990000">;</span>
+<span style="color: #000000">00027:</span>                 offCommands<span style="color: #990000">[</span>slot<span style="color: #990000">]</span> <span style="color: #990000">=</span> offCommand<span style="color: #990000">;</span>
+<span style="color: #000000">00028:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00029:</span>  
+<span style="color: #000000">00030:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">onButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> slot<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00031:</span>                 onCommands<span style="color: #990000">[</span>slot<span style="color: #990000">].</span><span style="font-weight: bold"><span style="color: #000000">execute</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00032:</span>                 undoCommand <span style="color: #990000">=</span> onCommands<span style="color: #990000">[</span>slot<span style="color: #990000">];</span>
+<span style="color: #000000">00033:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00034:</span>  
+<span style="color: #000000">00035:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">offButtonWasPushed</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> slot<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00036:</span>                 offCommands<span style="color: #990000">[</span>slot<span style="color: #990000">].</span><span style="font-weight: bold"><span style="color: #000000">execute</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00037:</span>                 undoCommand <span style="color: #990000">=</span> offCommands<span style="color: #990000">[</span>slot<span style="color: #990000">];</span>
+<span style="color: #000000">00038:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00039:</span>  
+<span style="color: #000000">00040:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">undoButtonWasPushed</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00041:</span>                 undoCommand<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">undo</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00042:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00043:</span>   
+<span style="color: #000000">00044:</span>         <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> String <span style="font-weight: bold"><span style="color: #000000">toString</span></span><span style="color: #990000">()</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00045:</span>                 StringBuilder stringBuff <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">StringBuilder</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00046:</span>                 stringBuff<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">------ Remote Control -------</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00047:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">for</span></span> <span style="color: #990000">(</span><span style="color: #009900">int</span> i <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> i <span style="color: #990000">&lt;</span> onCommands<span style="color: #990000">.</span>length<span style="color: #990000">;</span> i<span style="color: #990000">++)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00048:</span>                         stringBuff<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"[slot "</span> <span style="color: #990000">+</span> i <span style="color: #990000">+</span> <span style="color: #FF0000">"] "</span> <span style="color: #990000">+</span> onCommands<span style="color: #990000">[</span>i<span style="color: #990000">].</span><span style="font-weight: bold"><span style="color: #000000">getClass</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">getName</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00049:</span>                                 <span style="color: #990000">+</span> <span style="color: #FF0000">"    "</span> <span style="color: #990000">+</span> offCommands<span style="color: #990000">[</span>i<span style="color: #990000">].</span><span style="font-weight: bold"><span style="color: #000000">getClass</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">getName</span></span><span style="color: #990000">()</span> <span style="color: #990000">+</span> <span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00050:</span>                 <span style="color: #FF0000">}</span>
+<span style="color: #000000">00051:</span>                 stringBuff<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"[undo] "</span> <span style="color: #990000">+</span> undoCommand<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getClass</span></span><span style="color: #990000">().</span><span style="font-weight: bold"><span style="color: #000000">getName</span></span><span style="color: #990000">()</span> <span style="color: #990000">+</span> <span style="color: #FF0000">"</span><span style="color: #CC33CC">\n</span><span style="color: #FF0000">"</span><span style="color: #990000">);</span>
+<span style="color: #000000">00052:</span>                 <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> stringBuff<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">toString</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00053:</span>         <span style="color: #FF0000">}</span>
+<span style="color: #000000">00054:</span> <span style="color: #FF0000">}</span>
+</tt></pre>
+  </body>
+</html>

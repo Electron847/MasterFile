@@ -1,0 +1,235 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> horstmann<span style="color: #990000">.</span>ch03_junit<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">Day</span>
+<span style="color: #000000">00003:</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00004:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00005:</span> <span style="font-style: italic"><span style="color: #9A1900">      Constructs a day with a given year, month, and day</span></span>
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900">      of the Julian/Gregorian calendar. The Julian calendar</span></span>
+<span style="color: #000000">00007:</span> <span style="font-style: italic"><span style="color: #9A1900">      is used for all days before October 15, 1582</span></span>
+<span style="color: #000000">00008:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aYear a year != 0</span></span>
+<span style="color: #000000">00009:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aMonth a month between 1 and 12</span></span>
+<span style="color: #000000">00010:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> aDate a date between 1 and 31</span></span>
+<span style="color: #000000">00011:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00012:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #000000">Day</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> aYear<span style="color: #990000">,</span> <span style="color: #009900">int</span> aMonth<span style="color: #990000">,</span> <span style="color: #009900">int</span> aDate<span style="color: #990000">)</span>
+<span style="color: #000000">00013:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00014:</span>       year <span style="color: #990000">=</span> aYear<span style="color: #990000">;</span>
+<span style="color: #000000">00015:</span>       month <span style="color: #990000">=</span> aMonth<span style="color: #990000">;</span>
+<span style="color: #000000">00016:</span>       date <span style="color: #990000">=</span> aDate<span style="color: #990000">;</span>
+<span style="color: #000000">00017:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00018:</span> 
+<span style="color: #000000">00019:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00020:</span> <span style="font-style: italic"><span style="color: #9A1900">      Returns the year of this day</span></span>
+<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the year</span></span>
+<span style="color: #000000">00022:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00023:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">getYear</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00024:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00025:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> year<span style="color: #990000">;</span>
+<span style="color: #000000">00026:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00027:</span> 
+<span style="color: #000000">00028:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00029:</span> <span style="font-style: italic"><span style="color: #9A1900">      Returns the month of this day</span></span>
+<span style="color: #000000">00030:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the month</span></span>
+<span style="color: #000000">00031:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00032:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">getMonth</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00033:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00034:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> month<span style="color: #990000">;</span>
+<span style="color: #000000">00035:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00036:</span> 
+<span style="color: #000000">00037:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00038:</span> <span style="font-style: italic"><span style="color: #9A1900">      Returns the day of the month of this day</span></span>
+<span style="color: #000000">00039:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the day of the month</span></span>
+<span style="color: #000000">00040:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00041:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">getDate</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00042:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00043:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> date<span style="color: #990000">;</span>
+<span style="color: #000000">00044:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00045:</span> 
+<span style="color: #000000">00046:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00047:</span> <span style="font-style: italic"><span style="color: #9A1900">      Returns a day that is a certain number of days away from</span></span>
+<span style="color: #000000">00048:</span> <span style="font-style: italic"><span style="color: #9A1900">      this day</span></span>
+<span style="color: #000000">00049:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> n the number of days, can be negative</span></span>
+<span style="color: #000000">00050:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> a day that is n days away from this one</span></span>
+<span style="color: #000000">00051:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00052:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> Day <span style="font-weight: bold"><span style="color: #000000">addDays</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> n<span style="color: #990000">)</span>
+<span style="color: #000000">00053:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00054:</span>       Day result <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00055:</span>       <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #990000">(</span>n <span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00056:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00057:</span>          result <span style="color: #990000">=</span> result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">nextDay</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00058:</span>          n<span style="color: #990000">--;</span>
+<span style="color: #000000">00059:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00060:</span>       <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #990000">(</span>n <span style="color: #990000">&lt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00061:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00062:</span>          result <span style="color: #990000">=</span> result<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">previousDay</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00063:</span>          n<span style="color: #990000">++;</span>
+<span style="color: #000000">00064:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00065:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> result<span style="color: #990000">;</span>
+<span style="color: #000000">00066:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00067:</span> 
+<span style="color: #000000">00068:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00069:</span> <span style="font-style: italic"><span style="color: #9A1900">      Returns the number of days between this day and another</span></span>
+<span style="color: #000000">00070:</span> <span style="font-style: italic"><span style="color: #9A1900">      day</span></span>
+<span style="color: #000000">00071:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> other the other day</span></span>
+<span style="color: #000000">00072:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the number of days that this day is away from </span></span>
+<span style="color: #000000">00073:</span> <span style="font-style: italic"><span style="color: #9A1900">      the other (&gt;0 if this day comes later)</span></span>
+<span style="color: #000000">00074:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00075:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">daysFrom</span></span><span style="color: #990000">(</span>Day other<span style="color: #990000">)</span>
+<span style="color: #000000">00076:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00077:</span>       <span style="color: #009900">int</span> n <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span>
+<span style="color: #000000">00078:</span>       Day d <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00079:</span>       <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #990000">(</span>d<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">compareTo</span></span><span style="color: #990000">(</span>other<span style="color: #990000">)</span> <span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00080:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00081:</span>          d <span style="color: #990000">=</span> d<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">previousDay</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00082:</span>          n<span style="color: #990000">++;</span>
+<span style="color: #000000">00083:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00084:</span>       <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #990000">(</span>d<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">compareTo</span></span><span style="color: #990000">(</span>other<span style="color: #990000">)</span> <span style="color: #990000">&lt;</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+<span style="color: #000000">00085:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00086:</span>          d <span style="color: #990000">=</span> d<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">nextDay</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00087:</span>          n<span style="color: #990000">--;</span>
+<span style="color: #000000">00088:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00089:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> n<span style="color: #990000">;</span>
+<span style="color: #000000">00090:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00091:</span> 
+<span style="color: #000000">00092:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00093:</span> <span style="font-style: italic"><span style="color: #9A1900">      Compares this day with another day.</span></span>
+<span style="color: #000000">00094:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> other the other day</span></span>
+<span style="color: #000000">00095:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> a positive number if this day comes after the</span></span>
+<span style="color: #000000">00096:</span> <span style="font-style: italic"><span style="color: #9A1900">      other day, a negative number if this day comes before</span></span>
+<span style="color: #000000">00097:</span> <span style="font-style: italic"><span style="color: #9A1900">      the other day, and zero if the days are the same</span></span>
+<span style="color: #000000">00098:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00099:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">compareTo</span></span><span style="color: #990000">(</span>Day other<span style="color: #990000">)</span>
+<span style="color: #000000">00100:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00101:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>year <span style="color: #990000">&gt;</span> other<span style="color: #990000">.</span>year<span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00102:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>year <span style="color: #990000">&lt;</span> other<span style="color: #990000">.</span>year<span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #990000">-</span><span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00103:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>month <span style="color: #990000">&gt;</span> other<span style="color: #990000">.</span>month<span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00104:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>month <span style="color: #990000">&lt;</span> other<span style="color: #990000">.</span>month<span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #990000">-</span><span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00105:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> date <span style="color: #990000">-</span> other<span style="color: #990000">.</span>date<span style="color: #990000">;</span>
+<span style="color: #000000">00106:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00107:</span> 
+<span style="color: #000000">00108:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00109:</span> <span style="font-style: italic"><span style="color: #9A1900">      Computes the next day.</span></span>
+<span style="color: #000000">00110:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the day following this day</span></span>
+<span style="color: #000000">00111:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00112:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Day <span style="font-weight: bold"><span style="color: #000000">nextDay</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00113:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00114:</span>       <span style="color: #009900">int</span> y <span style="color: #990000">=</span> year<span style="color: #990000">;</span>
+<span style="color: #000000">00115:</span>       <span style="color: #009900">int</span> m <span style="color: #990000">=</span> month<span style="color: #990000">;</span>
+<span style="color: #000000">00116:</span>       <span style="color: #009900">int</span> d <span style="color: #990000">=</span> date<span style="color: #990000">;</span>
+<span style="color: #000000">00117:</span> 
+<span style="color: #000000">00118:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>y <span style="color: #990000">==</span> GREGORIAN_START_YEAR
+<span style="color: #000000">00119:</span>          <span style="color: #990000">&amp;&amp;</span> m <span style="color: #990000">==</span> GREGORIAN_START_MONTH
+<span style="color: #000000">00120:</span>          <span style="color: #990000">&amp;&amp;</span> d <span style="color: #990000">==</span> JULIAN_END_DAY<span style="color: #990000">)</span>
+<span style="color: #000000">00121:</span>             d <span style="color: #990000">=</span> GREGORIAN_START_DAY<span style="color: #990000">;</span>
+<span style="color: #000000">00122:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>d <span style="color: #990000">&lt;</span> <span style="font-weight: bold"><span style="color: #000000">daysPerMonth</span></span><span style="color: #990000">(</span>y<span style="color: #990000">,</span> m<span style="color: #990000">))</span>
+<span style="color: #000000">00123:</span>          d<span style="color: #990000">++;</span>
+<span style="color: #000000">00124:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00125:</span>       <span style="color: #FF0000">{</span>
+<span style="color: #000000">00126:</span>          d <span style="color: #990000">=</span> <span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00127:</span>          m<span style="color: #990000">++;</span>
+<span style="color: #000000">00128:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>m <span style="color: #990000">&gt;</span> DECEMBER<span style="color: #990000">)</span> 
+<span style="color: #000000">00129:</span>          <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00130:</span>             m <span style="color: #990000">=</span> JANUARY<span style="color: #990000">;</span> y<span style="color: #990000">++;</span> 
+<span style="color: #000000">00131:</span>             <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>y <span style="color: #990000">==</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> y<span style="color: #990000">++;</span>
+<span style="color: #000000">00132:</span>          <span style="color: #FF0000">}</span>
+<span style="color: #000000">00133:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00134:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Day</span></span><span style="color: #990000">(</span>y<span style="color: #990000">,</span> m<span style="color: #990000">,</span> d<span style="color: #990000">);</span>
+<span style="color: #000000">00135:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00136:</span> 
+<span style="color: #000000">00137:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00138:</span> <span style="font-style: italic"><span style="color: #9A1900">      Computes the previous day.</span></span>
+<span style="color: #000000">00139:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the day preceding this day</span></span>
+<span style="color: #000000">00140:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00141:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> Day <span style="font-weight: bold"><span style="color: #000000">previousDay</span></span><span style="color: #990000">()</span>
+<span style="color: #000000">00142:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00143:</span>       <span style="color: #009900">int</span> y <span style="color: #990000">=</span> year<span style="color: #990000">;</span>
+<span style="color: #000000">00144:</span>       <span style="color: #009900">int</span> m <span style="color: #990000">=</span> month<span style="color: #990000">;</span>
+<span style="color: #000000">00145:</span>       <span style="color: #009900">int</span> d <span style="color: #990000">=</span> date<span style="color: #990000">;</span>
+<span style="color: #000000">00146:</span> 
+<span style="color: #000000">00147:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>y <span style="color: #990000">==</span> GREGORIAN_START_YEAR
+<span style="color: #000000">00148:</span>          <span style="color: #990000">&amp;&amp;</span> m <span style="color: #990000">==</span> GREGORIAN_START_MONTH
+<span style="color: #000000">00149:</span>          <span style="color: #990000">&amp;&amp;</span> d <span style="color: #990000">==</span> GREGORIAN_START_DAY<span style="color: #990000">)</span>
+<span style="color: #000000">00150:</span>             d <span style="color: #990000">=</span> JULIAN_END_DAY<span style="color: #990000">;</span>
+<span style="color: #000000">00151:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span> <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>d <span style="color: #990000">&gt;</span> <span style="color: #993399">1</span><span style="color: #990000">)</span>
+<span style="color: #000000">00152:</span>          d<span style="color: #990000">--;</span>
+<span style="color: #000000">00153:</span>       <span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+<span style="color: #000000">00154:</span>       <span style="color: #FF0000">{</span> 
+<span style="color: #000000">00155:</span>          m<span style="color: #990000">--;</span>
+<span style="color: #000000">00156:</span>          <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>m <span style="color: #990000">&lt;</span> JANUARY<span style="color: #990000">)</span> 
+<span style="color: #000000">00157:</span>          <span style="color: #FF0000">{</span>             
+<span style="color: #000000">00158:</span>             m <span style="color: #990000">=</span> DECEMBER<span style="color: #990000">;</span> y<span style="color: #990000">--;</span> 
+<span style="color: #000000">00159:</span>             <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>y <span style="color: #990000">==</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> y <span style="color: #990000">=</span> <span style="color: #990000">-</span><span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00160:</span>          <span style="color: #FF0000">}</span>
+<span style="color: #000000">00161:</span>          d <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">daysPerMonth</span></span><span style="color: #990000">(</span>y<span style="color: #990000">,</span> m<span style="color: #990000">);</span>
+<span style="color: #000000">00162:</span>       <span style="color: #FF0000">}</span>
+<span style="color: #000000">00163:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">Day</span></span><span style="color: #990000">(</span>y<span style="color: #990000">,</span> m<span style="color: #990000">,</span> d<span style="color: #990000">);</span>
+<span style="color: #000000">00164:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00165:</span> 
+<span style="color: #000000">00166:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00167:</span> <span style="font-style: italic"><span style="color: #9A1900">      Gets the days in a given month</span></span>
+<span style="color: #000000">00168:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> y the year</span></span>
+<span style="color: #000000">00169:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> m the month</span></span>
+<span style="color: #000000">00170:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> the last day in the given month</span></span>
+<span style="color: #000000">00171:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00172:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="color: #009900">int</span> <span style="font-weight: bold"><span style="color: #000000">daysPerMonth</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> y<span style="color: #990000">,</span> <span style="color: #009900">int</span> m<span style="color: #990000">)</span>
+<span style="color: #000000">00173:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00174:</span>       <span style="color: #009900">int</span> days <span style="color: #990000">=</span> DAYS_PER_MONTH<span style="color: #990000">[</span>m <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">];</span>
+<span style="color: #000000">00175:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>m <span style="color: #990000">==</span> FEBRUARY <span style="color: #990000">&amp;&amp;</span> <span style="font-weight: bold"><span style="color: #000000">isLeapYear</span></span><span style="color: #990000">(</span>y<span style="color: #990000">))</span> 
+<span style="color: #000000">00176:</span>          days<span style="color: #990000">++;</span>
+<span style="color: #000000">00177:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> days<span style="color: #990000">;</span>
+<span style="color: #000000">00178:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00179:</span> 
+<span style="color: #000000">00180:</span>    <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00181:</span> <span style="font-style: italic"><span style="color: #9A1900">      Tests if a year is a leap year</span></span>
+<span style="color: #000000">00182:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@param</span><span style="font-style: italic"><span style="color: #9A1900"> y the year</span></span>
+<span style="color: #000000">00183:</span> <span style="font-style: italic"><span style="color: #9A1900">      </span></span><span style="color: #009900">@return</span><span style="font-style: italic"><span style="color: #9A1900"> true if y is a leap year</span></span>
+<span style="color: #000000">00184:</span> <span style="font-style: italic"><span style="color: #9A1900">   */</span></span>
+<span style="color: #000000">00185:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="color: #009900">boolean</span> <span style="font-weight: bold"><span style="color: #000000">isLeapYear</span></span><span style="color: #990000">(</span><span style="color: #009900">int</span> y<span style="color: #990000">)</span>
+<span style="color: #000000">00186:</span>    <span style="color: #FF0000">{</span>
+<span style="color: #000000">00187:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>y <span style="color: #990000">%</span> <span style="color: #993399">4</span> <span style="color: #990000">!=</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">false</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00188:</span>       <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span>y <span style="color: #990000">&lt;</span> GREGORIAN_START_YEAR<span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">true</span></span><span style="color: #990000">;</span>
+<span style="color: #000000">00189:</span>       <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #990000">(</span>y <span style="color: #990000">%</span> <span style="color: #993399">100</span> <span style="color: #990000">!=</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> <span style="color: #990000">||</span> <span style="color: #990000">(</span>y <span style="color: #990000">%</span> <span style="color: #993399">400</span> <span style="color: #990000">==</span> <span style="color: #993399">0</span><span style="color: #990000">);</span>
+<span style="color: #000000">00190:</span>    <span style="color: #FF0000">}</span>
+<span style="color: #000000">00191:</span> 
+<span style="color: #000000">00192:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> year<span style="color: #990000">;</span>
+<span style="color: #000000">00193:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> month<span style="color: #990000">;</span>
+<span style="color: #000000">00194:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="color: #009900">int</span> date<span style="color: #990000">;</span>
+<span style="color: #000000">00195:</span> 
+<span style="color: #000000">00196:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span><span style="color: #990000">[]</span> DAYS_PER_MONTH 
+<span style="color: #000000">00197:</span>       <span style="color: #990000">=</span> <span style="color: #FF0000">{</span> <span style="color: #993399">31</span><span style="color: #990000">,</span> <span style="color: #993399">28</span><span style="color: #990000">,</span> <span style="color: #993399">31</span><span style="color: #990000">,</span> <span style="color: #993399">30</span><span style="color: #990000">,</span> <span style="color: #993399">31</span><span style="color: #990000">,</span> <span style="color: #993399">30</span><span style="color: #990000">,</span> <span style="color: #993399">31</span><span style="color: #990000">,</span> <span style="color: #993399">31</span><span style="color: #990000">,</span> <span style="color: #993399">30</span><span style="color: #990000">,</span> <span style="color: #993399">31</span><span style="color: #990000">,</span> <span style="color: #993399">30</span><span style="color: #990000">,</span> <span style="color: #993399">31</span> <span style="color: #FF0000">}</span><span style="color: #990000">;</span>
+<span style="color: #000000">00198:</span> 
+<span style="color: #000000">00199:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> GREGORIAN_START_YEAR <span style="color: #990000">=</span> <span style="color: #993399">1582</span><span style="color: #990000">;</span>
+<span style="color: #000000">00200:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> GREGORIAN_START_MONTH <span style="color: #990000">=</span> <span style="color: #993399">10</span><span style="color: #990000">;</span>
+<span style="color: #000000">00201:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> GREGORIAN_START_DAY <span style="color: #990000">=</span> <span style="color: #993399">15</span><span style="color: #990000">;</span>
+<span style="color: #000000">00202:</span>    <span style="font-weight: bold"><span style="color: #0000FF">private</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> JULIAN_END_DAY <span style="color: #990000">=</span> <span style="color: #993399">4</span><span style="color: #990000">;</span>
+<span style="color: #000000">00203:</span> 
+<span style="color: #000000">00204:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> JANUARY <span style="color: #990000">=</span> <span style="color: #993399">1</span><span style="color: #990000">;</span>
+<span style="color: #000000">00205:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> FEBRUARY <span style="color: #990000">=</span> <span style="color: #993399">2</span><span style="color: #990000">;</span>
+<span style="color: #000000">00206:</span>    <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> <span style="font-weight: bold"><span style="color: #0000FF">final</span></span> <span style="color: #009900">int</span> DECEMBER <span style="color: #990000">=</span> <span style="color: #993399">12</span><span style="color: #990000">;</span>
+<span style="color: #000000">00207:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00208:</span> 
+<span style="color: #000000">00209:</span> 
+<span style="color: #000000">00210:</span> 
+<span style="color: #000000">00211:</span> 
+<span style="color: #000000">00212:</span> 
+</tt></pre>
+  </body>
+</html>

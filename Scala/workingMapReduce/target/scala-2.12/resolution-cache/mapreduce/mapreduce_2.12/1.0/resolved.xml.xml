@@ -4,7 +4,7 @@
 		module="mapreduce_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20200215005449"
+		publication="20201013162044"
 	>
 		<description>
 		MapReduce

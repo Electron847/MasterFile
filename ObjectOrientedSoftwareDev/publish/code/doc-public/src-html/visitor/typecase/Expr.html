@@ -1,0 +1,92 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package visitor.typecase;<a name="line.1"></a>
+<FONT color="green">002</FONT>    import enumeration.Op;<a name="line.2"></a>
+<FONT color="green">003</FONT>    <a name="line.3"></a>
+<FONT color="green">004</FONT>    public interface Expr { }<a name="line.4"></a>
+<FONT color="green">005</FONT>    <a name="line.5"></a>
+<FONT color="green">006</FONT>    class Const implements Expr {<a name="line.6"></a>
+<FONT color="green">007</FONT>      public final int c;<a name="line.7"></a>
+<FONT color="green">008</FONT>      public Const(int c) {<a name="line.8"></a>
+<FONT color="green">009</FONT>        this.c = c;<a name="line.9"></a>
+<FONT color="green">010</FONT>      }<a name="line.10"></a>
+<FONT color="green">011</FONT>    }<a name="line.11"></a>
+<FONT color="green">012</FONT>    <a name="line.12"></a>
+<FONT color="green">013</FONT>    class BinOp implements Expr {<a name="line.13"></a>
+<FONT color="green">014</FONT>      public final Expr l;<a name="line.14"></a>
+<FONT color="green">015</FONT>      public final Expr r;<a name="line.15"></a>
+<FONT color="green">016</FONT>      public final Op op;<a name="line.16"></a>
+<FONT color="green">017</FONT>    <a name="line.17"></a>
+<FONT color="green">018</FONT>      public BinOp(Expr l, Op op, Expr r) {<a name="line.18"></a>
+<FONT color="green">019</FONT>        if ((l == null) || (op == null) || (r == null)) {<a name="line.19"></a>
+<FONT color="green">020</FONT>          throw new IllegalArgumentException();<a name="line.20"></a>
+<FONT color="green">021</FONT>        }<a name="line.21"></a>
+<FONT color="green">022</FONT>        this.op = op;<a name="line.22"></a>
+<FONT color="green">023</FONT>        this.l = l;<a name="line.23"></a>
+<FONT color="green">024</FONT>        this.r = r;<a name="line.24"></a>
+<FONT color="green">025</FONT>      }<a name="line.25"></a>
+<FONT color="green">026</FONT>    }<a name="line.26"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

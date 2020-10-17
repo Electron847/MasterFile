@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <style type="text/css">
+      h1             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: large; }
+      h2             { margin-top: 0px;
+                       font-weight: bold;
+                       font-size: medium; }
+      body           { color: black;
+                       background-color: white; }
+      span.hilight   { color: black;
+                       background-color: yellow; }
+    </style>
+  </head>
+  <body>
+<!-- Generator: GNU source-highlight 2.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #000080">package</span></span> packageinterface<span style="color: #990000">.</span>i<span style="color: #990000">;</span>
+<span style="color: #000000">00002:</span> 
+<span style="color: #000000">00003:</span> <span style="font-style: italic"><span style="color: #9A1900">/**</span></span>
+<span style="color: #000000">00004:</span> <span style="font-style: italic"><span style="color: #9A1900"> * An interface.</span></span>
+<span style="color: #000000">00005:</span> <span style="font-style: italic"><span style="color: #9A1900"> * The methods only accept implementations that are created using this interface.</span></span>
+<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900"> */</span></span>
+<span style="color: #000000">00007:</span> <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">interface</span></span> <span style="color: #009900">I</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00008:</span>   <span style="font-style: italic"><span style="color: #9A1900">// By convention, all types mentioned in the public interface must be</span></span>
+<span style="color: #000000">00009:</span>   <span style="font-style: italic"><span style="color: #9A1900">// public types, even when not strictly necessary.  For example, it would</span></span>
+<span style="color: #000000">00010:</span>   <span style="font-style: italic"><span style="color: #9A1900">// be allowable to declare aConstant at type pI, but javadoc is too stupid</span></span>
+<span style="color: #000000">00011:</span>   <span style="font-style: italic"><span style="color: #9A1900">// to print sensible documentation...</span></span>
+<span style="color: #000000">00012:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> IFunctions f <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">IFunctionsObj</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00013:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="font-weight: bold"><span style="color: #0000FF">static</span></span> I aConstant <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">new</span></span> <span style="font-weight: bold"><span style="color: #000000">IObj</span></span><span style="color: #990000">();</span>
+<span style="color: #000000">00014:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">publicMethod</span></span><span style="color: #990000">(</span>I that<span style="color: #990000">);</span>
+<span style="color: #000000">00015:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00016:</span> 
+<span style="color: #000000">00017:</span> <span style="font-weight: bold"><span style="color: #0000FF">interface</span></span> <span style="color: #009900">pI</span> <span style="font-weight: bold"><span style="color: #0000FF">extends</span></span> I <span style="color: #FF0000">{</span>
+<span style="color: #000000">00018:</span>   <span style="font-style: italic"><span style="color: #9A1900">// Package-private interfaces may mention the package-private types.</span></span>
+<span style="color: #000000">00019:</span>   <span style="font-style: italic"><span style="color: #9A1900">// Although utilityMethod is "public", it can only be called inside this</span></span>
+<span style="color: #000000">00020:</span>   <span style="font-style: italic"><span style="color: #9A1900">// package, since the interface itself is package-private.</span></span>
+<span style="color: #000000">00021:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">utilityMethod</span></span><span style="color: #990000">(</span>pI x<span style="color: #990000">);</span>
+<span style="color: #000000">00022:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00023:</span> 
+<span style="color: #000000">00024:</span> <span style="font-weight: bold"><span style="color: #0000FF">class</span></span> <span style="color: #009900">IObj</span> <span style="font-weight: bold"><span style="color: #0000FF">implements</span></span> pI <span style="color: #FF0000">{</span>
+<span style="color: #000000">00025:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">publicMethod</span></span><span style="color: #990000">(</span>I thatI<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00026:</span>     pI that <span style="color: #990000">=</span> <span style="color: #990000">(</span>pI<span style="color: #990000">)</span> thatI<span style="color: #990000">;</span>
+<span style="color: #000000">00027:</span>     <span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">utilityMethod</span></span><span style="color: #990000">(</span>that<span style="color: #990000">);</span>
+<span style="color: #000000">00028:</span>     that<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">utilityMethod</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #0000FF">this</span></span><span style="color: #990000">);</span>
+<span style="color: #000000">00029:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00030:</span>   <span style="font-weight: bold"><span style="color: #0000FF">public</span></span> <span style="color: #009900">void</span> <span style="font-weight: bold"><span style="color: #000000">utilityMethod</span></span><span style="color: #990000">(</span>pI x<span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+<span style="color: #000000">00031:</span>     <span style="font-style: italic"><span style="color: #9A1900">/* ... */</span></span>
+<span style="color: #000000">00032:</span>   <span style="color: #FF0000">}</span>
+<span style="color: #000000">00033:</span> <span style="color: #FF0000">}</span>
+<span style="color: #000000">00034:</span>     
+<span style="color: #000000">00035:</span>   
+<span style="color: #000000">00036:</span>   
+</tt></pre>
+  </body>
+</html>
